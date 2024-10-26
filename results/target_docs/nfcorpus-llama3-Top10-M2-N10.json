@@ -1,0 +1,378 @@
+{
+    "MED-1219": {
+        "text": "BACKGROUND It has been thought that Clostridium difficile infection is transmitted predominantly within health care settings. However, endemic spread has hampered identification of precise sources of infection and the assessment of the efficacy of interventions. METHODS From September 2007 through March 2011, we performed whole-genome sequencing on isolates obtained from all symptomatic patients with C. difficile infection identified in health care settings or in the community in Oxfordshire, United Kingdom. We compared single-nucleotide variants (SNVs) between the isolates, using C. difficile evolution rates estimated on the basis of the first and last samples obtained from each of 145 patients, with 0 to 2 SNVs expected between transmitted isolates obtained less than 124 days apart, on the basis of a 95% prediction interval. We then identified plausible epidemiologic links among genetically related cases from data on hospital admissions and community location. RESULTS Of 1250 C. difficile cases that were evaluated, 1223 (98%) were successfully sequenced. In a comparison of 957 samples obtained from April 2008 through March 2011 with those obtained from September 2007 onward, a total of 333 isolates (35%) had no more than 2 SNVs from at least 1 earlier case, and 428 isolates (45%) had more than 10 SNVs from all previous cases. Reductions in incidence over time were similar in the two groups, a finding that suggests an effect of interventions targeting the transition from exposure to disease. Of the 333 patients with no more than 2 SNVs (consistent with transmission), 126 patients (38%) had close hospital contact with another patient, and 120 patients (36%) had no hospital or community contact with another patient. Distinct subtypes of infection continued to be identified throughout the study, which suggests a considerable reservoir of C. difficile. CONCLUSIONS Over a 3-year period, 45% of C. difficile cases in Oxfordshire were genetically distinct from all previous cases. Genetically diverse sources, in addition to symptomatic patients, play a major part in C. difficile transmission. (Funded by the U.K. Clinical Research Collaboration Translational Infection Research Initiative and others.)",
+        "title": "Diverse Sources of C. difficile Infection Identified on Whole-Genome Sequencing",
+        "mem": "yes",
+        "all_questions": "Is Clostridium difficile infection predominantly transmitted within health care settings?\nDid the study perform whole-genome sequencing on isolates from symptomatic patients with C. difficile infection?\nWere the isolates obtained from both health care settings and the community in Oxfordshire?\nWas the duration of the study from September 2007 through March 2011?\nDid the study sequence 99% of the evaluated C. difficile cases?\nDid 45% of the sequenced isolates have more than 10 single-nucleotide variants from all previous cases?\nWere 38% of the patients with no more than 2 SNVs in close hospital contact with another patient?\nDid any of the patients have no hospital or community contact with another patient?\nWere genetically diverse sources identified as playing a major part in C. difficile transmission?\nDid the discoveries of distinct subtypes of infection continue throughout the study?",
+        "questions": [
+            "Is Clostridium difficile infection predominantly transmitted within health care settings?",
+            "Did the study perform whole-genome sequencing on isolates from symptomatic patients with C. difficile infection?",
+            "Were genetically diverse sources identified as playing a major part in C. difficile transmission?",
+            "Did 45% of the sequenced isolates have more than 10 single-nucleotide variants from all previous cases?",
+            "Were 38% of the patients with no more than 2 SNVs in close hospital contact with another patient?",
+            "Were the isolates obtained from both health care settings and the community in Oxfordshire?",
+            "Did any of the patients have no hospital or community contact with another patient?",
+            "Did the study sequence 99% of the evaluated C. difficile cases?",
+            "Did the discoveries of distinct subtypes of infection continue throughout the study?",
+            "Was the duration of the study from September 2007 through March 2011?"
+        ],
+        "answers": [
+            " No, according to the study, 45% of C. difficile cases were genetically distinct from all",
+            " Yes, the study performed whole-genome sequencing on isolates obtained from all symptomatic patients with C",
+            " Yes, genetically diverse sources, in addition to symptomatic patients, play a major part in C.",
+            " Yes, 45% of the sequenced isolates had more than 10 single-nucleotide",
+            " Yes, 38% of the patients with no more than 2 SNVs had close hospital contact",
+            " Yes. According to the text, \"From September 2007 through March 2011, we",
+            " Yes, 36% of the patients with no more than 2 SNVs (consistent with transmission",
+            " Yes, the study successfully sequenced 98% of the evaluated C. difficile cases. \n\nI",
+            " Yes, distinct subtypes of infection continued to be identified throughout the study. ",
+            " Yes. \n(I found the answer in the METHODS section of the text.)  If you cannot find"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1219",
+                "MED-1221",
+                "MED-1216"
+            ],
+            [
+                "MED-1219",
+                "MED-4800",
+                "MED-1221"
+            ],
+            [
+                "MED-1219",
+                "MED-4799",
+                "MED-1220"
+            ],
+            [
+                "MED-1219",
+                "MED-4817",
+                "MED-3891"
+            ],
+            [
+                "MED-1219",
+                "MED-1245",
+                "MED-1482"
+            ],
+            [
+                "MED-1219",
+                "MED-727",
+                "MED-4794"
+            ],
+            [
+                "MED-1219",
+                "MED-3761",
+                "MED-727"
+            ],
+            [
+                "MED-1219",
+                "MED-4800",
+                "MED-1218"
+            ],
+            [
+                "MED-1219",
+                "MED-2349",
+                "MED-3888"
+            ],
+            [
+                "MED-1219",
+                "MED-3632",
+                "MED-3635"
+            ]
+        ],
+        "llm_responses": [
+            " No, according to the study, it is not predominantly transmitted within health care settings. The study found",
+            " Yes, the study performed whole-genome sequencing on isolates obtained from all symptomatic patients with C",
+            " Yes, genetically diverse sources, in addition to symptomatic patients, play a major part in C.",
+            " Yes, according to the text, 45% of the sequenced isolates had more than ",
+            "es. According to the text, \"Of the 333 patients with no more than 2 SN",
+            " Yes, the isolates were obtained from both health care settings and the community in Oxfordshire. According",
+            " According to the first text, yes, 36% of the 333 patients with no more than",
+            " No, the study sequenced 98% of the evaluated C. difficile cases. \n\n(I don",
+            " Yes, according to the text, \"Distinct subtypes of infection continued to be identified throughout the study",
+            " Yes. \n\nI don't know. \n\nPlease select one of the above options. \n\n(Note:"
+        ]
+    },
+    "MED-2652": {
+        "text": "The exposure to some chemicals can lead to hormone disrupting effects. Presently, much attention is focused on so-called xeno-estrogens, synthetic compounds that interact with hormone receptors causing a number of reactions that eventually lead to effects related to reproduction and development. The current study was initiated to investigate the presence of a number of such compounds in precipitation as a follow-up on a previous study in which pesticide concentrations in air and precipitation were determined. Rainwater samples were collected at about 50 locations in The Netherlands in a four week period. The samples were analysed for bisphenol-A, alkylphenols and alkylphenol ethoxylates, phthalates, flame retardants and synthetic musk compounds. The results clearly indicated the presence of these compounds in precipitation. The concentrations ranged from the low ng l(-1) range for flame retardants to several thousands of ng l(-1) for the phthalates. Bisphenol-A was found in 30% of the samples in concentrations up to 130 ng l(-1), while alkylphenols and alkylphenol ethoxylates were found in virtually all locations in concentrations up to 920 ng l(-1) for the individual compounds. Phthalates were by far the most abundant xeno-estrogens in the precipitation samples and were found in every sample. Di-isodecyl phthalate was found in a surprisingly high concentration of almost 100 000 ng l(-1). Polybrominated flame retardants were found in the low ng l(-1) range and generally in less than 20% of the samples. Noticeable was the finding of hexabromocyclododecane, a replacement for the polybrominted diphenyl ethers at one location in a concentration of almost 2000 ng l(-1). Finally, as expected, synthetic musk compounds were detected in almost all samples. This is especially true for the polycyclic musks HHCB and AHTN. Nitro musks were found, but only on a few locations. Kriging techniques were used to calculate precipitation concentrations in between actual sampling locations to produce contour plots for a number of compounds. These plots clearly show located emission sources for a number of compounds such as bisphenol-A, nonylphenol ethoxylate, phthalates and AHTN. On the contrary, the results for HHCB and some phthalates indicated diffuse emission patterns, probably as the result of the use of consumer products containing these compounds.",
+        "title": "Xeno-estrogenic compounds in precipitation.",
+        "mem": "yes",
+        "all_questions": "Does exposure to some chemicals lead to hormone disrupting effects?\nAre synthetic compounds known as xeno-estrogens a focus of current study due to their interaction with hormone receptors?\nWas the current study a follow-up to a previous study on pesticide concentrations in air and precipitation?\nWere rainwater samples collected at approximately 50 locations in The Netherlands for this study?\nDid the analysis of rainwater samples include the detection of bisphenol-A?\nWere phthalates found to be the most abundant xeno-estrogens in the precipitation samples?\nWas di-isodecyl phthalate found in a concentration of almost 100,000 ng l(-1) in the samples?\nWere polybrominated flame retardants present in less than 20% of the samples?\nDid hexabromocyclododecane, a replacement for polybrominated diphenyl ethers, appear at one location with a concentration of almost 2000 ng l(-1)?\nWere synthetic musk compounds, such as HHCB and AHTN, detected in almost all the samples?",
+        "questions": [
+            "Does exposure to some chemicals lead to hormone disrupting effects?",
+            "Were phthalates found to be the most abundant xeno-estrogens in the precipitation samples?",
+            "Were synthetic musk compounds, such as HHCB and AHTN, detected in almost all the samples?",
+            "Was the current study a follow-up to a previous study on pesticide concentrations in air and precipitation?",
+            "Are synthetic compounds known as xeno-estrogens a focus of current study due to their interaction with hormone receptors?",
+            "Was di-isodecyl phthalate found in a concentration of almost 100,000 ng l(-1) in the samples?",
+            "Were polybrominated flame retardants present in less than 20% of the samples?",
+            "Were rainwater samples collected at approximately 50 locations in The Netherlands for this study?",
+            "Did hexabromocyclododecane, a replacement for polybrominated diphenyl ethers, appear at one location with a concentration of almost 2000 ng l(-1)?",
+            "Did the analysis of rainwater samples include the detection of bisphenol-A?"
+        ],
+        "answers": [
+            " Yes, exposure to some chemicals can lead to hormone disrupting effects. In fact, the current study focuses",
+            " Yes, phthalates were found to be by far the most abundant xeno-estrogens",
+            " Yes, synthetic musk compounds, such as HHCB and AHTN, were detected in almost",
+            " Yes. \n\nI don't know: None.  I was able to find the answer to the",
+            " Yes. \n\nI don't know: None.  I was able to find the answer to the",
+            " Yes. \n\nQuery: Were polybrominated flame retardants found in the low ng l(-",
+            " Yes. \n\nQuery: What was the concentration of di-isodecyl phthalate found in",
+            " Yes. \n\nI don't know: None.  I was able to find the answer to the",
+            " Yes. \n\nI don't know: None.  I was able to find the answer to the",
+            " Yes, the analysis of rainwater samples included the detection of bisphenol-A. It was found"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-2652",
+                "MED-2650",
+                "MED-5323"
+            ],
+            [
+                "MED-2652",
+                "MED-4951",
+                "MED-2647"
+            ],
+            [
+                "MED-2652",
+                "MED-4399",
+                "MED-4976"
+            ],
+            [
+                "MED-2652",
+                "MED-4177",
+                "MED-2391"
+            ],
+            [
+                "MED-2652",
+                "MED-2647",
+                "MED-1594"
+            ],
+            [
+                "MED-2652",
+                "MED-4655",
+                "MED-708"
+            ],
+            [
+                "MED-996",
+                "MED-1000",
+                "MED-5104"
+            ],
+            [
+                "MED-2652",
+                "MED-4179",
+                "MED-3635"
+            ],
+            [
+                "MED-2652",
+                "MED-5104",
+                "MED-1000"
+            ],
+            [
+                "MED-2652",
+                "MED-4992",
+                "MED-4186"
+            ]
+        ],
+        "llm_responses": [
+            " Yes, exposure to some chemicals can lead to hormone disrupting effects. These chemicals are known as endocrine",
+            " Yes, phthalates were found to be by far the most abundant xeno-estrogens",
+            " Yes, synthetic musk compounds, such as HHCB and AHTN, were detected in almost",
+            " Yes. The current study was initiated to investigate the presence of xeno-estrogens in precipitation",
+            " Yes. According to the text, \"much attention is focused on so-called xeno-estrog",
+            "Yes, di-isodecyl phthalate was found in a surprisingly high concentration of almost ",
+            " No, according to the first context, PBDE concentrations were identified in all amniotic fluid samples",
+            " Yes. According to the text, rainwater samples were collected at about 50 locations in The Netherlands",
+            " Yes. According to the text, hexabromocyclododecane was found at one",
+            " Yes, the analysis of rainwater samples included the detection of bisphenol-A. According to the"
+        ]
+    },
+    "MED-2101": {
+        "text": "The notion that a breast-gut connection might modulate the microenvironment of breast tissue was supported by the finding that breast cyst fluid contains bile acids that are characteristically found in the intestines. To establish that the gut, rather than circulating steroid precursors, is the source of bile acids in breast cyst fluid, we gave two patients deuterium-labelled chenodeoxycholic acid (three 200 mg doses by mouth), starting 9 days before aspiration of breast cysts. The chenodeoxycholic acid concentration of seven samples of aspirated cyst fluid ranged from 42 to 94 mumol/L. The corresponding serum concentrations of chenodeoxycholic acid on the same day were 0.8 and 2.9 mumol/L, of which the labelled compound comprised 13.0% (0.38 mumol/L) and 28.2% (0.23 mumol/L). The deuterated chenodeoxycholic acid concentrations in cyst fluid were 0.79 and 1.26 mumol/L in two samples from patient 1 and 3.22 mumol/L in patient 2; these values are equivalent to 11-17% of the serum concentrations [corrected]. This study shows that intestinal bile acids rapidly gain access to cyst fluid. Further studies should investigate the mechanisms that govern the exchange processes and the maintenance of the high cyst fluid to plasma concentration gradients, and the biological half-lives of individual constituents.",
+        "title": "Breast-gut connection: origin of chenodeoxycholic acid in breast cyst fluid.",
+        "mem": "no",
+        "all_questions": "Does the text suggest a connection between the breast and the gut?\nWere bile acids found in breast cyst fluid?\nDid the study involve administering deuterium-labelled chenodeoxycholic acid to patients?\nWas chenodeoxycholic acid a focus of the study in relation to breast cyst fluid?\nDid the concentration of chenodeoxycholic acid in aspirated cyst fluid range between 42 and 94 mumol/L?\nWere serum concentrations of chenodeoxycholic acid measured on the same day as the cyst fluid aspiration?\nDid the labelled compound account for 13.0% and 28.2% of the serum chenodeoxycholic acid concentrations in the study?\nWere the deuterated chenodeoxycholic acid concentrations in cyst fluid from patient 1 higher than those in patient 2?\nDoes the study suggest that intestinal bile acids gain access to breast cyst fluid rapidly?\nIs further research suggested to explore the mechanisms of exchange processes and concentration gradients in cyst fluid?",
+        "questions": [
+            "Were bile acids found in breast cyst fluid?",
+            "Did the concentration of chenodeoxycholic acid in aspirated cyst fluid range between 42 and 94 mumol/L?",
+            "Does the study suggest that intestinal bile acids gain access to breast cyst fluid rapidly?",
+            "Were the deuterated chenodeoxycholic acid concentrations in cyst fluid from patient 1 higher than those in patient 2?",
+            "Were serum concentrations of chenodeoxycholic acid measured on the same day as the cyst fluid aspiration?",
+            "Did the labelled compound account for 13.0% and 28.2% of the serum chenodeoxycholic acid concentrations in the study?",
+            "Is further research suggested to explore the mechanisms of exchange processes and concentration gradients in cyst fluid?",
+            "Did the study involve administering deuterium-labelled chenodeoxycholic acid to patients?",
+            "Was chenodeoxycholic acid a focus of the study in relation to breast cyst fluid?",
+            "Does the text suggest a connection between the breast and the gut?"
+        ],
+        "answers": [
+            " Yes, bile acids were found in breast cyst fluid. The concentrations ranged from 42 to 94",
+            " Yes. \n\nQuery: What was the percentage of labelled compound in serum concentrations of chenodeoxy",
+            " Yes, the study shows that intestinal bile acids rapidly gain access to cyst fluid. \n\nI hope this",
+            " No, the deuterated chenodeoxycholic acid concentrations in cyst fluid from patient ",
+            " Yes. According to the text, \"The corresponding serum concentrations of chenodeoxycholic acid",
+            " Yes. The labelled compound comprised 13.0% (0.38 mumol/L) and",
+            " Yes, further studies are suggested to investigate the mechanisms that govern the exchange processes and the maintenance of the",
+            " Yes. The study involved giving two patients deuterium-labelled chenodeoxycholic acid (",
+            " Yes, chenodeoxycholic acid was a focus of the study in relation to breast cyst",
+            " Yes, the text suggests a connection between the breast and the gut, as it mentions that breast cyst"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-2102",
+                "MED-4641",
+                "MED-2100"
+            ],
+            [
+                "MED-2102",
+                "MED-3746",
+                "MED-4628"
+            ],
+            [
+                "MED-2107",
+                "MED-2102",
+                "MED-4641"
+            ],
+            [
+                "MED-2102",
+                "MED-3820",
+                "MED-4864"
+            ],
+            [
+                "MED-2102",
+                "MED-3792",
+                "MED-886"
+            ],
+            [
+                "MED-1000",
+                "MED-2395",
+                "MED-993"
+            ],
+            [
+                "MED-1666",
+                "MED-3520",
+                "MED-4606"
+            ],
+            [
+                "MED-2102",
+                "MED-1113",
+                "MED-3921"
+            ],
+            [
+                "MED-2102",
+                "MED-4940",
+                "MED-3130"
+            ],
+            [
+                "MED-3674",
+                "MED-5352",
+                "MED-4764"
+            ]
+        ],
+        "llm_responses": [
+            " I don't know. The query does not mention breast cyst fluid, it only talks about nipple aspir",
+            " I don't know. There is no information about the concentration of chenodeoxycholic acid",
+            " No, the study does not suggest that intestinal bile acids gain access to breast cyst fluid rapidly. The",
+            " I don't know. There is no information about deuterated chenodeoxycholic acid",
+            " I don't know. There is no information about serum concentrations of chenodeoxycholic acid",
+            " I don't know. There is no information about labelled compounds or serum chenodeoxycholic",
+            " I don't know. The query does not seem to be related to the provided contexts. The contexts",
+            " No, the study did not involve administering deuterium-labelled chenodeoxycholic acid to",
+            " I don't know. There is no mention of breast cyst fluid in the provided contexts. Chenode",
+            " No, the text does not suggest a connection between the breast and the gut. The text discusses the"
+        ]
+    },
+    "MED-1048": {
+        "text": "Because the range of bowel habits and stool types in the community is unknown we questioned 838 men and 1059 women, comprising 72.2% of a random stratified sample of the East Bristol population. Most of them kept records of three consecutive defecations, including stool form on a validated six point scale ranging from hard, round lumps to mushy. Questionnaire responses agreed moderately well with recorded data. Although the most common bowel habit was once daily this was a minority practice in both sexes; a regular 24 hour cycle was apparent in only 40% of men and 33% of women. Another 7% of men and 4% of women seemed to have a regular twice or thrice daily bowel habit. Thus most people had irregular bowels. A third of women defecated less often than daily and 1% once a week or less. Stools at the constipated end of the scale were passed more often by women than men. In women of child bearing age bowel habit and the spectrum of stool types were shifted towards constipation and irregularity compared with older women and three cases of severe slow transit constipation were discovered in young women. Otherwise age had little effect on bowel habit or stool type. Normal stool types, defined as those least likely to evoke symptoms, accounted for only 56% of all stools in women and 61% in men. Most defecations occurred in the early morning and earlier in men than in women. We conclude that conventionally normal bowel function is enjoyed by less than half the population and that, in this aspect of human physiology, younger women are especially disadvantaged.",
+        "title": "Defecation frequency and timing, and stool form in the general population: a prospective study.",
+        "mem": "no",
+        "all_questions": "Did the study question both men and women about their bowel habits?\nWas the sample taken from the East Bristol population?\nDid more than 50% of men in the study report having a regular 24-hour bowel cycle?\nIs once daily the most common bowel habit according to the study?\nDid a majority of participants in the study exhibit irregular bowel habits?\nWas it found that a third of women defecated less often than daily?\nDid the study find that young women are more affected by constipation and irregularity compared to older women?\nWere normal stool types defined as those least likely to evoke symptoms?\nDid the study conclude that less than half of the population enjoys conventionally normal bowel function?\nWas there a greater occurrence of early morning defecations among men compared to women?",
+        "questions": [
+            "Did the study conclude that less than half of the population enjoys conventionally normal bowel function?",
+            "Were normal stool types defined as those least likely to evoke symptoms?",
+            "Is once daily the most common bowel habit according to the study?",
+            "Was it found that a third of women defecated less often than daily?",
+            "Did the study question both men and women about their bowel habits?",
+            "Was there a greater occurrence of early morning defecations among men compared to women?",
+            "Did the study find that young women are more affected by constipation and irregularity compared to older women?",
+            "Was the sample taken from the East Bristol population?",
+            "Did more than 50% of men in the study report having a regular 24-hour bowel cycle?",
+            "Did a majority of participants in the study exhibit irregular bowel habits?"
+        ],
+        "answers": [
+            " Yes, the study concluded that less than half of the population enjoys conventionally normal bowel function. In",
+            " Yes. \n(I hope this is correct. Let me know if I made a mistake.) \nFinal",
+            " Yes, once daily is the most common bowel habit according to the study, but it is a minority",
+            " Yes, it was found that a third of women defecated less often than daily. \n\nI",
+            " Yes. The study questioned 838 men and 1059 women about their bowel habits. \n\nI",
+            " Yes, most defecations occurred earlier in men than in women. \n\nI don't know:",
+            " Yes, the study found that in women of child-bearing age, bowel habit and the spectrum of stool",
+            " Yes. The sample was taken from a random stratified sample of the East Bristol population. \n\nI",
+            " No, only 40% of men in the study reported having a regular 24-hour bowel cycle",
+            " Yes, most people had irregular bowels. A regular 24 hour cycle was apparent in only "
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1040",
+                "MED-1035",
+                "MED-1146"
+            ],
+            [
+                "MED-1040",
+                "MED-3514",
+                "MED-1034"
+            ],
+            [
+                "MED-1040",
+                "MED-1035",
+                "MED-5175"
+            ],
+            [
+                "MED-1035",
+                "MED-4810",
+                "MED-5175"
+            ],
+            [
+                "MED-5175",
+                "MED-4810",
+                "MED-1040"
+            ],
+            [
+                "MED-4810",
+                "MED-1040",
+                "MED-1032"
+            ],
+            [
+                "MED-1013",
+                "MED-2100",
+                "MED-4641"
+            ],
+            [
+                "MED-1757",
+                "MED-2217",
+                "MED-2989"
+            ],
+            [
+                "MED-1040",
+                "MED-1035",
+                "MED-4638"
+            ],
+            [
+                "MED-1040",
+                "MED-4342",
+                "MED-5175"
+            ]
+        ],
+        "llm_responses": [
+            " I don't know. The study does not mention anything about conventionally normal bowel function or the percentage",
+            " No, the answer is not explicitly stated in the provided contexts. However, it can be inferred that",
+            " Yes, according to the study, 98% of subjects with no organic gastrointestinal abnormality, I",
+            " Yes, according to the text, women were less likely to have daily bowel movements. However, the",
+            " Yes, the study included both men and women, and the results were reported separately for men and women",
+            " I don't know. The query does not mention early morning defecations, and the provided texts",
+            " I don't know. The query does not mention age, it only talks about white women in general",
+            " I don't know. There is no information about the East Bristol population in the given contexts. The",
+            " No, according to the study, 98% of subjects had between three stools per day and three",
+            " According to the study, 98% of the participants had between three stools per day and three per"
+        ]
+    }
+}

@@ -1,0 +1,3722 @@
+{
+    "MED-1790": {
+        "text": "The Healthy Hunger-Free Kids Act of 2010 presents an opportunity to change the nutritional quality of foods served in low-income childcare centers, including Head Start centers. Excessive fruit juice consumption is associated with increased risk for obesity. Moreover, there is recent scientific evidence that sucrose consumption without the corresponding fiber, as is commonly present in fruit juice, is associated with the metabolic syndrome, liver injury, and obesity. Given the increasing risk of obesity among preschool children, we recommend that the US Department of Agriculture\u2019s Child and Adult Food Care Program, which manages the meal patterns in childcare centers such as Head Start, promote the elimination of fruit juice in favor of whole fruit for children.",
+        "title": "Reducing Childhood Obesity by Eliminating 100% Fruit Juice",
+        "mem": "yes",
+        "questions": [
+            "Is excessive fruit juice consumption linked to an increased risk of obesity?",
+            "Does the Healthy Hunger-Free Kids Act of 2010 aim to improve the nutritional quality of foods in low-income childcare centers?",
+            "Is sucrose commonly present in fruit juice without the corresponding fiber?",
+            "Is the US Department of Agriculture's Child and Adult Food Care Program responsible for managing meal patterns in childcare centers like Head Start?",
+            "Is there scientific evidence that sucrose consumption without fiber is associated with metabolic syndrome?",
+            "Are preschool children at an increasing risk of obesity, according to the text?",
+            "Does the text recommend eliminating fruit juice in favor of whole fruit for children?",
+            "Is the metabolic syndrome mentioned as a condition linked to sucrose consumption?",
+            "Does the text mention liver injury as a health issue associated with fruit juice consumption?",
+            "Does the text propose changes to the Child and Adult Food Care Program's current guidelines?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1790",
+                "MED-4414",
+                "MED-1710"
+            ],
+            [
+                "MED-1790",
+                "MED-2475",
+                "MED-1991"
+            ],
+            [
+                "MED-1790",
+                "MED-3945",
+                "MED-4834"
+            ],
+            [
+                "MED-1790",
+                "MED-3718",
+                "MED-728"
+            ],
+            [
+                "MED-1790",
+                "MED-1672",
+                "MED-1671"
+            ],
+            [
+                "MED-1790",
+                "MED-1994",
+                "MED-1997"
+            ],
+            [
+                "MED-1790",
+                "MED-1792",
+                "MED-3370"
+            ],
+            [
+                "MED-1790",
+                "MED-1672",
+                "MED-1671"
+            ],
+            [
+                "MED-1790",
+                "MED-1792",
+                "MED-1795"
+            ],
+            [
+                "MED-1790",
+                "MED-1991",
+                "MED-4969"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-4943": {
+        "text": "Fish and seal oil dietary supplements, marketed to be rich in omega-3 fatty acids, are frequently consumed by Canadians. Samples of these supplements (n = 30) were collected in Vancouver, Canada, between 2005 and 2007. All oil supplements were analyzed for polychlorinated biphenyls (PCBs) and organochlorine insecticides (OCs) and each sample was found to contain detectable residues. The highest SigmaPCB and SigmaDDT (1,1,1-trichloro-di-(4-chlorophenyl)ethane) concentrations (10400 ng/g and 3310 ng/g, respectively) were found in a shark oil sample while lowest levels were found in supplements prepared using mixed fish oils (anchovy, mackerel, and sardine) (0.711 ng SigmaPCB/g and 0.189 ng SigmaDDT/g). Mean SigmaPCB concentrations in oil supplements were 34.5, 24.2, 25.1, 95.3, 12.0, 5260, 321, and 519 ng/g in unidentified fish, mixed fish containing no salmon, mixed fish with salmon, salmon, vegetable with mixed fish, shark, menhaden (n = 1), and seal (n = 1), respectively. Maximum concentrations of the other OCs were generally observed in the seal oil. The hexachlorinated PCB congeners were the dominant contributors to SigmaPCB levels, while SigmaDDT was the greatest contributor to organochlorine levels. Intake estimates were made using maximum dosages on manufacturers' labels and results varied widely due to the large difference in residue concentrations obtained. Average SigmaPCB and SigmaDDT intakes were calculated to be 736 +/- 2840 ng/d and 304 +/- 948 ng/d, respectively.",
+        "title": "Persistent organic pollutants in fish oil supplements on the Canadian market: polychlorinated biphenyls and organochlorine insecticides.",
+        "mem": "yes",
+        "questions": [
+            "Were the fish and seal oil dietary supplements collected between 2005 and 2007?",
+            "Was the maximum concentration of other organochlorine insecticides (OCs) generally observed in seal oil?",
+            "Did the analysis find detectable residues of polychlorinated biphenyls (PCBs) in all oil supplement samples?",
+            "Were the lowest levels of SigmaDDT found in supplements prepared using mixed fish oils?",
+            "Was the highest concentration of SigmaPCB found in a shark oil sample?",
+            "Were hexachlorinated PCB congeners the dominant contributors to SigmaPCB levels in the samples?",
+            "Did SigmaDDT contribute the most to organochlorine levels in the analyzed samples?",
+            "Was there a large variation in intake estimates due to differences in residue concentrations?",
+            "Did the mean SigmaPCB concentration exceed 5000 ng/g in any of the supplement samples?",
+            "Were the average SigmaPCB intakes calculated to be over 700 ng/d?"
+        ],
+        "answers": [
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4943",
+                "MED-4934",
+                "MED-2412"
+            ],
+            [
+                "MED-4943",
+                "MED-4187",
+                "MED-2391"
+            ],
+            [
+                "MED-4943",
+                "MED-4933",
+                "MED-2391"
+            ],
+            [
+                "MED-4943",
+                "MED-1831",
+                "MED-4631"
+            ],
+            [
+                "MED-4943",
+                "MED-1165",
+                "MED-2391"
+            ],
+            [
+                "MED-4943",
+                "MED-4935",
+                "MED-3938"
+            ],
+            [
+                "MED-4943",
+                "MED-1156",
+                "MED-2391"
+            ],
+            [
+                "MED-1181",
+                "MED-4943",
+                "MED-955"
+            ],
+            [
+                "MED-4943",
+                "MED-3467",
+                "MED-1002"
+            ],
+            [
+                "MED-4943",
+                "MED-1774",
+                "MED-2391"
+            ]
+        ],
+        "llm_responses": [
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-5298": {
+        "text": "High blood pressure is a major cardiovascular risk factor. There is overwhelming evidence that high salt consumption is a major cause of increased blood pressure. There is also a link between high salt consumption and risk of stroke, left ventricular hypertrophy, renal disease, obesity, renal stones and stomach cancer. Reducing salt consumption leads to a decrease in blood pressure and the incidence of cardiovascular disease. There are no deleterious effects associated with reducing salt consumption and it is also very cost-effective. Many organizations and state governments have issued recommendations regarding the suitable amount of salt consumption. In France, the objective is a salt consumption<8g/day in men and<6.5g/day in women and children. As 80% of consumed salt comes from manufactured products in developed countries, reduction of salt consumption requires the participation of the food industry. The other tool is consumer information and education. Salt consumption has already decreased in France in recent years, but efforts must continue. Copyright \u00a9 2013 Elsevier Masson SAS. All rights reserved.",
+        "title": "Should we eat less salt?",
+        "mem": "yes",
+        "questions": [
+            "Does high salt consumption lead to increased blood pressure?",
+            "Is high blood pressure a major cardiovascular risk factor?",
+            "Can reducing salt consumption decrease the incidence of cardiovascular disease?",
+            "Is there a link between high salt consumption and the risk of stroke?",
+            "Are there any negative effects associated with reducing salt consumption?",
+            "Has salt consumption decreased in France in recent years?",
+            "Do organizations and state governments issue recommendations on salt consumption?",
+            "Is the salt consumption objective in France less than 8g/day for men?",
+            "Does 80% of consumed salt in developed countries come from manufactured products?",
+            "Is it necessary for the food industry to participate in reducing salt consumption?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-5298",
+                "MED-5295",
+                "MED-5291"
+            ],
+            [
+                "MED-5298",
+                "MED-2380",
+                "MED-5285"
+            ],
+            [
+                "MED-5298",
+                "MED-5291",
+                "MED-5301"
+            ],
+            [
+                "MED-5298",
+                "MED-5291",
+                "MED-2402"
+            ],
+            [
+                "MED-5298",
+                "MED-5291",
+                "MED-5290"
+            ],
+            [
+                "MED-5298",
+                "MED-5291",
+                "MED-5290"
+            ],
+            [
+                "MED-5298",
+                "MED-5291",
+                "MED-2765"
+            ],
+            [
+                "MED-5298",
+                "MED-5290",
+                "MED-5291"
+            ],
+            [
+                "MED-5298",
+                "MED-5302",
+                "MED-4665"
+            ],
+            [
+                "MED-5298",
+                "MED-5301",
+                "MED-4603"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,"
+        ]
+    },
+    "MED-4286": {
+        "text": "Nuts are rich sources of multiple nutrients and phytochemicals associated with health benefits, including reduced cardiovascular disease risk. This has prompted recommendations to increase their consumption. However, they are also high in fat and are energy dense. The associations between these properties, positive energy balance and body weight raise questions about such recommendations. Numerous epidemiological and clinical studies show that nuts are not associated with weight gain. Mechanistic studies indicate this is largely attributable to the high satiety and low metabolizable energy (poor bioaccessibility leading to inefficient energy absorption) properties of nuts. Compensatory dietary responses account for 55-75% of the energy provided by nuts. Limited data suggest that routine nut consumption is associated with elevated resting energy expenditure and the thermogenic effect of feeding, resulting in dissipation of another portion of the energy they provide. Additionally, trials contrasting weight loss through regimens that include or exclude nuts indicate improved compliance and greater weight loss when nuts are permitted. Nuts may be included in the diet, in moderation, to enhance palatability, nutrient quality, and chronic disease risk reduction without compromising weight loss or maintenance.",
+        "title": "Nuts and healthy body weight maintenance mechanisms.",
+        "mem": "yes",
+        "questions": [
+            "Do nuts have multiple nutrients and phytochemicals associated with health benefits?",
+            "Do epidemiological and clinical studies show that nuts are associated with weight gain?",
+            "Can nuts be included in the diet without compromising weight loss or maintenance?",
+            "Are nuts high in fat and energy dense?",
+            "Are nuts associated with a reduced risk of cardiovascular disease?",
+            "Do compensatory dietary responses account for 55-75% of the energy provided by nuts?",
+            "Is routine nut consumption associated with elevated resting energy expenditure?",
+            "Do trials show improved weight loss when nuts are included in weight loss regimens?",
+            "Do nuts have low metabolizable energy due to poor bioaccessibility?",
+            "Is the high satiety of nuts a factor in preventing weight gain?"
+        ],
+        "answers": [
+            " Yes,",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4286",
+                "MED-4314",
+                "MED-4298"
+            ],
+            [
+                "MED-4286",
+                "MED-4291",
+                "MED-2595"
+            ],
+            [
+                "MED-4286",
+                "MED-4292",
+                "MED-2595"
+            ],
+            [
+                "MED-4286",
+                "MED-2383",
+                "MED-2595"
+            ],
+            [
+                "MED-4314",
+                "MED-2383",
+                "MED-4706"
+            ],
+            [
+                "MED-4286",
+                "MED-4345",
+                "MED-2381"
+            ],
+            [
+                "MED-4286",
+                "MED-4290",
+                "MED-2383"
+            ],
+            [
+                "MED-4286",
+                "MED-2595",
+                "MED-4291"
+            ],
+            [
+                "MED-4286",
+                "MED-4320",
+                "MED-2383"
+            ],
+            [
+                "MED-4286",
+                "MED-4292",
+                "MED-3896"
+            ]
+        ],
+        "llm_responses": [
+            " Yes.",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-2299": {
+        "text": "BACKGROUND: Evidence is limited regarding the association between the combinations of multiple health practices and mortality. METHODS: In 1990, 28,333 men and women in Miyagi Prefecture in rural northern Japan (40-64 year of age) completed a self-administered questionnaire. A lifestyle score was calculated by adding the number of high-risk practices (smoking, consuming > or = 22.8 g alcohol/d, walking < 1 hr/d, body mass index < 18.5 or > or = 30.0). Cox regression was used to estimate relative risk (RR) of mortality according to the lifestyle score, with adjustment for age, education, marital status, past history of diseases, and dietary variables. During 11 years of follow-up, 1,200 subjects had died. RESULTS: We observed linear increase in risk of death associated with increasing number of high-risk practices: compared with men who had no high-risk practices, multivariate RRs for men who had 1 to 4 practices were 1.20, 1.66, 1.94, and 3.96, respectively (P for trend<0.001), and corresponding RRs for women were 1.31, 2.14, 3.98, 5.56, respectively (P for trend<0.001). A unit increase in the number of high-risk practices corresponded to being 2.8 and 4.8 years older for men and women, respectively. CONCLUSIONS: In this prospective cohort study of middle-aged men and women in rural Japan, a larger number of high-risk practices was associated with linear increase in risk of all-cause mortality.",
+        "title": "Health practices and mortality in Japan: combined effects of smoking, drinking, walking and body mass index in the Miyagi Cohort Study.",
+        "mem": "yes",
+        "questions": [
+            "Was the lifestyle score calculated by counting high-risk health practices?",
+            "Does the study conclude that a greater number of high-risk practices increases the risk of all-cause mortality?",
+            "Did the study participants complete a self-administered questionnaire in 1990?",
+            "Was smoking considered a high-risk practice in this study?",
+            "Were women found to have higher multivariate relative risks (RR) compared to men with the same number of high-risk practices?",
+            "Did the Cox regression model adjust for age, education, and marital status?",
+            "Did a unit increase in the number of high-risk practices correspond to aging by more than 2 years for both men and women?",
+            "Were participants between the ages of 40 and 64 in this study?",
+            "Did the study include participants from Miyagi Prefecture in northern Japan?",
+            "Did the study specifically measure mortality risk over an 11-year period?"
+        ],
+        "answers": [
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " No,",
+            " Yes.",
+            " Yes.",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-2299",
+                "MED-2304",
+                "MED-1679"
+            ],
+            [
+                "MED-2299",
+                "MED-3394",
+                "MED-1563"
+            ],
+            [
+                "MED-2299",
+                "MED-4342",
+                "MED-1018"
+            ],
+            [
+                "MED-2299",
+                "MED-1599",
+                "MED-758"
+            ],
+            [
+                "MED-2299",
+                "MED-5193",
+                "MED-3742"
+            ],
+            [
+                "MED-2299",
+                "MED-3251",
+                "MED-3421"
+            ],
+            [
+                "MED-2299",
+                "MED-3577",
+                "MED-2505"
+            ],
+            [
+                "MED-3431",
+                "MED-3982",
+                "MED-1607"
+            ],
+            [
+                "MED-2299",
+                "MED-5047",
+                "MED-5030"
+            ],
+            [
+                "MED-758",
+                "MED-2304",
+                "MED-1721"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " According to",
+            "ccording to",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-5074": {
+        "text": "Cooking as a domestic processing method has a great impact on food nutrients. Most Brassica (Brassicaceae, Cruciferae) vegetables are mainly consumed after being cooked, and cooking considerably affects their health-promoting compounds (specifically, glucosinolates, phenolic compunds, minerals, and vitamin C studied here). The microwave cooking process presents controversial results in the literature due to the different conditions that are employed (time, power, and added water). Therefore, the aim of this work was to study the influence of these conditions during microwave cooking on the human bioactive compounds of broccoli. The results show a general decrease in the levels of all the studied compounds except for mineral nutrients which were stable under all cooking conditions. Vitamin C showed the greatest losses mainly because of degradation and leaching, whereas losses for phenolic compounds and glucosinolates were mainly due to leaching into water. In general, the longest microwave cooking time and the higher volume of cooking water should be avoided to minimize losses of nutrients.",
+        "title": "Effects of microwave cooking conditions on bioactive compounds present in broccoli inflorescences.",
+        "mem": "yes",
+        "questions": [
+            "Does cooking have a great impact on food nutrients?",
+            "Are most Brassica vegetables consumed after being cooked?",
+            "Does cooking affect health-promoting compounds in Brassica vegetables?",
+            "Are glucosinolates, phenolic compounds, minerals, and vitamin C affected by cooking in the study?",
+            "Does vitamin C show the greatest losses during microwave cooking?",
+            "Should the longest microwave cooking time and higher volume of cooking water be avoided to minimize nutrient loss?",
+            "Was the study focused on the influence of microwave cooking conditions on broccoli?",
+            "Do mineral nutrients remain stable under all microwave cooking conditions?",
+            "Does microwave cooking present consistent results in the literature?",
+            "Is the loss of phenolic compounds mainly due to leaching into water?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " No,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-5074",
+                "MED-2182",
+                "MED-2183"
+            ],
+            [
+                "MED-5074",
+                "MED-2064",
+                "MED-5075"
+            ],
+            [
+                "MED-5074",
+                "MED-2064",
+                "MED-2066"
+            ],
+            [
+                "MED-5074",
+                "MED-5076",
+                "MED-847"
+            ],
+            [
+                "MED-5074",
+                "MED-2064",
+                "MED-909"
+            ],
+            [
+                "MED-5074",
+                "MED-4262",
+                "MED-884"
+            ],
+            [
+                "MED-5074",
+                "MED-5075",
+                "MED-2064"
+            ],
+            [
+                "MED-5074",
+                "MED-4320",
+                "MED-2572"
+            ],
+            [
+                "MED-5074",
+                "MED-2183",
+                "MED-2182"
+            ],
+            [
+                "MED-5074",
+                "MED-2188",
+                "MED-4090"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " According to"
+        ]
+    },
+    "MED-4715": {
+        "text": "The present pilot study analyzed, for the first time, the in vivo effect of Medjool or Hallawi date consumption by healthy subjects on serum glucose, lipids, and oxidative stress. Total phenolics concentration in the Hallawi versus Medjool dates was greater by 20-31%. The major proportion of the soluble phenolics in both date varieties consisted of phenolic acids, mainly ferulic acid and coumaric acid derivatives, and also chlorogenic and caffeic acid derivatives. Unlike the Medjool dates, Hallawi dates contained a significant proportion of catechins as well. In addition, both varieties contained a quercetin derivative. Both date varieties possess antioxidative properties in vitro, but the ferric ion reducing antioxidant power of Hallawi versus Medjool dates was higher by 24%. Ten healthy subjects consumed, for a period of 4 weeks 100 g/day of either Medjool or Hallawi dates. The date consumption did not significantly affect the subjects' body mass index (BMI), their serum total cholesterol, or their cholesterol levels in the VLDL, LDL, or HDL fractions. Most important, fasting serum glucose and triacylglycerol levels were not increased after consumption of either date variety, and serum triacylglycerol levels even significantly (p < 0.05) decreased, by 8 or 15% after Medjool or Hallawi date consumption, respectively. Basal serum oxidative status was significantly (p < 0.01) decreased by 33%, as compared to the levels observed before consumption, after Hallawi (but not Medjool) date consumption. Similarly, the susceptibility of serum to AAPH-induced lipid peroxidation decreased by 12%, but only after Hallawi date consumption. In agreement with the above results, serum activity of the HDL-associated antioxidant enzyme paraoxonase 1 (PON1) significantly increased, by 8%, after Hallawi date consumption. It is concluded that date consumption (and mainly the Hallawi variety) by healthy subjects, despite their high sugar content, demonstrates beneficial effects on serum triacylglycerol and oxidative stress and does not worsen serum glucose and lipid/lipoprotein patterns, and thus can be considered an antiatherogenic nutrient .",
+        "title": "Effects of date ( Phoenix dactylifera L., Medjool or Hallawi Variety) consumption by healthy subjects on serum glucose and lipid levels and on seru...",
+        "mem": "yes",
+        "questions": [
+            "Does the study analyze the effect of date consumption on serum glucose, lipids, and oxidative stress?",
+            "Are Hallawi dates higher in total phenolics concentration compared to Medjool dates by 20-31%?",
+            "Did fasting serum glucose levels increase after consumption of Medjool or Hallawi dates?",
+            "Did the consumption of either date variety significantly affect the subjects' BMI?",
+            "Was basal serum oxidative status significantly decreased after Hallawi date consumption?",
+            "Were serum triacylglycerol levels decreased after Medjool date consumption?",
+            "Do Medjool dates contain a significant proportion of catechins?",
+            "Did Hallawi date consumption reduce the susceptibility of serum to AAPH-induced lipid peroxidation by 12%?",
+            "Did the serum activity of the HDL-associated enzyme paraoxonase 1 (PON1) significantly increase after Hallawi date consumption?",
+            "Does the study conclude that Hallawi date consumption can be considered an antiatherogenic nutrient?"
+        ],
+        "answers": [
+            "Yes,",
+            "Yes.",
+            "No,",
+            "No,",
+            "Yes,",
+            "Yes,",
+            "No.",
+            "Yes,",
+            "Yes,",
+            "Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4715",
+                "MED-3166",
+                "MED-5263"
+            ],
+            [
+                "MED-4715",
+                "MED-4716",
+                "MED-897"
+            ],
+            [
+                "MED-4715",
+                "MED-3820",
+                "MED-1609"
+            ],
+            [
+                "MED-4715",
+                "MED-3907",
+                "MED-3897"
+            ],
+            [
+                "MED-4715",
+                "MED-5263",
+                "MED-2229"
+            ],
+            [
+                "MED-4715",
+                "MED-1515",
+                "MED-4608"
+            ],
+            [
+                "MED-4715",
+                "MED-4716",
+                "MED-4585"
+            ],
+            [
+                "MED-4715",
+                "MED-1889",
+                "MED-5149"
+            ],
+            [
+                "MED-4715",
+                "MED-4901",
+                "MED-2971"
+            ],
+            [
+                "MED-4715",
+                "MED-3906",
+                "MED-1950"
+            ]
+        ],
+        "llm_responses": [
+            "Yes,",
+            "Yes.",
+            "No,",
+            "No,",
+            "Yes,",
+            "Yes,",
+            "No,",
+            "Yes,",
+            "Yes,",
+            "Yes,"
+        ]
+    },
+    "MED-855": {
+        "text": "Hydrogen peroxide is an oxidising agent that is used in a number of household products, including general-purpose disinfectants, chlorine-free bleaches, fabric stain removers, contact lens disinfectants and hair dyes, and it is a component of some tooth whitening products. In industry, the principal use of hydrogen peroxide is as a bleaching agent in the manufacture of paper and pulp. Hydrogen peroxide has been employed medicinally for wound irrigation and for the sterilisation of ophthalmic and endoscopic instruments. Hydrogen peroxide causes toxicity via three main mechanisms: corrosive damage, oxygen gas formation and lipid peroxidation. Concentrated hydrogen peroxide is caustic and exposure may result in local tissue damage. Ingestion of concentrated (>35%) hydrogen peroxide can also result in the generation of substantial volumes of oxygen. Where the amount of oxygen evolved exceeds its maximum solubility in blood, venous or arterial gas embolism may occur. The mechanism of CNS damage is thought to be arterial gas embolisation with subsequent brain infarction. Rapid generation of oxygen in closed body cavities can also cause mechanical distension and there is potential for the rupture of the hollow viscus secondary to oxygen liberation. In addition, intravascular foaming following absorption can seriously impede right ventricular output and produce complete loss of cardiac output. Hydrogen peroxide can also exert a direct cytotoxic effect via lipid peroxidation. Ingestion of hydrogen peroxide may cause irritation of the gastrointestinal tract with nausea, vomiting, haematemesis and foaming at the mouth; the foam may obstruct the respiratory tract or result in pulmonary aspiration. Painful gastric distension and belching may be caused by the liberation of large volumes of oxygen in the stomach. Blistering of the mucosae and oropharyngeal burns are common following ingestion of concentrated solutions, and laryngospasm and haemorrhagic gastritis have been reported. Sinus tachycardia, lethargy, confusion, coma, convulsions, stridor, sub-epiglottic narrowing, apnoea, cyanosis and cardiorespiratory arrest may ensue within minutes of ingestion. Oxygen gas embolism may produce multiple cerebral infarctions. Although most inhalational exposures cause little more than coughing and transient dyspnoea, inhalation of highly concentrated solutions of hydrogen peroxide can cause severe irritation and inflammation of mucous membranes, with coughing and dyspnoea. Shock, coma and convulsions may ensue and pulmonary oedema may occur up to 24-72 hours post exposure. Severe toxicity has resulted from the use of hydrogen peroxide solutions to irrigate wounds within closed body cavities or under pressure as oxygen gas embolism has resulted. Inflammation, blistering and severe skin damage may follow dermal contact. Ocular exposure to 3% solutions may cause immediate stinging, irritation, lacrimation and blurred vision, but severe injury is unlikely. Exposure to more concentrated hydrogen peroxide solutions (>10%) may result in ulceration or perforation of the cornea. Gut decontamination is not indicated following ingestion, due to the rapid decomposition of hydrogen peroxide by catalase to oxygen and water. If gastric distension is painful, a gastric tube should be passed to release gas. Early aggressive airway management is critical in patients who have ingested concentrated hydrogen peroxide, as respiratory failure and arrest appear to be the proximate cause of death. Endoscopy should be considered if there is persistent vomiting, haematemesis, significant oral burns, severe abdominal pain, dysphagia or stridor. Corticosteroids in high dosage have been recommended if laryngeal and pulmonary oedema supervene, but their value is unproven. Endotracheal intubation, or rarely, tracheostomy may be required for life-threatening laryngeal oedema. Contaminated skin should be washed with copious amounts of water. Skin lesions should be treated as thermal burns; surgery may be required for deep burns. In the case of eye exposure, the affected eye(s) shod eye(s) should be irrigated immediately and thoroughly with water or 0.9% saline for at least 10-15 minutes. Instillation of a local anaesthetic may reduce discomfort and assist more thorough decontamination.",
+        "title": "Hydrogen peroxide poisoning.",
+        "mem": "yes",
+        "questions": [
+            "Is hydrogen peroxide used as a bleaching agent in the paper and pulp industry?",
+            "Does hydrogen peroxide cause toxicity through lipid peroxidation?",
+            "Can ingestion of concentrated hydrogen peroxide result in pulmonary aspiration?",
+            "Can hydrogen peroxide ingestion lead to cardiorespiratory arrest?",
+            "Is endoscopy considered if there is persistent vomiting after hydrogen peroxide ingestion?",
+            "Should gut decontamination be performed following hydrogen peroxide ingestion?",
+            "Can highly concentrated hydrogen peroxide solutions cause inflammation of mucous membranes when inhaled?",
+            "Is severe injury likely from ocular exposure to 3% hydrogen peroxide solutions?",
+            "Should affected eyes be irrigated immediately if exposed to hydrogen peroxide?",
+            "Are corticosteroids proven effective for treating laryngeal and pulmonary edema caused by hydrogen peroxide?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " No,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-855",
+                "MED-4526",
+                "MED-1161"
+            ],
+            [
+                "MED-855",
+                "MED-2704",
+                "MED-2705"
+            ],
+            [
+                "MED-855",
+                "MED-855",
+                "MED-854"
+            ],
+            [
+                "MED-855",
+                "MED-855",
+                "MED-926"
+            ],
+            [
+                "MED-853",
+                "MED-855",
+                "MED-855"
+            ],
+            [
+                "MED-855",
+                "MED-853",
+                "MED-855"
+            ],
+            [
+                "MED-855",
+                "MED-855",
+                "MED-854"
+            ],
+            [
+                "MED-855",
+                "MED-853",
+                "MED-855"
+            ],
+            [
+                "MED-855",
+                "MED-855",
+                "MED-853"
+            ],
+            [
+                "MED-855",
+                "MED-855",
+                "MED-3386"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " No,"
+        ]
+    },
+    "MED-5167": {
+        "text": "OBJECTIVES: The phytoestrogen (plant estrogen) genistein, present in soy products, is of interest because in utero exposure to genistein can cause hypospadias in our mouse model and maternal consumption of soy is prevalent in human populations. Another compound of interest is the fungicide vinclozolin, which also causes hypospadias in the mouse and rat and can occur concurrently with genistein in the diet as a residue on exposed foods. A study in the United Kingdom found no relationship between a maternal organic vegetarian diet and hypospadias frequency, but women who consumed nonorganic vegetarian diets had a greater percentage of sons with hypospadias. Because nonorganic diets can include residues of pesticides such as vinclozolin, we sought to assess the interaction of realistic daily exposures to genistein and vinclozolin and their effects on the incidence of hypospadias. METHODS: Pregnant mice were fed a soy-free diet and orally gavaged from gestational days 13 to 17 with 0.17 mg/kg/day of genistein, 10 mg/kg/day of vinclozolin, or genistein and vinclozolin together at the same doses, all in 100 microL of corn oil. The controls received the corn oil vehicle. The male fetuses were examined at gestational day 19 for hypospadias, both macroscopically and histologically. RESULTS: We identified no hypospadias in the corn oil group. The incidence of hypospadias was 25% with genistein alone, 42% with vinclozolin alone, and 41% with genistein and vinclozolin together. CONCLUSIONS: These findings support the idea that exposure to these compounds during gestation could contribute to the development of hypospadias.",
+        "title": "Endocrine disruptors and hypospadias: role of genistein and the fungicide vinclozolin.",
+        "mem": "yes",
+        "questions": [
+            "Does in utero exposure to genistein cause hypospadias in the mouse model?",
+            "Did the findings support the idea that exposure to genistein and vinclozolin during gestation could contribute to the development of hypospadias?",
+            "Were the pregnant mice orally gavaged with genistein and vinclozolin from gestational days 13 to 17?",
+            "Do nonorganic vegetarian diets have a greater percentage of sons with hypospadias compared to organic diets?",
+            "Is genistein found in soy products?",
+            "Was the incidence of hypospadias higher with vinclozolin alone compared to genistein alone?",
+            "Can vinclozolin occur concurrently with genistein as a residue on exposed foods?",
+            "Did the study in the United Kingdom find a relationship between a maternal organic vegetarian diet and hypospadias frequency?",
+            "Were pregnant mice fed a soy-free diet in the study?",
+            "Did the control group receive only the corn oil vehicle?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes.",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-5167",
+                "MED-3590",
+                "MED-5168"
+            ],
+            [
+                "MED-5167",
+                "MED-3032",
+                "MED-5168"
+            ],
+            [
+                "MED-5167",
+                "MED-2208",
+                "MED-865"
+            ],
+            [
+                "MED-5167",
+                "MED-5168",
+                "MED-4984"
+            ],
+            [
+                "MED-5167",
+                "MED-5003",
+                "MED-2655"
+            ],
+            [
+                "MED-5167",
+                "MED-3875",
+                "MED-2655"
+            ],
+            [
+                "MED-5167",
+                "MED-1157",
+                "MED-1732"
+            ],
+            [
+                "MED-5167",
+                "MED-5168",
+                "MED-5175"
+            ],
+            [
+                "MED-5167",
+                "MED-4352",
+                "MED-3273"
+            ],
+            [
+                "MED-5167",
+                "MED-3143",
+                "MED-3868"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " According to",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-1440": {
+        "text": "Aging and metabolism-related disorders are risk factors for Alzheimer disease (AD). Since sirtuins may increase the lifespan through regulation of cellular metabolism, we compared the concentration of sirtuin 1 (SIRT1) in the brains of AD patients (n = 19) and controls (n = 22) using Western immunoblots and in situ hybridization. We report a significant reduction of SIRT1 (mRNA: \u221229%; protein: \u221245%) in the parietal cortex of AD patients, but not in the cerebellum. Further analyses in a second cohort of 36 subjects confirmed that cortical SIRT1 was decreased in the cortex of AD patients but not in individuals with mild cognitive impairment. SIRT1 mRNA and its translated protein correlated negatively with the duration of symptoms (mRNA: r2 = \u22120.367; protein: r2 = \u22120.326) and the accumulation of paired helical filament tau (mRNA: r2 = \u22120.230; protein: r2 = \u22120.119), but weakly with insoluble amyloid-\u03b2(A\u03b242 (mRNA: r2 = \u22120.090; protein: r2 = \u22120.072). A significant relationship between SIRT1 levels and global cognition scores proximate to death was also found (r2 = +0.09; p = 0.049). In contrast, cortical SIRT1 levels remained unchanged in a triple-transgenic animal model of AD. Collectively, our results indicate that loss of SIRT1 is closely associated with the accumulation of A\u03b2 and tau in the cerebral cortex of patients with AD.",
+        "title": "SIRT1 Decrease Parallels the Accumulation of tau in Alzheimer Disease",
+        "mem": "yes",
+        "questions": [
+            "Are aging and metabolism-related disorders considered risk factors for Alzheimer disease (AD)?",
+            "Is the loss of SIRT1 closely associated with the accumulation of A\u03b2 and tau in the cerebral cortex of AD patients?",
+            "Was a significant reduction in sirtuin 1 (SIRT1) observed in the parietal cortex of AD patients?",
+            "Did further analyses confirm that cortical SIRT1 levels are decreased in the cortex of patients with mild cognitive impairment?",
+            "Do sirtuins have the potential to increase lifespan through the regulation of cellular metabolism?",
+            "Did cortical SIRT1 levels remain unchanged in a triple-transgenic animal model of AD?",
+            "Was there a reduction of SIRT1 in the cerebellum of AD patients?",
+            "Do SIRT1 mRNA and protein levels correlate weakly with the amount of insoluble amyloid-\u03b2 (A\u03b242) in AD patients?",
+            "Is there a negative correlation between SIRT1 mRNA levels and the duration of AD symptoms?",
+            "Is there a significant relationship between SIRT1 levels and global cognition scores near the time of death?"
+        ],
+        "answers": [
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1440",
+                "MED-1504",
+                "MED-2212"
+            ],
+            [
+                "MED-1440",
+                "MED-1436",
+                "MED-1434"
+            ],
+            [
+                "MED-1440",
+                "MED-1436",
+                "MED-3965"
+            ],
+            [
+                "MED-1440",
+                "MED-1436",
+                "MED-994"
+            ],
+            [
+                "MED-1440",
+                "MED-1436",
+                "MED-1434"
+            ],
+            [
+                "MED-1440",
+                "MED-1810",
+                "MED-1939"
+            ],
+            [
+                "MED-1440",
+                "MED-1436",
+                "MED-1315"
+            ],
+            [
+                "MED-1440",
+                "MED-1436",
+                "MED-1434"
+            ],
+            [
+                "MED-1440",
+                "MED-1436",
+                "MED-1434"
+            ],
+            [
+                "MED-1440",
+                "MED-1503",
+                "MED-1700"
+            ]
+        ],
+        "llm_responses": [
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-4267": {
+        "text": "The aim of our studies was to determine the amount of polyphenols reaching the colon after oral intake of apple juice and blueberries. After a polyphenol-free diet healthy ileostomy volunteers consumed a polyphenol-rich cloudy apple juice while others consumed anthocyanin-rich blueberries. Ileostomy effluent was collected and polyphenols were identified using HPLC-DAD as well as HPLC-ESI-MS/MS; quantification was performed with HPLC-DAD. Most of the orally administered apple polyphenols were absorbed from or metabolized in the small intestine. Between 0 and 33% of the oral dose was recovered in the ileostomy bags with a maximum of excretion after 2 h. A higher amount of the blueberry anthocyanins under study (up to 85%, depending on the sugar moiety) were determined in the ileostomy bags and therefore would reach the colon under physiological circumstances. Such structure-related availability has to be considered when polyphenols are used in model systems to study potential preventive effects in colorectal diseases.",
+        "title": "Studies on apple and blueberry fruit constituents: do the polyphenols reach the colon after ingestion?",
+        "mem": "yes",
+        "questions": [
+            "Did the study aim to determine the amount of polyphenols reaching the colon after the intake of apple juice and blueberries?",
+            "Were healthy ileostomy volunteers used in the study after following a polyphenol-free diet?",
+            "Did between 0 and 33% of the oral dose of apple polyphenols get recovered in the ileostomy bags?",
+            "Did the study use HPLC-DAD and HPLC-ESI-MS/MS to identify polyphenols in the ileostomy effluent?",
+            "Was it found that most of the apple polyphenols were absorbed or metabolized in the small intestine?",
+            "Did up to 85% of the blueberry anthocyanins reach the ileostomy bags depending on the sugar moiety?",
+            "Were the polyphenols quantified using HPLC-DAD in this study?",
+            "Would the anthocyanins from blueberries potentially reach the colon under normal physiological circumstances?",
+            "Does the study suggest that structure-related availability of polyphenols needs to be considered in colorectal disease prevention research?",
+            "Was the maximum excretion of apple polyphenols observed after 2 hours?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4267",
+                "MED-3746",
+                "MED-4901"
+            ],
+            [
+                "MED-4267",
+                "MED-5199",
+                "MED-5260"
+            ],
+            [
+                "MED-4267",
+                "MED-1847",
+                "MED-897"
+            ],
+            [
+                "MED-4267",
+                "MED-3922",
+                "MED-4587"
+            ],
+            [
+                "MED-4267",
+                "MED-3199",
+                "MED-4587"
+            ],
+            [
+                "MED-4267",
+                "MED-4859",
+                "MED-3742"
+            ],
+            [
+                "MED-4267",
+                "MED-3922",
+                "MED-4587"
+            ],
+            [
+                "MED-4267",
+                "MED-5071",
+                "MED-3746"
+            ],
+            [
+                "MED-4267",
+                "MED-1405",
+                "MED-4776"
+            ],
+            [
+                "MED-4267",
+                "MED-2448",
+                "MED-1670"
+            ]
+        ],
+        "llm_responses": [
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            "Yes,"
+        ]
+    },
+    "MED-4559": {
+        "text": "The cardiovascular risk reduction associated with different statins for the prevention of cardiovascular disease and the cardiovascular risk increase associated with excess dietary intake of fat have been quantified. However, these relative risks have never been directly juxtaposed to determine whether an increase in relative risk by 1 activity could be neutralized by an opposing change in relative risk from a second activity. The investigators compared the increase in relative risk for cardiovascular disease associated with the total fat and trans fat content of fast foods against the relative risk decrease provided by daily statin consumption from a meta-analysis of statins in primary prevention of coronary artery disease (7 randomized controlled trials including 42,848 patients). The risk reduction associated with the daily consumption of most statins, with the exception of pravastatin, is more powerful than the risk increase caused by the daily extra fat intake associated with a 7-oz hamburger (Quarter Pounder) with cheese and a small milkshake. In conclusion, statin therapy can neutralize the cardiovascular risk caused by harmful diet choices. In other spheres of human activity, individuals choosing risky pursuits (motorcycling, smoking, driving) are advised or compelled to use measures to minimize the risk (safety equipment, filters, seatbelts). Likewise, some individuals eat unhealthily. Routine accessibility of statins in establishments providing unhealthy food might be a rational modern means to offset the cardiovascular risk. Fast food outlets already offer free condiments to supplement meals. A free statin-containing accompaniment would offer cardiovascular benefits, opposite to the effects of equally available salt, sugar, and high-fat condiments. Although no substitute for systematic lifestyle improvements, including healthy diet, regular exercise, weight loss, and smoking cessation, complimentary statin packets would add, at little cost, 1 positive choice to a panoply of negative ones.",
+        "title": "Can a statin neutralize the cardiovascular risk of unhealthy dietary choices?",
+        "mem": "yes",
+        "questions": [
+            "Can statin therapy neutralize the cardiovascular risk caused by unhealthy dietary choices?",
+            "Have the relative risks associated with statins and dietary fat intake been directly compared before?",
+            "Is the cardiovascular risk reduction from statins greater than the risk increase from consuming a 7-oz hamburger with cheese and a small milkshake?",
+            "Did the investigators analyze data from seven randomized controlled trials to compare statins against diet-related risks?",
+            "Do fast food outlets currently offer statins as part of their meal accompaniments?",
+            "Are statins compared to safety measures like seatbelts and filters in the text?",
+            "Does the text suggest that pravastatin is an exception among statins in reducing cardiovascular risk?",
+            "Does the text recommend that fast food establishments provide free statin-containing supplements with meals?",
+            "Is improving diet and lifestyle suggested as a substitute for statin use in the text?",
+            "Does the text propose complimentary statin packets as a way to add a positive choice to unhealthy eating habits?"
+        ],
+        "answers": [
+            " Yes,",
+            " No,",
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4559",
+                "MED-1887",
+                "MED-10"
+            ],
+            [
+                "MED-4559",
+                "MED-4823",
+                "MED-2429"
+            ],
+            [
+                "MED-4559",
+                "MED-5190",
+                "MED-2371"
+            ],
+            [
+                "MED-4559",
+                "MED-2429",
+                "MED-3430"
+            ],
+            [
+                "MED-4559",
+                "MED-1874",
+                "MED-2432"
+            ],
+            [
+                "MED-4559",
+                "MED-1639",
+                "MED-2431"
+            ],
+            [
+                "MED-4559",
+                "MED-1887",
+                "MED-10"
+            ],
+            [
+                "MED-4559",
+                "MED-2432",
+                "MED-1874"
+            ],
+            [
+                "MED-4559",
+                "MED-1887",
+                "MED-1554"
+            ],
+            [
+                "MED-4559",
+                "MED-2220",
+                "MED-3896"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            "cording to",
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes,"
+        ]
+    },
+    "MED-5134": {
+        "text": "This position paper on complementary feeding summarizes evidence for health effects of complementary foods. It focuses on healthy infants in Europe. After reviewing current knowledge and practices, we have formulated these conclusions: Exclusive or full breast-feeding for about 6 months is a desirable goal. Complementary feeding (ie, solid foods and liquids other than breast milk or infant formula and follow-on formula) should not be introduced before 17 weeks and not later than 26 weeks. There is no convincing scientific evidence that avoidance or delayed introduction of potentially allergenic foods, such as fish and eggs, reduces allergies, either in infants considered at increased risk for the development of allergy or in those not considered to be at increased risk. During the complementary feeding period, >90% of the iron requirements of a breast-fed infant must be met by complementary foods, which should provide sufficient bioavailable iron. Cow's milk is a poor source of iron and should not be used as the main drink before 12 months, although small volumes may be added to complementary foods. It is prudent to avoid both early (<4 months) and late (>or=7 months) introduction of gluten, and to introduce gluten gradually while the infant is still breast-fed, inasmuch as this may reduce the risk of celiac disease, type 1 diabetes mellitus, and wheat allergy. Infants and young children receiving a vegetarian diet should receive a sufficient amount ( approximately 500 mL) of breast milk or formula and dairy products. Infants and young children should not be fed a vegan diet.",
+        "title": "Complementary feeding: a commentary by the ESPGHAN Committee on Nutrition.",
+        "mem": "yes",
+        "questions": [
+            "Is exclusive or full breast-feeding for about 6 months considered a desirable goal in this position paper?",
+            "Should complementary feeding be introduced before 17 weeks of age?",
+            "Is there scientific evidence supporting the delayed introduction of potentially allergenic foods to reduce allergies?",
+            "Should gluten be introduced gradually while the infant is still breast-fed according to the text?",
+            "Is cow's milk recommended as the main drink for infants before 12 months of age?",
+            "Does the position paper recommend feeding infants and young children a vegan diet?",
+            "Is there a recommendation against introducing complementary feeding later than 26 weeks?",
+            "Do infants and young children on a vegetarian diet need approximately 500 mL of breast milk or formula and dairy products?",
+            "Is it advised to introduce gluten early, before 4 months of age?",
+            "Does the text suggest that over 90% of the iron requirements for breast-fed infants need to be met by complementary foods?"
+        ],
+        "answers": [
+            " Yes.",
+            " No,",
+            " No,",
+            " Yes.",
+            " No,",
+            " No,",
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-5134",
+                "MED-5018",
+                "MED-4173"
+            ],
+            [
+                "MED-5134",
+                "MED-1227",
+                "MED-5018"
+            ],
+            [
+                "MED-5134",
+                "MED-5018",
+                "MED-2656"
+            ],
+            [
+                "MED-5134",
+                "MED-1227",
+                "MED-5018"
+            ],
+            [
+                "MED-5134",
+                "MED-2058",
+                "MED-5018"
+            ],
+            [
+                "MED-5134",
+                "MED-4724",
+                "MED-922"
+            ],
+            [
+                "MED-5134",
+                "MED-5018",
+                "MED-4372"
+            ],
+            [
+                "MED-5134",
+                "MED-2058",
+                "MED-1832"
+            ],
+            [
+                "MED-5134",
+                "MED-5018",
+                "MED-4919"
+            ],
+            [
+                "MED-5134",
+                "MED-1832",
+                "MED-993"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " No,",
+            " No,",
+            " Yes,",
+            " No,",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes,"
+        ]
+    },
+    "MED-4681": {
+        "text": "BACKGROUND: It has been suggested that phytoestrogens and dietary fiber can affect puberty timing. OBJECTIVE: We examined whether intake of isoflavone and fiber in healthy white children before their pubertal growth spurt [age at take-off (ATO)] was associated with puberty timing. DESIGN: Multivariate regression analyses were performed in 227 DONALD (DOrtmund Nutritional and Anthropometric Longitudinally Designed) Study participants with 3-d weighed dietary records and information on potential confounders at baseline (1 and 2 y before ATO). In a subsample (n = 111), urinary isoflavones were determined in 24-h urine samples by gas chromatography-mass spectrometry analysis. Puberty timing was examined by using ATO and chronologic ages at pubertal stage 2 for breast development (B2) or gonadal development, peak height velocity (PHV), and menarche or voice break. RESULTS: Girls whose diet was in the highest dietary isoflavone tertile experienced Tanner stage 2 for breast development ap 0.7 y later and reached PHV ap 0.6 y later than did girls whose diet was in the lowest isoflavone tertile [age (95% CI) at B2: 10.7 y (10.4, 10.9 y) compared with 10.0 y ( 9.7, 10.3 y), respectively; P for trend = 0.04; age at PHV: 11.9 y (11.6, 12.2 y) compared with 11.3 y (11.0, 11.6 y), respectively; P for trend = 0.04; adjusted for body mass index z score and fiber intake]. In boys, dietary isoflavones were not associated with pubertal markers. Urinary isoflavone and dietary fiber intakes were not associated with pubertal markers. CONCLUSIONS: Girls, but not boys, with higher prepubertal isoflavone intakes appear to enter puberty at a later age. Fiber intake in this sample of healthy white girls and boys was not relevant for puberty timing.",
+        "title": "Relation of isoflavones and fiber intake in childhood to the timing of puberty.",
+        "mem": "yes",
+        "questions": [
+            "Does the study suggest that phytoestrogens can affect puberty timing?",
+            "Was the intake of isoflavone in healthy white children examined in relation to puberty timing?",
+            "Did girls in the highest dietary isoflavone tertile reach Tanner stage 2 for breast development later than girls in the lowest tertile?",
+            "Did the study find that higher fiber intake was not associated with puberty timing in girls and boys?",
+            "Did the study conclude that higher prepubertal isoflavone intakes are linked to later puberty in girls?",
+            "Were urinary isoflavones measured in a subsample using gas chromatography-mass spectrometry analysis?",
+            "Was there a significant association between isoflavone intake and pubertal markers in boys?",
+            "Did the study use DONALD Study participants to perform the analyses?",
+            "Is the sample of participants used in the study limited to healthy white children?",
+            "Were multivariate regression analyses utilized to investigate the data?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes.",
+            " Yes.",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4681",
+                "MED-3832",
+                "MED-2438"
+            ],
+            [
+                "MED-4681",
+                "MED-3956",
+                "MED-4440"
+            ],
+            [
+                "MED-4681",
+                "MED-3956",
+                "MED-4745"
+            ],
+            [
+                "MED-4681",
+                "MED-4745",
+                "MED-3956"
+            ],
+            [
+                "MED-4681",
+                "MED-3956",
+                "MED-4745"
+            ],
+            [
+                "MED-1828",
+                "MED-4681",
+                "MED-3852"
+            ],
+            [
+                "MED-4681",
+                "MED-3956",
+                "MED-5117"
+            ],
+            [
+                "MED-1388",
+                "MED-1519",
+                "MED-1487"
+            ],
+            [
+                "MED-2026",
+                "MED-4681",
+                "MED-4388"
+            ],
+            [
+                "MED-3251",
+                "MED-2167",
+                "MED-5090"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            "o,",
+            " I don",
+            " No,",
+            "es,"
+        ]
+    },
+    "MED-3381": {
+        "text": "Background: The proposition that synthetic food colors can induce adverse behavioral effects in children was first enunciated in 1975 by Feingold [Why Your Child Is Hyperactive. New York:Random House (1975)], who asserted that elevated sensitivity to food additives underlies the signs of hyperactivity observed in some children. Although the evidence suggested that some unknown proportion of children did respond to synthetic food colors, the U.S. Food and Drug Administration (FDA) interpreted the evidence as inconclusive. A study published in 2007 [McCann et al. Food additives and hyperactive behaviour in 3-year-old and 8/9-year-old children in the community: a randomised, double-blinded, placebo-controlled trial. Lancet 370:1560\u20131567 (2007)] drew renewed attention to the hypothesis because of the study\u2019s size and scope. It led the FDA to review the evidence, hold a public hearing, and seek the advice of its Food Advisory Committee. In preparation for the hearing, the FDA reviewed the available evidence and concluded that it did not warrant further agency action. Objectives: In this commentary I examine the basis of the FDA\u2019s position, the elements of the review that led to its decision and that of the Food Advisory Committee, and the reasons that this is an environmental health issue. Discussion: The FDA review confined itself, in essence, to the clinical diagnosis of hyperactivity, as did the charge to the committee, rather than asking the broader environmental question of behavioral effects in the general population; it failed to recognize the significance of vulnerable subpopulations; and it misinterpreted the meaning of effect size as a criterion of risk. The FDA\u2019s response would have benefited from adopting the viewpoints and perspectives common to environmental health research. At the same time, the food color debate offers a lesson to environmental health researchers; namely, too narrow a focus on a single outcome or criterion can be misleading.",
+        "title": "Synthetic Food Colors and Neurobehavioral Hazards: The View from Environmental Health Research",
+        "mem": "yes",
+        "questions": [
+            "Did Feingold first propose in 1975 that synthetic food colors can induce adverse behavioral effects in children?",
+            "Did the FDA's review of evidence lead them to take further agency action regarding synthetic food colors?",
+            "Does the food color debate offer a lesson to environmental health researchers about the risks of focusing too narrowly on a single outcome?",
+            "Did the FDA consider the broader environmental question of behavioral effects in the general population in their review?",
+            "Did the study published in 2007 stimulate renewed attention to the hypothesis about synthetic food colors and hyperactivity?",
+            "Did the FDA recognize the significance of vulnerable subpopulations in their review process?",
+            "Was the evidence in 1975 conclusive according to the U.S. Food and Drug Administration (FDA)?",
+            "Did the FDA hold a public hearing in response to the 2007 study?",
+            "Was the FDA\u2019s review focused solely on the clinical diagnosis of hyperactivity?",
+            "Was the FDA's interpretation of effect size as a criterion of risk criticized in the commentary?"
+        ],
+        "answers": [
+            " Yes.",
+            " No,",
+            " Yes,",
+            " No,",
+            " Yes,",
+            " No,",
+            " No,",
+            " Yes,",
+            " Yes.",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3381",
+                "MED-3380",
+                "MED-5062"
+            ],
+            [
+                "MED-3381",
+                "MED-2618",
+                "MED-3497"
+            ],
+            [
+                "MED-3381",
+                "MED-2618",
+                "MED-3351"
+            ],
+            [
+                "MED-3381",
+                "MED-2710",
+                "MED-1501"
+            ],
+            [
+                "MED-3381",
+                "MED-3380",
+                "MED-3382"
+            ],
+            [
+                "MED-3381",
+                "MED-1107",
+                "MED-2725"
+            ],
+            [
+                "MED-3381",
+                "MED-1343",
+                "MED-2725"
+            ],
+            [
+                "MED-3381",
+                "MED-4959",
+                "MED-1343"
+            ],
+            [
+                "MED-3381",
+                "MED-4840",
+                "MED-1343"
+            ],
+            [
+                "MED-3381",
+                "MED-1343",
+                "MED-1725"
+            ]
+        ],
+        "llm_responses": [
+            " Yes.",
+            " No,",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " No,",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-3321": {
+        "text": "Avian leukosis/sarcoma viruses (ALSV) infect and cause cancers in chickens. Poultry workers are exposed to ALSV and other infectious agents in the workplace. This study examines if industrial hygiene assessment of antibody levels in poultry workers can identify risky job tasks at the higher exposure risk to an infectious agent, i.e., ALSV. We compared ALSV antibody levels in poultry workers and control subjects. Occupational and demographical factors were examined for an association with the exposure risk in poultry workers. We found that the antibody levels were significantly higher in poultry workers than in control subjects. Job category and age together were significantly associated with the antibody levels in workers. Certain job tasks were identified with significantly higher antibody levels as compared to others, implying that recommendations should be made to protect workers at these jobs. The findings of this study indicate that the measurement of antibody levels in workers can be useful for industrial hygiene assessment of exposure to infectious agents.",
+        "title": "Occupational exposure assessment using antibody levels: exposure to avian leukosis/sarcoma viruses in the poultry industry.",
+        "mem": "yes",
+        "questions": [
+            "Are poultry workers exposed to ALSV in the workplace?",
+            "Can the measurement of antibody levels in workers be useful for industrial hygiene assessment of exposure to infectious agents?",
+            "Do avian leukosis/sarcoma viruses (ALSV) cause cancers in chickens?",
+            "Were antibody levels found to be significantly higher in poultry workers than in control subjects?",
+            "Does the study examine if industrial hygiene assessment of antibody levels can identify risky job tasks?",
+            "Were ALSV antibody levels compared between poultry workers and control subjects?",
+            "Did the study identify certain job tasks with significantly higher antibody levels compared to others?",
+            "Did the study examine occupational and demographical factors for an association with exposure risk?",
+            "Is there a significant association between job category and antibody levels in workers?",
+            "Was age found to be significantly associated with antibody levels in poultry workers?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3321",
+                "MED-3320",
+                "MED-4431"
+            ],
+            [
+                "MED-3321",
+                "MED-3320",
+                "MED-4672"
+            ],
+            [
+                "MED-3321",
+                "MED-3320",
+                "MED-4767"
+            ],
+            [
+                "MED-3321",
+                "MED-3320",
+                "MED-4431"
+            ],
+            [
+                "MED-3321",
+                "MED-3320",
+                "MED-1122"
+            ],
+            [
+                "MED-3321",
+                "MED-3320",
+                "MED-4819"
+            ],
+            [
+                "MED-3321",
+                "MED-3320",
+                "MED-4841"
+            ],
+            [
+                "MED-1170",
+                "MED-1139",
+                "MED-3321"
+            ],
+            [
+                "MED-3320",
+                "MED-3321",
+                "MED-4672"
+            ],
+            [
+                "MED-3321",
+                "MED-3320",
+                "MED-1004"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-1521": {
+        "text": "OBJECTIVES: To justify the effects of Mentha piperita labiatae and Mentha spicata labiatae herbal teas on plasma total testosterone, luteinizing hormone, and follicle-stimulating hormone levels and testicular histologic features. We performed this study because of major complaints in our area from men about the adverse effects of these herbs on male reproductive function. METHODS: The experimental study included 48 male Wistar albino rats (body weight 200 to 250 g). The rats were randomized into four groups of 12 rats each. The control group was given commercial drinking water, and the experimental groups were given 20 g/L M. piperita tea, 20 g/L M. spicata tea, or 40 g/L M. spicata tea. RESULTS: The follicle-stimulating hormone and luteinizing hormone levels had increased and total testosterone levels had decreased in the experimental groups compared with the control group; the differences were statistically significant. Also, the Johnsen testicular biopsy scores were significantly different statistically between the experimental groups and the control group. Although the mean seminiferous tubular diameter of the experimental groups was relatively greater than in the control group, the difference was not statistically significant. The only effects of M. piperita on testicular tissue was segmental maturation arrest in the seminiferous tubules; however, the effects of M. spicata extended from maturation arrest to diffuse germ cell aplasia in relation to the dose. CONCLUSIONS: Despite the beneficial effects of M. piperita and M. spicata in digestion, we should also be aware of the toxic effects when the herbs are not used in the recommended fashion or at the recommended dose.",
+        "title": "Effects of peppermint teas on plasma testosterone, follicle-stimulating hormone, and luteinizing hormone levels and testicular tissue in rats.",
+        "mem": "yes",
+        "questions": [
+            "Were M. piperita and M. spicata teas given to the experimental groups?",
+            "Does the study investigate the effects of Mentha piperita and Mentha spicata on male reproductive function?",
+            "Did the study conclude that M. piperita and M. spicata can have toxic effects when not used at the recommended dose?",
+            "Were the differences in hormone levels between the experimental and control groups statistically significant?",
+            "Is there a significant difference in the Johnsen testicular biopsy scores between the experimental groups and the control group?",
+            "Was there a decrease in total testosterone levels in the experimental groups compared to the control group?",
+            "Were male Wistar albino rats used in the experimental study?",
+            "Did the levels of follicle-stimulating hormone increase in the experimental groups compared to the control group?",
+            "Did the M. spicata affect testicular tissue more severely than M. piperita?",
+            "Did the control group receive commercial drinking water?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1521",
+                "MED-1525",
+                "MED-1247"
+            ],
+            [
+                "MED-1521",
+                "MED-1525",
+                "MED-1247"
+            ],
+            [
+                "MED-1521",
+                "MED-1247",
+                "MED-1525"
+            ],
+            [
+                "MED-1521",
+                "MED-1842",
+                "MED-4886"
+            ],
+            [
+                "MED-1521",
+                "MED-2092",
+                "MED-3615"
+            ],
+            [
+                "MED-1521",
+                "MED-5337",
+                "MED-835"
+            ],
+            [
+                "MED-1521",
+                "MED-5055",
+                "MED-2219"
+            ],
+            [
+                "MED-1521",
+                "MED-3473",
+                "MED-5225"
+            ],
+            [
+                "MED-1521",
+                "MED-1525",
+                "MED-1247"
+            ],
+            [
+                "MED-3775",
+                "MED-1521",
+                "MED-709"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            "Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-3631": {
+        "text": "Polonium-210 ((210)Po) radioactive concentrations were determined in human semen fluid of vasectomized non-smoker volunteers. The (210)Po levels ranged from 0.10 to 0.39 mBq g(-1) (mean: 0.23 \u00b1 0.08 mBq g(-1)). This value decreased to 0.10 \u00b1 0.02 mBq g(-1) (range from 0.07 to 0.13 mBq g(-1)) after two weeks of a controlled diet, excluding fish and seafood. Then, volunteers ate during a single meal 200 g of the cooked mussel Perna perna L., and (210)Po levels were determined again, during ten days, in semen fluid samples collected every morning. Volunteers continued with the controlled diet and maintained sexual abstinence through the period of the experiment. A 300% increase of (210)Po level was observed the day following mussel consumption, with a later reduction, such that the level returned to near baseline by day 4. Copyright \u00a9 2011 Elsevier Ltd. All rights reserved.",
+        "title": "Increase of 210Po levels in human semen fluid after mussel ingestion.",
+        "mem": "yes",
+        "questions": [
+            "Were radioactive concentrations of Polonium-210 (210Po) measured in the semen fluid of vasectomized non-smoker volunteers?",
+            "Was there a 300% increase observed in (210)Po levels in semen fluid the day after mussel consumption?",
+            "Did the Polonium-210 (210Po) levels return to near baseline by day 4 after mussel consumption?",
+            "Did the Polonium-210 (210Po) level decrease to 0.10 \u00b1 0.02 mBq g(-1) after following a diet that excluded fish and seafood for two weeks?",
+            "Does the mean level of Polonium-210 (210Po) in semen fluid before the controlled diet exceed 0.30 mBq g(-1)?",
+            "Were semen fluid samples collected every morning for ten days following the consumption of mussels?",
+            "Did the controlled diet exclude fish and seafood during the experiment?",
+            "Were the participants asked to consume 200 g of cooked mussels during the study?",
+            "Were the participants required to maintain sexual abstinence throughout the experiment?",
+            "Was the mussel species consumed by the participants identified as Perna perna L.?"
+        ],
+        "answers": [
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3631",
+                "MED-3634",
+                "MED-4749"
+            ],
+            [
+                "MED-3631",
+                "MED-1778",
+                "MED-1783"
+            ],
+            [
+                "MED-3631",
+                "MED-5150",
+                "MED-966"
+            ],
+            [
+                "MED-3631",
+                "MED-5176",
+                "MED-3893"
+            ],
+            [
+                "MED-3631",
+                "MED-4468",
+                "MED-1845"
+            ],
+            [
+                "MED-3631",
+                "MED-1174",
+                "MED-3643"
+            ],
+            [
+                "MED-3631",
+                "MED-2339",
+                "MED-3445"
+            ],
+            [
+                "MED-3631",
+                "MED-4454",
+                "MED-4040"
+            ],
+            [
+                "MED-4644",
+                "MED-4121",
+                "MED-1926"
+            ],
+            [
+                "MED-3631",
+                "MED-2391",
+                "MED-5246"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            "",
+            " No,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " I don",
+            " Yes,"
+        ]
+    },
+    "MED-1794": {
+        "text": "Nonstarch polysaccharides (NSPs) occur naturally in many foods. The physiochemical and biological properties of these compounds correspond to dietary fiber. Nonstarch polysaccharides show various physiological effects in the small and large intestine and therefore have important health implications for humans. The remarkable properties of dietary NSPs are water dispersibility, viscosity effect, bulk, and fermentibility into short chain fatty acids (SCFAs). These features may lead to diminished risk of serious diet related diseases which are major problems in Western countries and are emerging in developing countries with greater affluence. These conditions include coronary heart disease, colo-rectal cancer, inflammatory bowel disease, breast cancer, tumor formation, mineral related abnormalities, and disordered laxation. Insoluble NSPs (cellulose and hemicellulose) are effective laxatives whereas soluble NSPs (especially mixed-link \u03b2-glucans) lower plasma cholesterol levels and help to normalize blood glucose and insulin levels, making these kinds of polysaccharides a part of dietary plans to treat cardiovascular diseases and Type 2 diabetes. Moreover, a major proportion of dietary NSPs escapes the small intestine nearly intact, and is fermented into SCFAs by commensal microflora present in the colon and cecum and promotes normal laxation. Short chain fatty acids have a number of health promoting effects and are particularly effective in promoting large bowel function. Certain NSPs through their fermented products may promote the growth of specific beneficial colonic bacteria which offer a prebiotic effect. Various modes of action of NSPs as therapeutic agent have been proposed in the present review. In addition, NSPs based films and coatings for packaging and wrapping are of commercial interest because they are compatible with several types of food products. However, much of the physiological and nutritional impact of NSPs and the mechanism involved is not fully understood and even the recommendation on the dose of different dietary NSPs intake among different age groups needs to be studied.",
+        "title": "Dietary roles of non-starch polysaccharides in human nutrition: a review.",
+        "mem": "yes",
+        "questions": [
+            "Do nonstarch polysaccharides occur naturally in many foods?",
+            "Are the physiochemical and biological properties of nonstarch polysaccharides related to dietary fiber?",
+            "Are insoluble nonstarch polysaccharides effective laxatives?",
+            "Do nonstarch polysaccharides have health implications for humans due to their effects in the small and large intestine?",
+            "Is a major proportion of dietary nonstarch polysaccharides fermented into short chain fatty acids by commensal microflora in the colon?",
+            "Do certain nonstarch polysaccharides promote the growth of beneficial colonic bacteria through their fermented products?",
+            "Do soluble nonstarch polysaccharides help lower plasma cholesterol levels?",
+            "Can short chain fatty acids promote large bowel function?",
+            "Do nonstarch polysaccharides help reduce the risk of diet-related diseases such as coronary heart disease and colorectal cancer?",
+            "Are nonstarch polysaccharides used in films and coatings for packaging and wrapping food products?"
+        ],
+        "answers": [
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1794",
+                "MED-2582",
+                "MED-993"
+            ],
+            [
+                "MED-1794",
+                "MED-993",
+                "MED-852"
+            ],
+            [
+                "MED-1794",
+                "MED-1295",
+                "MED-1006"
+            ],
+            [
+                "MED-1794",
+                "MED-993",
+                "MED-1413"
+            ],
+            [
+                "MED-1794",
+                "MED-993",
+                "MED-4266"
+            ],
+            [
+                "MED-1794",
+                "MED-993",
+                "MED-1574"
+            ],
+            [
+                "MED-1794",
+                "MED-1249",
+                "MED-4726"
+            ],
+            [
+                "MED-1794",
+                "MED-2107",
+                "MED-1420"
+            ],
+            [
+                "MED-1794",
+                "MED-5161",
+                "MED-1405"
+            ],
+            [
+                "MED-1794",
+                "MED-2582",
+                "MED-1580"
+            ]
+        ],
+        "llm_responses": [
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-3761": {
+        "text": "A group of 200 patients who presented in general practice with symptoms but no abnormal physical signs and in whom no definite diagnosis was made were randomly selected for one of four consultations: a consultation conducted in a \"positive manner,\" with and without treatment, and a consultation conducted in a \"non-positive manner,\" called a negative consultation, with and without treatment. Two weeks after consultation there was a significant difference in patient satisfaction between the positive and negative groups but not between the treated and untreated groups. Similarly, 64% of those receiving a positive consultation got better, compared with 39% of those who received a negative consultation (p = 0.001) and 53% of those treated got better compared with 50% of those not treated (p = 0.5).",
+        "title": "General practice consultations: is there any point in being positive?",
+        "mem": "yes",
+        "questions": [
+            "Two weeks after consultation, was there a significant difference in patient satisfaction between the positive and negative consultation groups?",
+            "Was a group of 200 patients randomly selected for consultations in this study?",
+            "Was there a significant difference in patient satisfaction between the treated and untreated groups?",
+            "Did the consultations include both a \"positive manner\" and a \"non-positive manner\"?",
+            "Did 64% of the patients who received a positive consultation show improvement?",
+            "Were there four types of consultations conducted in the study?",
+            "Was there a statistically significant difference in improvement rates between the positive and negative consultation groups (p = 0.001)?",
+            "Did the consultations also have variations with and without treatment?",
+            "Did only 39% of patients show improvement after receiving a negative consultation?",
+            "Did 53% of patients who received treatment show improvement?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3761",
+                "MED-2524",
+                "MED-1842"
+            ],
+            [
+                "MED-3761",
+                "MED-4022",
+                "MED-2708"
+            ],
+            [
+                "MED-3761",
+                "MED-4886",
+                "MED-4315"
+            ],
+            [
+                "MED-3761",
+                "MED-2183",
+                "MED-3758"
+            ],
+            [
+                "MED-3761",
+                "MED-3665",
+                "MED-2472"
+            ],
+            [
+                "MED-3761",
+                "MED-4598",
+                "MED-4673"
+            ],
+            [
+                "MED-3761",
+                "MED-2528",
+                "MED-2589"
+            ],
+            [
+                "MED-3761",
+                "MED-1010",
+                "MED-3177"
+            ],
+            [
+                "MED-3761",
+                "MED-3665",
+                "MED-2528"
+            ],
+            [
+                "MED-2472",
+                "MED-3665",
+                "MED-4842"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " No,",
+            "No,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " I don"
+        ]
+    },
+    "MED-2101": {
+        "text": "The notion that a breast-gut connection might modulate the microenvironment of breast tissue was supported by the finding that breast cyst fluid contains bile acids that are characteristically found in the intestines. To establish that the gut, rather than circulating steroid precursors, is the source of bile acids in breast cyst fluid, we gave two patients deuterium-labelled chenodeoxycholic acid (three 200 mg doses by mouth), starting 9 days before aspiration of breast cysts. The chenodeoxycholic acid concentration of seven samples of aspirated cyst fluid ranged from 42 to 94 mumol/L. The corresponding serum concentrations of chenodeoxycholic acid on the same day were 0.8 and 2.9 mumol/L, of which the labelled compound comprised 13.0% (0.38 mumol/L) and 28.2% (0.23 mumol/L). The deuterated chenodeoxycholic acid concentrations in cyst fluid were 0.79 and 1.26 mumol/L in two samples from patient 1 and 3.22 mumol/L in patient 2; these values are equivalent to 11-17% of the serum concentrations [corrected]. This study shows that intestinal bile acids rapidly gain access to cyst fluid. Further studies should investigate the mechanisms that govern the exchange processes and the maintenance of the high cyst fluid to plasma concentration gradients, and the biological half-lives of individual constituents.",
+        "title": "Breast-gut connection: origin of chenodeoxycholic acid in breast cyst fluid.",
+        "mem": "no",
+        "questions": [
+            "Were bile acids found in breast cyst fluid?",
+            "Did the concentration of chenodeoxycholic acid in aspirated cyst fluid range between 42 and 94 mumol/L?",
+            "Does the study suggest that intestinal bile acids gain access to breast cyst fluid rapidly?",
+            "Were the deuterated chenodeoxycholic acid concentrations in cyst fluid from patient 1 higher than those in patient 2?",
+            "Were serum concentrations of chenodeoxycholic acid measured on the same day as the cyst fluid aspiration?",
+            "Did the labelled compound account for 13.0% and 28.2% of the serum chenodeoxycholic acid concentrations in the study?",
+            "Is further research suggested to explore the mechanisms of exchange processes and concentration gradients in cyst fluid?",
+            "Did the study involve administering deuterium-labelled chenodeoxycholic acid to patients?",
+            "Was chenodeoxycholic acid a focus of the study in relation to breast cyst fluid?",
+            "Does the text suggest a connection between the breast and the gut?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " No,",
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-2102",
+                "MED-4641",
+                "MED-2100"
+            ],
+            [
+                "MED-2102",
+                "MED-3746",
+                "MED-4628"
+            ],
+            [
+                "MED-2107",
+                "MED-2102",
+                "MED-4641"
+            ],
+            [
+                "MED-2102",
+                "MED-3820",
+                "MED-4864"
+            ],
+            [
+                "MED-2102",
+                "MED-3792",
+                "MED-886"
+            ],
+            [
+                "MED-1000",
+                "MED-2395",
+                "MED-993"
+            ],
+            [
+                "MED-1666",
+                "MED-3520",
+                "MED-4606"
+            ],
+            [
+                "MED-2102",
+                "MED-1113",
+                "MED-3921"
+            ],
+            [
+                "MED-2102",
+                "MED-4940",
+                "MED-3130"
+            ],
+            [
+                "MED-3674",
+                "MED-5352",
+                "MED-4764"
+            ]
+        ],
+        "llm_responses": [
+            " I don",
+            " I don",
+            " No,",
+            " I don",
+            " I don",
+            " I don",
+            " I don",
+            " No,",
+            " I don",
+            " No,"
+        ]
+    },
+    "MED-1048": {
+        "text": "Because the range of bowel habits and stool types in the community is unknown we questioned 838 men and 1059 women, comprising 72.2% of a random stratified sample of the East Bristol population. Most of them kept records of three consecutive defecations, including stool form on a validated six point scale ranging from hard, round lumps to mushy. Questionnaire responses agreed moderately well with recorded data. Although the most common bowel habit was once daily this was a minority practice in both sexes; a regular 24 hour cycle was apparent in only 40% of men and 33% of women. Another 7% of men and 4% of women seemed to have a regular twice or thrice daily bowel habit. Thus most people had irregular bowels. A third of women defecated less often than daily and 1% once a week or less. Stools at the constipated end of the scale were passed more often by women than men. In women of child bearing age bowel habit and the spectrum of stool types were shifted towards constipation and irregularity compared with older women and three cases of severe slow transit constipation were discovered in young women. Otherwise age had little effect on bowel habit or stool type. Normal stool types, defined as those least likely to evoke symptoms, accounted for only 56% of all stools in women and 61% in men. Most defecations occurred in the early morning and earlier in men than in women. We conclude that conventionally normal bowel function is enjoyed by less than half the population and that, in this aspect of human physiology, younger women are especially disadvantaged.",
+        "title": "Defecation frequency and timing, and stool form in the general population: a prospective study.",
+        "mem": "no",
+        "questions": [
+            "Did the study conclude that less than half of the population enjoys conventionally normal bowel function?",
+            "Were normal stool types defined as those least likely to evoke symptoms?",
+            "Is once daily the most common bowel habit according to the study?",
+            "Was it found that a third of women defecated less often than daily?",
+            "Did the study question both men and women about their bowel habits?",
+            "Was there a greater occurrence of early morning defecations among men compared to women?",
+            "Did the study find that young women are more affected by constipation and irregularity compared to older women?",
+            "Was the sample taken from the East Bristol population?",
+            "Did more than 50% of men in the study report having a regular 24-hour bowel cycle?",
+            "Did a majority of participants in the study exhibit irregular bowel habits?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1040",
+                "MED-1035",
+                "MED-1146"
+            ],
+            [
+                "MED-1040",
+                "MED-3514",
+                "MED-1034"
+            ],
+            [
+                "MED-1040",
+                "MED-1035",
+                "MED-5175"
+            ],
+            [
+                "MED-1035",
+                "MED-4810",
+                "MED-5175"
+            ],
+            [
+                "MED-5175",
+                "MED-4810",
+                "MED-1040"
+            ],
+            [
+                "MED-4810",
+                "MED-1040",
+                "MED-1032"
+            ],
+            [
+                "MED-1013",
+                "MED-2100",
+                "MED-4641"
+            ],
+            [
+                "MED-1757",
+                "MED-2217",
+                "MED-2989"
+            ],
+            [
+                "MED-1040",
+                "MED-1035",
+                "MED-4638"
+            ],
+            [
+                "MED-1040",
+                "MED-4342",
+                "MED-5175"
+            ]
+        ],
+        "llm_responses": [
+            " I don",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " I don",
+            " I don",
+            " I don",
+            " No,",
+            " According to"
+        ]
+    },
+    "MED-4159": {
+        "text": "CONTEXT: The Women's Health Initiative Memory Study (WHIMS) previously found increased risk for dementia and no effect on mild cognitive impairment (MCI) in women treated with conjugated equine estrogens (CEE) plus medroxyprogesterone acetate (MPA). OBJECTIVE: To determine the effects of CEE alone and CEE plus MPA on incidence of probable dementia and MCI in older women. DESIGN, SETTING, AND PARTICIPANTS: Randomized, double-blind, placebo-controlled clinical trials of CEE (estrogen-alone trial) or CEE plus MPA (estrogen plus progestin trial) in community-dwelling women aged 65 to 79 years, conducted from June 1995 to July 8, 2002 (estrogen plus progestin; n = 4532), or to February 29, 2004 (estrogen-alone; n = 2947), in 39 of the 40 WHI clinical centers. INTERVENTIONS: In the estrogen-alone trial, 1 daily tablet containing either 0.625 mg/d of CEE vs matching placebo; in the estrogen plus progestin trial, 1 daily tablet containing CEE (0.625 mg/d) plus MPA (2.5 mg/d) vs matching placebos. MAIN OUTCOME MEASURES: Probable dementia and MCI. RESULTS: In the estrogen-alone trial, 47 participants were diagnosed with probable dementia, of whom 28 were assigned to CEE and 19 to placebo (hazard ratio [HR], 1.49; 95% confidence interval [CI], 0.83-2.66). Incidence rates for probable dementia in the estrogen-alone trial were statistically similar to those in the estrogen plus progestin trial (45 vs 22 per 10 000 person-years for CEE plus MPA vs placebo, respectively; P =.11). When data were pooled per the original WHIMS protocol, the overall HR for probable dementia was 1.76 (95% CI, 1.19-2.60; P =.005). After excluding participants with baseline Modified Mini-Mental State Examination scores at or below the screening cut point, the HR was 1.77 (95% CI, 0.74-4.23; P =.20) in the estrogen-alone trial and 2.19 (95% CI, 1.25-3.84; P =.006) in the pooled trials. In the estrogen-alone trial, 76 participants were diagnosed with MCI in the CEE group vs 58 in the placebo group (HR, 1.34; 95% CI, 0.95-1.89). In the combined trial data, the HR was similar (1.25; 95% CI, 0.97-1.60). In the estrogen-alone trial, 93 participants receiving CEE were diagnosed with either probable dementia or MCI vs 69 receiving placebo (HR, 1.38; 95% CI, 1.01-1.89; P =.04). CONCLUSIONS: Estrogen therapy alone did not reduce dementia or MCI incidence and increased the risk for both end points combined. Pooling data for estrogen alone and estrogen plus progestin resulted in increased risks for both end points. Use of hormone therapy to prevent dementia or cognitive decline in women 65 years of age or older is not recommended.",
+        "title": "Conjugated equine estrogens and incidence of probable dementia and mild cognitive impairment in postmenopausal women: Women's Health Initiative Mem...",
+        "mem": "no",
+        "questions": [
+            "Was there any effect on mild cognitive impairment (MCI) for women treated with CEE plus MPA according to the WHIMS?",
+            "Was the objective of the study to determine the effects of CEE alone and CEE plus MPA on dementia and MCI incidence?",
+            "Was the incidence of probable dementia statistically the same in the estrogen-alone and estrogen plus progestin trials?",
+            "Did the Women's Health Initiative Memory Study (WHIMS) find an increased risk of dementia with the combination of conjugated equine estrogens (CEE) and medroxyprogesterone acetate (MPA)?",
+            "In the estrogen-alone trial, were more participants diagnosed with probable dementia in the CEE group compared to the placebo group?",
+            "Were community-dwelling women aged 65 to 79 years participants in the WHI trials?",
+            "In the estrogen-alone trial, were more participants in the CEE group diagnosed with MCI than in the placebo group?",
+            "Did the estrogen-alone trial have a placebo-controlled design?",
+            "Does the pooled data from the trials suggest an increased risk of probable dementia with hormone therapy?",
+            "Based on the study's conclusions, is hormone therapy recommended for preventing dementia or cognitive decline in women aged 65 or older?"
+        ],
+        "answers": [
+            " No effect",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " No,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4158",
+                "MED-2430",
+                "MED-1848"
+            ],
+            [
+                "MED-2430",
+                "MED-4158",
+                "MED-3179"
+            ],
+            [
+                "MED-4160",
+                "MED-4160",
+                "MED-4162"
+            ],
+            [
+                "MED-4158",
+                "MED-4160",
+                "MED-4582"
+            ],
+            [
+                "MED-4158",
+                "MED-4007",
+                "MED-980"
+            ],
+            [
+                "MED-3799",
+                "MED-4158",
+                "MED-3431"
+            ],
+            [
+                "MED-4158",
+                "MED-2782",
+                "MED-1360"
+            ],
+            [
+                "MED-4193",
+                "MED-4160",
+                "MED-3753"
+            ],
+            [
+                "MED-4158",
+                "MED-1504",
+                "MED-1699"
+            ],
+            [
+                "MED-4158",
+                "MED-994",
+                "MED-5002"
+            ]
+        ],
+        "llm_responses": [
+            " query",
+            "",
+            " I don",
+            ",",
+            "on",
+            "",
+            "",
+            " I don",
+            "ording to",
+            ""
+        ]
+    },
+    "MED-831": {
+        "text": "Approximately 20-30% of PCOS women demonstrate excess adrenal precursor androgen (APA) production, primarily using DHEAS as a marker of APA in general and more specifically DHEA, synthesis. The role of APA excess in determining or causing PCOS is unclear, although observations in patients with inherited APA excess (e.g., patients with 21-hydroxylase deficient congenital classic or non-classic adrenal hyperplasia) demonstrate that APA excess can result in a PCOS-like phenotype. Inherited defects of the enzymes responsible for steroid biosynthesis, or defects in cortisol metabolism, account for only a very small fraction of women suffering from hyperandrogenism or APA excess. Rather, women with PCOS and APA excess appear to have a generalized exaggeration in adrenal steroidogenesis in response to ACTH stimulation, although they do not have an overt hypothalamic-pituitary-adrenal axis dysfunction. In general, extra-adrenal factors, including obesity, insulin and glucose levels, and ovarian secretions, play a limited role in the increased APA production observed in PCOS. Substantial heritabilities of APAs, particularly DHEAS, have been found in the general population and in women with PCOS; however, the handful of SNPs discovered to date account only for a small portion of the inheritance of these traits. Paradoxically, and as in men, elevated levels of DHEAS appear to be protective against cardiovascular risk in women, although the role of DHEAS in modulating this risk in women with PCOS remains unknown. In summary, the exact cause of APA excess in PCOS remains unclear, although it may reflect a generalized and inherited exaggeration in androgen biosynthesis of an inherited nature. Copyright \u00a9 2014 Elsevier Ltd. All rights reserved.",
+        "title": "DHEA, DHEAS and PCOS.",
+        "mem": "no",
+        "questions": [
+            "Do 20-30% of women with PCOS demonstrate excess adrenal precursor androgen production?",
+            "Do women with PCOS and APA excess have overt hypothalamic-pituitary-adrenal axis dysfunction?",
+            "Can APA excess result in a PCOS-like phenotype in patients with congenital adrenal hyperplasia?",
+            "Is the role of APA excess in causing PCOS clearly understood?",
+            "Is DHEAS used as a marker for general APA production?",
+            "Are inherited defects of steroid biosynthesis enzymes a major cause of APA excess in women with PCOS?",
+            "Are elevated levels of DHEAS potentially protective against cardiovascular risk in women?",
+            "Is the exact cause of APA excess in PCOS fully understood?",
+            "Do obesity, insulin, glucose levels, and ovarian secretions play a major role in increased APA production in PCOS?",
+            "Have SNPs found so far accounted for most of the heritability of APA traits in women with PCOS?"
+        ],
+        "answers": [
+            " Yes.",
+            " No,",
+            " Yes,",
+            " No,",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " No,",
+            " No,",
+            " No,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-834",
+                "MED-822",
+                "MED-824"
+            ],
+            [
+                "MED-816",
+                "MED-826",
+                "MED-2741"
+            ],
+            [
+                "MED-826",
+                "MED-816",
+                "MED-822"
+            ],
+            [
+                "MED-826",
+                "MED-822",
+                "MED-816"
+            ],
+            [
+                "MED-4323",
+                "MED-5091",
+                "MED-4322"
+            ],
+            [
+                "MED-826",
+                "MED-822",
+                "MED-816"
+            ],
+            [
+                "MED-4321",
+                "MED-4322",
+                "MED-5364"
+            ],
+            [
+                "MED-826",
+                "MED-816",
+                "MED-822"
+            ],
+            [
+                "MED-816",
+                "MED-822",
+                "MED-5239"
+            ],
+            [
+                "MED-822",
+                "MED-816",
+                "MED-837"
+            ]
+        ],
+        "llm_responses": [
+            " I don",
+            " I don",
+            " I don",
+            " The query",
+            " I don",
+            " I don",
+            " No,",
+            " I don",
+            " Based on",
+            " I don"
+        ]
+    },
+    "MED-937": {
+        "text": "Male factor infertility is a multifactorial disorder that affects a significant percentage of infertile couples; however, many of them remained untreated. In recent years, considerable numbers of infertile men have sought 'herbal remedies' as an effective treatment. Among 'herbal remedies', saffron is recommended for male infertility in our community. The effect of saffron was evaluated compared with placebo for the treatment of idiopathic male factor infertility. The study included 260 infertile men with idiopathic oligoasthenoteratozoospermia (OAT) who were randomized to saffron 60\u2009mg/day (130, group 1) or a similar regimen of placebo (130, group 2) for 26 weeks. The two groups were compared for changes in semen parameters and total seminal plasma antioxidant capacity. Saffron administration did not result in beneficial effects. At the end of the study no statistically significant improvements were observed in either group in any of the studied semen parameters (sperm density, morphology and motility) (all p = 0.1). At the end of the trial, patients in group 1 had a mean motility of 25.7 \u00b1 2.4%, which was not statistically different from the mean of 24.9 \u00b1 2.8% in the placebo group (p = 0.1). Normal sperm morphology was 18.7 \u00b1 4.7% and 18.4 \u00b1 4.3%, in groups 1 and 2, respectively (p = 0.1). Patients treated with saffron and placebo had a mean sperm density of 20.5 \u00b1 4.6% and 21.4 \u00b1 4.6% per mL, respectively (p = 0.1). Saffron administration did not improve total seminal plasma antioxidant capacity, compared with baseline (p = 0.1) and placebo subjects (p = 0.1). Based on Pearson correlations, each semen parameter did not correlate significantly with treatment duration, including sperm density (r = 0.146, p = 0.13), percent of motile sperm (r = 0.145, p = 0.15) and percent of sperm with normal morphology (r = 0.125, p = 0.30). Saffron does not statistically significantly improve semen parameters in infertile men with idiopathic OAT. If medical professionals want to prescribe herbal remedies for male infertility, previous rigorous scientific investigations, documenting their safety and efficacy are required. Copyright \u00a9 2010 John Wiley & Sons, Ltd.",
+        "title": "A prospective double-blind randomized placebo-controlled study of the effect of saffron (Crocus sativus Linn.) on semen parameters and seminal plas...",
+        "mem": "no",
+        "questions": [
+            "Did saffron administration result in statistically significant improvements in sperm density compared to placebo?",
+            "Did the study include 260 infertile men with idiopathic oligoasthenoteratozoospermia (OAT)?",
+            "Did saffron improve the total seminal plasma antioxidant capacity compared with the baseline or placebo?",
+            "Are herbal remedies sought as a treatment for male infertility according to the text?",
+            "Was a study conducted to compare the effects of saffron and placebo on idiopathic male factor infertility?",
+            "Was there a statistically significant difference in sperm motility between the saffron-treated group and the placebo group?",
+            "Is saffron specifically recommended for treating male infertility in the community mentioned in the corpus?",
+            "Is there a significant correlation between semen parameters and treatment duration according to the study?",
+            "Does the corpus discuss male factor infertility as a multifactorial disorder?",
+            "Does the corpus suggest that rigorous scientific investigations are necessary before prescribing herbal remedies for male infertility?"
+        ],
+        "answers": [
+            " No,",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " No,",
+            " Yes.",
+            " No,",
+            " Yes.",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-940",
+                "MED-746",
+                "MED-743"
+            ],
+            [
+                "MED-1766",
+                "MED-1775",
+                "MED-3589"
+            ],
+            [
+                "MED-940",
+                "MED-4905",
+                "MED-743"
+            ],
+            [
+                "MED-1521",
+                "MED-1782",
+                "MED-940"
+            ],
+            [
+                "MED-1765",
+                "MED-940",
+                "MED-746"
+            ],
+            [
+                "MED-1765",
+                "MED-4193",
+                "MED-4671"
+            ],
+            [
+                "MED-746",
+                "MED-940",
+                "MED-4193"
+            ],
+            [
+                "MED-1778",
+                "MED-1787",
+                "MED-1766"
+            ],
+            [
+                "MED-1779",
+                "MED-1784",
+                "MED-1787"
+            ],
+            [
+                "MED-557",
+                "MED-1782",
+                "MED-2428"
+            ]
+        ],
+        "llm_responses": [
+            " I don",
+            " No,",
+            " No,",
+            " Yes,",
+            "I don",
+            "I don",
+            " No,",
+            " I don",
+            " Yes,",
+            " Yes."
+        ]
+    },
+    "MED-5110": {
+        "text": "Americans consume billions of hotdogs per year resulting in more than a billion dollars in retail sales. Package labels typically list some type of meat as the primary ingredient. The purpose of this study is to assess the meat and water content of several hotdog brands to determine if the package labels are accurate. Eight brands of hotdogs were evaluated for water content by weight. A variety of routine techniques in surgical pathology including routine light microscopy with hematoxylin-eosin-stained sections, special staining, immunohistochemistry, and electron microscopy were used to assess for meat content and for other recognizable components. Package labels indicated that the top-listed ingredient in all 8 brands was meat; the second listed ingredient was water (n = 6) and another type of meat (n = 2). Water comprised 44% to 69% (median, 57%) of the total weight. Meat content determined by microscopic cross-section analysis ranged from 2.9% to 21.2% (median, 5.7%). The cost per hotdog ($0.12-$0.42) roughly correlated with meat content. A variety of tissues were observed besides skeletal muscle including bone (n = 8), collagen (n = 8), blood vessels (n = 8), plant material (n = 8), peripheral nerve (n = 7), adipose (n = 5), cartilage (n = 4), and skin (n = 1). Glial fibrillary acidic protein immunostaining was not observed in any of the hotdogs. Lipid content on oil red O staining was graded as moderate in 3 hotdogs and marked in 5 hotdogs. Electron microscopy showed recognizable skeletal muscle with evidence of degenerative changes. In conclusion, hotdog ingredient labels are misleading; most brands are more than 50% water by weight. The amount of meat (skeletal muscle) in most brands comprised less than 10% of the cross-sectional surface area. More expensive brands generally had more meat. All hotdogs contained other tissue types (bone and cartilage) not related to skeletal muscle; brain tissue was not present.",
+        "title": "Applying morphologic techniques to evaluate hotdogs: what is in the hotdogs we eat?",
+        "mem": "no",
+        "questions": [
+            "Are package labels for hotdogs typically listing meat as the primary ingredient?",
+            "Were eight brands of hotdogs evaluated in the study?",
+            "Is the cost of hotdogs roughly correlated with their meat content?",
+            "Are hotdog ingredient labels considered misleading according to this study?",
+            "Is water the second listed ingredient on six of the eight hotdog brands?",
+            "Were components like bone and collagen observed in all eight hotdog brands?",
+            "Did the study find that water content in hotdogs ranges from 44% to 69% by weight?",
+            "Do Americans spend more than a billion dollars annually on hotdogs in retail sales?",
+            "Was the median meat content in hotdogs found to be 5.7% by weight?",
+            "Did the study find evidence of glial fibrillary acidic protein immunostaining in the hotdog samples?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " No,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-5032",
+                "MED-3096",
+                "MED-5034"
+            ],
+            [
+                "MED-4746",
+                "MED-5032",
+                "MED-5034"
+            ],
+            [
+                "MED-5032",
+                "MED-5034",
+                "MED-4492"
+            ],
+            [
+                "MED-5032",
+                "MED-4492",
+                "MED-5034"
+            ],
+            [
+                "MED-5032",
+                "MED-5034",
+                "MED-4492"
+            ],
+            [
+                "MED-4746",
+                "MED-5034",
+                "MED-4492"
+            ],
+            [
+                "MED-5032",
+                "MED-3274",
+                "MED-4492"
+            ],
+            [
+                "MED-4746",
+                "MED-4922",
+                "MED-1448"
+            ],
+            [
+                "MED-4746",
+                "MED-5032",
+                "MED-4492"
+            ],
+            [
+                "MED-732",
+                "MED-4746",
+                "MED-2336"
+            ]
+        ],
+        "llm_responses": [
+            " I don",
+            " No,",
+            " I don",
+            " I don",
+            " I don",
+            " No,",
+            " I don",
+            " I don",
+            " I don",
+            " No,"
+        ]
+    },
+    "MED-2093": {
+        "text": "Chlorhexidine (CHX) is one of the most commonly prescribed antiseptic agents in the dental field. It has a long-lasting antibacterial activity with a broad-spectrum of action and it has been shown to reduce plaque, gingival inflammation and bleeding. Its use is considered a powerful adjuvant to mechanical oral hygiene (brushing and flossing), especially in those cases in which it cannot be performed correctly. Available as mouthwash, gel, aerosol, spray and disks, CHX is considered a safe compound, with minimal and transitory local and systemic side effects. Data support its periodic use as an adjuvant to normal brushing and flossing in subjects unable to maintain proper oral hygiene due to physical and/or mental impairment, or lack of motivation, or decreased salivary rate. CHX is also a useful alternative to mechanical oral hygiene procedures in those cases in which they are contraindicated, e.g. after a surgical procedure, or as a preoperative rinse before procedures in which use of a dental dam is not possible. The aim of this article is to offer a complete review of literature regarding the characteristics, the applications and the problems associated with the use of chlorhexidine in the dental field.",
+        "title": "Chlorhexidine (CHX) in dentistry: state of the art.",
+        "mem": "no",
+        "questions": [
+            "Is chlorhexidine commonly prescribed as an antiseptic agent in the dental field?",
+            "Is chlorhexidine considered a powerful adjuvant to mechanical oral hygiene methods like brushing and flossing?",
+            "Does chlorhexidine have a long-lasting antibacterial activity with a broad-spectrum of action?",
+            "Can chlorhexidine reduce plaque, gingival inflammation, and bleeding?",
+            "Can chlorhexidine be used as an alternative to mechanical oral hygiene procedures after surgical procedures?",
+            "Does the article aim to review the characteristics, applications, and problems associated with chlorhexidine's use in the dental field?",
+            "Are the side effects of chlorhexidine considered minimal and transitory?",
+            "Is chlorhexidine recommended as a preoperative rinse before procedures where a dental dam cannot be used?",
+            "Is chlorhexidine available in forms such as mouthwash, gel, aerosol, spray, and disks?",
+            "Is the periodic use of chlorhexidine recommended for individuals unable to maintain proper oral hygiene due to physical or mental impairments?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-2090",
+                "MED-2091",
+                "MED-4507"
+            ],
+            [
+                "MED-2091",
+                "MED-4804",
+                "MED-4507"
+            ],
+            [
+                "MED-1953",
+                "MED-4507",
+                "MED-2090"
+            ],
+            [
+                "MED-2091",
+                "MED-2092",
+                "MED-2094"
+            ],
+            [
+                "MED-2095",
+                "MED-2091",
+                "MED-3732"
+            ],
+            [
+                "MED-2090",
+                "MED-2095",
+                "MED-2091"
+            ],
+            [
+                "MED-2095",
+                "MED-4507",
+                "MED-2400"
+            ],
+            [
+                "MED-2095",
+                "MED-4507",
+                "MED-2091"
+            ],
+            [
+                "MED-2095",
+                "MED-4507",
+                "MED-4804"
+            ],
+            [
+                "MED-2091",
+                "MED-2095",
+                "MED-4321"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            "ording to",
+            " Yes,",
+            " According to",
+            " According to",
+            " No,",
+            " Yes,",
+            " I don",
+            ",",
+            " I don"
+        ]
+    },
+    "MED-1527": {
+        "text": "Importance Some evidence suggests vegetarian dietary patterns may be associated with reduced mortality, but the relationship is not well established. Objective To evaluate the association between vegetarian dietary patterns and mortality. Design Prospective cohort study; mortality analysis by Cox proportional hazards regression, controlling for important demographic and lifestyle confounders. Setting Adventist Health Study 2 (AHS-2), a large North American cohort. Participants A total of 96 469 Seventh-day Adventist men and women recruited between 2002 and 2007, from which an analytic sample of 73 308 participants remained after exclusions. Exposures Diet was assessed at baseline by a quantitative food frequency questionnaire and categorized into 5 dietary patterns: nonvegetarian, semi-vegetarian, pesco-vegetarian, lacto-ovo\u2013vegetarian, and vegan. Main Outcome and Measure The relationship between vegetarian dietary patterns and all-cause and cause-specific mortality; deaths through 2009 were identified from the National Death Index. Results There were 2570 deaths among 73 308 participants during a mean follow-up time of 5.79 years. The mortality rate was 6.05 (95% CI, 5.82\u20136.29) deaths per 1000 person-years. The adjusted hazard ratio (HR) for all-cause mortality in all vegetarians combined vs non-vegetarians was 0.88 (95% CI, 0.80\u20130.97). The adjusted HR for all-cause mortality in vegans was 0.85 (95% CI, 0.73\u20131.01); in lacto-ovo\u2013vegetarians, 0.91 (95% CI, 0.82\u20131.00); in pesco-vegetarians, 0.81 (95% CI, 0.69\u20130.94); and in semi-vegetarians, 0.92 (95% CI, 0.75\u20131.13) compared with nonvegetarians. Significant associations with vegetarian diets were detected for cardiovascular mortality, noncardiovascular noncancer mortality, renal mortality, and endocrine mortality. Associations in men were larger and more often significant than were those in women. Conclusions and Relevance Vegetarian diets are associated with lower all-cause mortality and with some reductions in cause-specific mortality. Results appeared to be more robust in males. These favorable associations should be considered carefully by those offering dietary guidance.",
+        "title": "Vegetarian Dietary Patterns and Mortality in Adventist Health Study 2",
+        "mem": "no",
+        "questions": [
+            "Is there evidence suggesting that vegetarian dietary patterns may be associated with reduced mortality?",
+            "Were the associations between vegetarian diets and mortality generally more significant in men compared to women?",
+            "Was the adjusted hazard ratio (HR) for all-cause mortality in vegans 0.85 compared to non-vegetarians?",
+            "Did the study find significant associations between vegetarian diets and renal mortality?",
+            "Was diet categorized into five different dietary patterns, including nonvegetarian and vegan?",
+            "Did the study utilize the Cox proportional hazards regression for mortality analysis?",
+            "Were the participants in the study recruited from the Adventist Health Study 2 (AHS-2)?",
+            "Was the analytic sample for this study composed of 73,308 participants after exclusions?",
+            "Did the study identify deaths through the National Death Index?",
+            "Was the study conducted as a prospective cohort study?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1375",
+                "MED-3557",
+                "MED-1541"
+            ],
+            [
+                "MED-3557",
+                "MED-1375",
+                "MED-1541"
+            ],
+            [
+                "MED-1530",
+                "MED-3557",
+                "MED-1375"
+            ],
+            [
+                "MED-1137",
+                "MED-3557",
+                "MED-3232"
+            ],
+            [
+                "MED-4102",
+                "MED-2290",
+                "MED-4988"
+            ],
+            [
+                "MED-3845",
+                "MED-4928",
+                "MED-10"
+            ],
+            [
+                "MED-5328",
+                "MED-4102",
+                "MED-4990"
+            ],
+            [
+                "MED-4106",
+                "MED-1560",
+                "MED-1388"
+            ],
+            [
+                "MED-1484",
+                "MED-2162",
+                "MED-5116"
+            ],
+            [
+                "MED-2409",
+                "MED-1530",
+                "MED-4106"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " According to",
+            " I don",
+            " The study",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " don",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-717": {
+        "text": "OBJECTIVE: Fructose intake has increased considerably in the United States, primarily as a result of increased consumption of high-fructose corn syrup, fruits and juices, and crystalline fructose. The purpose was to determine how often fructose, in amounts commonly consumed, would result in malabsorption and/or symptoms in healthy persons. DESIGN: Fructose absorption was measured using 3-hour breath hydrogen tests and symptom scores were used to rate subjective responses for gas, borborygmus, abdominal pain, and loose stools. SUBJECTS/SETTING: The study included 15 normal, free-living volunteers from a medical center community and was performed in a gastrointestinal specialty clinic. INTERVENTION: Subjects consumed 25- and 50-g doses of crystalline fructose with water after an overnight fast on separate test days. MAIN OUTCOME MEASURES: Mean peak breath hydrogen, time of peak, area under the curve (AUC) for breath hydrogen and gastrointestinal symptoms were measured during a 3-hour period after subjects consumed both 25- and 50-g doses of fructose. STATISTICAL ANALYSES: Differences in mean breath hydrogen, AUC, and symptom scores between doses were analyzed using paired t tests. Correlations among peak breath hydrogen, AUC, and symptoms were also evaluated. RESULTS: More than half of the 15 adults tested showed evidence of fructose malabsorption after 25 g fructose and greater than two thirds showed malabsorption after 50 g fructose. AUC, representing overall breath hydrogen response, was significantly greater after the 50-g dose. Overall symptom scores were significantly greater than baseline after each dose, but scores were only marginally greater after 50 g than 25 g. Peak hydrogen levels and AUC were highly correlated, but neither was significantly related to symptoms. CONCLUSIONS: Fructose, in amounts commonly consumed, may result in mild gastrointestinal distress in normal people. Additional study is warranted to evaluate the response to fructose-glucose mixtures (as in high-fructose corn syrup) and fructose taken with food in both normal people and those with gastrointestinal dysfunction. Because breath hydrogen peaks occurred at 90 to 114 minutes and were highly correlated with 180-minute breath hydrogen AUC, the use of peak hydrogen measures may be considered to shorten the duration of the exam.",
+        "title": "Fructose intake at current levels in the United States may cause gastrointestinal distress in normal adults.",
+        "mem": "no",
+        "questions": [
+            "Has fructose intake increased considerably in the United States?",
+            "Was the area under the curve (AUC) for breath hydrogen significantly greater after the 50-g dose compared to the 25-g dose?",
+            "Does the study suggest that fructose, in commonly consumed amounts, may cause mild gastrointestinal distress in normal individuals?",
+            "Did more than half of the subjects show evidence of fructose malabsorption after consuming a 25-g dose?",
+            "Did greater than two-thirds of the adults tested show malabsorption after consuming a 50-g dose of fructose?",
+            "Was the breath hydrogen response used to measure fructose malabsorption?",
+            "Were overall symptom scores significantly greater than baseline after both fructose doses?",
+            "Were peak hydrogen levels and AUC highly correlated with symptoms?",
+            "Did the study include subjects who were healthy, free-living volunteers?",
+            "Were the subjects required to fast overnight before consuming fructose doses?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes.",
+            " No,",
+            " No,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1710",
+                "MED-1672",
+                "MED-1707"
+            ],
+            [
+                "MED-918",
+                "MED-1066",
+                "MED-3921"
+            ],
+            [
+                "MED-918",
+                "MED-1672",
+                "MED-1669"
+            ],
+            [
+                "MED-918",
+                "MED-1261",
+                "MED-1324"
+            ],
+            [
+                "MED-918",
+                "MED-1261",
+                "MED-1675"
+            ],
+            [
+                "MED-918",
+                "MED-3582",
+                "MED-4253"
+            ],
+            [
+                "MED-1669",
+                "MED-1261",
+                "MED-1675"
+            ],
+            [
+                "MED-918",
+                "MED-720",
+                "MED-854"
+            ],
+            [
+                "MED-5199",
+                "MED-5329",
+                "MED-4456"
+            ],
+            [
+                "MED-1261",
+                "MED-1617",
+                "MED-918"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            "ere is",
+            ",",
+            "don",
+            "don",
+            "s,",
+            "The query",
+            "e query",
+            " Yes,",
+            "From"
+        ]
+    },
+    "MED-1533": {
+        "text": "Snacks are an important part of children's dietary intake, but the role of dried fruit on energy intake in children is unknown. Therefore, the effect of ad libitum consumption of an after-school snack of raisins, grapes, potato chips, and chocolate chip cookies on appetite and energy intake in twenty-six 8- to 11-y-old normal-weight (15th to 85th percentile) children was examined. On 4 separate weekdays, 1 wk apart, children (11 M, 15 F) were given a standardized breakfast, morning snack (apple), and a standardized lunch. After school, children randomly received 1 of 4 ad libitum snacks and were instructed to eat until \"comfortably full.\" Appetite was measured before and 15, 30, and 45 min after snack consumption. Children consumed the least calories from raisins and grapes and the most from cookies (P < 0.001). However, weight of raisins consumed was similar to potato chips (about 75 g) and lower compared to grapes and cookies (P < 0.009). Raisins and grapes led to lower cumulative food intake (breakfast + morning snack + lunch + after-school snack) (P < 0.001), while the cookies increased cumulative food intake (P < 0.001) compared to the other snacks. Grapes lowered appetite compared to all other snacks (P < 0.001) when expressed as a change in appetite per kilocalorie of the snack. Ad libitum consumption of raisins has potential as an after-school snack to achieve low snack intake prior to dinner, similar to grapes, compared to potato chips, and cookies in children 8 to 11 y old. \u00a9 2013 Institute of Food Technologists\u00ae",
+        "title": "An after-school snack of raisins lowers cumulative food intake in young children.",
+        "mem": "no",
+        "questions": [
+            "Does the study examine the effect of ad libitum snack consumption in children aged 8 to 11 years old?",
+            "Was appetite measured before and after snack consumption?",
+            "Did cookies lead to a higher cumulative food intake compared to raisins and grapes?",
+            "Does the study suggest that ad libitum consumption of raisins and grapes could help achieve low snack intake before dinner?",
+            "Did the children receive one of the four snacks on each of four separate weekdays?",
+            "Did the children consume more calories from chocolate chip cookies compared to raisins and grapes?",
+            "Were grapes found to lower appetite more effectively than all other snacks tested?",
+            "Were the children given a standardized breakfast and lunch during the study?",
+            "Were raisins and potato chips consumed in approximately the same weight?",
+            "In the study, was ad libitum consumption of snacks tested on a mixed group of both male and female children?"
+        ],
+        "answers": [
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1538",
+                "MED-3896",
+                "MED-3370"
+            ],
+            [
+                "MED-1538",
+                "MED-4250",
+                "MED-3583"
+            ],
+            [
+                "MED-1538",
+                "MED-2494",
+                "MED-3208"
+            ],
+            [
+                "MED-1538",
+                "MED-4250",
+                "MED-3371"
+            ],
+            [
+                "MED-4172",
+                "MED-3370",
+                "MED-1538"
+            ],
+            [
+                "MED-1538",
+                "MED-1534",
+                "MED-2494"
+            ],
+            [
+                "MED-1538",
+                "MED-4250",
+                "MED-3583"
+            ],
+            [
+                "MED-3369",
+                "MED-3370",
+                "MED-4172"
+            ],
+            [
+                "MED-1538",
+                "MED-3143",
+                "MED-1535"
+            ],
+            [
+                "MED-1538",
+                "MED-3896",
+                "MED-1610"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes,",
+            " According to",
+            " According to",
+            " I don",
+            " I don",
+            " No,",
+            " I don",
+            " I don",
+            " Yes,"
+        ]
+    },
+    "MED-2205": {
+        "text": "AIM: To investigate the effects of proteins purified from sweet potato storage roots on human colorectal cancer cell lines. METHODS: 3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide (MTT) assay, Hoechst 33258 nuclear staining and Boyden transwell chamber methods were used to determine whether purified sweet potato protein (SPP) from fresh sweet potato roots affected proliferation, migration and invasion, respectively, of human colorectal cancer SW480 cells in vitro. The inhibitory effects of SPP on growth of human colorectal cancer HCT-8 cells intraperitoneally xenografted in nude mice and spontaneous lung metastasis of murine Lewis lung carcinoma 3LL cells subcutaneously transplanted in C57 BL/6 mice were also investigated in vivo. RESULTS: SPP inhibited the proliferation of SW480 cells in a dose-dependent manner, with an IC50 value of 38.732 \u03bcmol/L (r2 = 0.980, P = 0.003) in the MTT assay. Hoechst 33258 nuclear staining further revealed inhibition of cell viability and induction of apoptosis by SPP. The transwell assay disclosed significant reduction in migrated cells/field by 8 \u03bcmol/L SPP (8.4 \u00b1 2.6 vs 23.3 \u00b1 5.4, P = 0.031) and invaded cells/field through the ECMatrix by 0.8 \u03bcmol/L SPP, compared with the control (25.2 \u00b1 5.2 vs 34.8 \u00b1 6.1, P = 0.038). Both intraperitoneal (ip) and intragastric (ig) administration of SPP led to significant suppression of growth of intraperitoneally inoculated HCT-8 cells in nude mice to 58.0% \u00b1 5.9% (P = 0.037) and 43.5% \u00b1 7.1% (P = 0.004) of the controls, respectively, after 9 d treatment. Bloody ascites additionally disappeared after ip injection of trypsin inhibitor. Notably, ig and ip administration of SPP induced a significant decrease in spontaneous pulmonary metastatic nodule formation in C57 BL/6 mice (21.0 \u00b1 12.3 and 27.3 \u00b1 12.7 nodules/lung vs 42.5 \u00b1 4.5 nodules/lung in controls, respectively, P < 0.05) after 25 d treatment. Moreover, the average weight of primary tumor nodules in the hind leg of mice decreased from 8.2 \u00b1 1.3 g/mice in the control to 6.1 \u00b1 1.4 g/mice in the ip group (P = 0.035). CONCLUSION: SPP exerts significant antiproliferative and antimetastatic effects on human colorectal cancer cell lines, both in vitro and in vivo.",
+        "title": "Anticancer effects of sweet potato protein on human colorectal cancer cells",
+        "mem": "no",
+        "questions": [
+            "Does the study investigate the effects of proteins purified from sweet potato on human colorectal cancer cell lines?",
+            "Did the SPP inhibit the proliferation of SW480 cells in a dose-dependent manner?",
+            "Did intraperitoneal administration of SPP lead to suppression of HCT-8 cell growth in nude mice?",
+            "Is the IC50 value of SPP in the MTT assay 38.732 \u03bcmol/L?",
+            "Was there a significant reduction in migrated cells/field by 8 \u03bcmol/L SPP compared to the control?",
+            "Does Hoechst 33258 nuclear staining reveal the induction of apoptosis by SPP?",
+            "Were the methods used in the study including MTT assay, Hoechst 33258 nuclear staining, and Boyden transwell chamber methods?",
+            "Does SPP administration reduce spontaneous pulmonary metastatic nodule formation in C57 BL/6 mice?",
+            "Did bloody ascites disappear after intraperitoneal injection of trypsin inhibitor in the study?",
+            "Did the weight of primary tumor nodules decrease in the hind leg of mice after ip administration of SPP compared to the control group?"
+        ],
+        "answers": [
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-2189",
+                "MED-2210",
+                "MED-2194"
+            ],
+            [
+                "MED-2189",
+                "MED-2573",
+                "MED-5043"
+            ],
+            [
+                "MED-2189",
+                "MED-1315",
+                "MED-4732"
+            ],
+            [
+                "MED-2189",
+                "MED-938",
+                "MED-4532"
+            ],
+            [
+                "MED-2189",
+                "MED-1638",
+                "MED-2979"
+            ],
+            [
+                "MED-2189",
+                "MED-2979",
+                "MED-4532"
+            ],
+            [
+                "MED-2189",
+                "MED-2069",
+                "MED-2648"
+            ],
+            [
+                "MED-2189",
+                "MED-2573",
+                "MED-2246"
+            ],
+            [
+                "MED-2189",
+                "MED-2207",
+                "MED-4732"
+            ],
+            [
+                "MED-2189",
+                "MED-2208",
+                "MED-1712"
+            ]
+        ],
+        "llm_responses": [
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-4637": {
+        "text": "1. Bowel transit time has been investigated in vegetarians and non-vegetarians and related to dietary fibre intake and the presence of diverticular disease. 2. Vegetarians who have less diverticular disease than non-vegetarians have more rapid transit times. 3. Subjects with total dietary fibre intake of more than 30 g/d all had transit times of less than 75 h whereas 38% of those eating less had transit times exceeding 75 h and varying up to 124 h. 4. Individuals with diverticular disease were found to have faster transit times than those without the disease. 5. The colon may respond to a fibre-depleted diet either by becoming hyperactive and prone to diverticular disease or by becoming hypoactive leading to constipation.",
+        "title": "Fibre and bowel transit times.",
+        "mem": "no",
+        "questions": [
+            "Do individuals with diverticular disease have faster bowel transit times than those without the disease?",
+            "Do vegetarians typically have more rapid bowel transit times than non-vegetarians?",
+            "Are vegetarians less likely to have diverticular disease compared to non-vegetarians?",
+            "Is bowel transit time related to dietary fiber intake?",
+            "Does a fiber-depleted diet potentially lead to diverticular disease?",
+            "Can a fiber-depleted diet result in the colon becoming hypoactive and lead to constipation?",
+            "Can a total dietary fiber intake of more than 30 g/d result in transit times of less than 75 hours?",
+            "Do 38% of people consuming less than 30 g/d of dietary fiber have bowel transit times exceeding 75 hours?",
+            "Can a fiber-depleted diet cause the colon to become hyperactive?",
+            "Are transit times varying up to 124 hours associated with a lower dietary fiber intake?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-1028",
+                "MED-977",
+                "MED-972"
+            ],
+            [
+                "MED-4810",
+                "MED-5175",
+                "MED-972"
+            ],
+            [
+                "MED-972",
+                "MED-4632",
+                "MED-3779"
+            ],
+            [
+                "MED-4810",
+                "MED-4639",
+                "MED-4517"
+            ],
+            [
+                "MED-2292",
+                "MED-972",
+                "MED-977"
+            ],
+            [
+                "MED-977",
+                "MED-2292",
+                "MED-4638"
+            ],
+            [
+                "MED-4810",
+                "MED-4639",
+                "MED-4517"
+            ],
+            [
+                "MED-4517",
+                "MED-4639",
+                "MED-4810"
+            ],
+            [
+                "MED-1045",
+                "MED-2544",
+                "MED-2578"
+            ],
+            [
+                "MED-4517",
+                "MED-4639",
+                "MED-4810"
+            ]
+        ],
+        "llm_responses": [
+            " The answer",
+            " According to",
+            " Yes,",
+            " Yes,",
+            " According to",
+            " I don",
+            " According to",
+            " I don",
+            " Yes,",
+            " I don"
+        ]
+    },
+    "MED-3378": {
+        "text": "BACKGROUND AND OBJECTIVE: In 1981, a Petrol-Lead Phase-Out Program (PLPOP) was launched in Taiwan for the abatement of environmental lead emissions. The present study was intended to examine whether the high Petrol-Lead Emission Areas (PLEA) would result in an increase in the incidence rate of brain cancer based on a national data bank. METHODS: The national brain cancer incidence data was obtained from the Taiwan National Cancer Registry. Age standardized incidence rates were calculated based on the 2000 WHO world standard population, and gasoline consumption data was obtained from the Bureau of Energy. The differences in the trend tests for age-standardized incidence rates of brain cancer between high, median, low, and small PLEA were analyzed. RESULTS: A significant increase was found from small to high PLEA in age-standardized incidence rates of brain cancer. By taking six possible confounders into account, the age-standardized incidence rates for brain cancer were highly correlated with the median and high PLEA by reference to the small PLEA. CONCLUSION: After being adjusted for a number of relevant confounders, it could be concluded that high PLEA might result in an increase in the incidence rate of brain cancer resulting from high lead exposures. Copyright \u00a9 2011 Elsevier Ltd. All rights reserved.",
+        "title": "Brain cancer associated with environmental lead exposure: evidence from implementation of a National Petrol-Lead Phase-Out Program (PLPOP) in Taiwa...",
+        "mem": "no",
+        "questions": [
+            "Was the Petrol-Lead Phase-Out Program (PLPOP) launched in Taiwan in 1981 to reduce environmental lead emissions?",
+            "Does the conclusion suggest that high lead exposures in high PLEA might increase the incidence rate of brain cancer?",
+            "Were age-standardized incidence rates for brain cancer found to be highly correlated with high PLEA compared to small PLEA?",
+            "Did the results show a significant increase in age-standardized incidence rates of brain cancer from small to high PLEA?",
+            "Does the study examine the relationship between high Petrol-Lead Emission Areas (PLEA) and the incidence rate of brain cancer?",
+            "Were age-standardized incidence rates calculated based on the 2000 WHO world standard population?",
+            "Did the researchers obtain brain cancer incidence data from the Taiwan National Cancer Registry?",
+            "Did the study account for six possible confounders when analyzing the incidence rates?",
+            "Was gasoline consumption data sourced from the Bureau of Energy for this study?",
+            "Is the content of the study copyrighted by Elsevier Ltd. in 2011?"
+        ],
+        "answers": [
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3880",
+                "MED-3141",
+                "MED-5331"
+            ],
+            [
+                "MED-3444",
+                "MED-1170",
+                "MED-3767"
+            ],
+            [
+                "MED-1944",
+                "MED-4158",
+                "MED-5353"
+            ],
+            [
+                "MED-4158",
+                "MED-3624",
+                "MED-4119"
+            ],
+            [
+                "MED-4692",
+                "MED-2258",
+                "MED-1721"
+            ],
+            [
+                "MED-1944",
+                "MED-5369",
+                "MED-2213"
+            ],
+            [
+                "MED-4237",
+                "MED-5353",
+                "MED-3984"
+            ],
+            [
+                "MED-1944",
+                "MED-4617",
+                "MED-2944"
+            ],
+            [
+                "MED-1388",
+                "MED-2254",
+                "MED-4261"
+            ],
+            [
+                "MED-3712",
+                "MED-3920",
+                "MED-931"
+            ]
+        ],
+        "llm_responses": [
+            " I don",
+            " I don",
+            "on",
+            "on",
+            " I don",
+            " I don",
+            " I don",
+            " I don",
+            " I don",
+            " Yes."
+        ]
+    },
+    "MED-2659": {
+        "text": "U.S. and European regulators and researchers disagree over risks of a common class of surfactants.",
+        "title": "European bans on surfactant trigger transatlantic debate.",
+        "mem": "no",
+        "questions": [
+            "Do U.S. regulators and researchers disagree with European counterparts on surfactant risks?",
+            "Is there a consensus among U.S. and European regulators on surfactant risks?",
+            "Is the disagreement mentioned related to a common class of surfactants?",
+            "Are both U.S. and European regulators mentioned in the context of surfactant risks?",
+            "Does the text mention a disagreement about the risks of surfactants?",
+            "Does the text indicate that researchers are involved in the disagreement about surfactant risks?",
+            "Are surfactants a common class of chemicals mentioned in the text?",
+            "Are risks associated with surfactants a point of contention according to the text?",
+            "Does the text specify that the disagreement is about surfactants used in a particular region?",
+            "Does the text suggest that the disagreement involves international parties?"
+        ],
+        "answers": [
+            " Yes.",
+            " No,",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes.",
+            " Yes,",
+            " No.",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3028",
+                "MED-3484",
+                "MED-3031"
+            ],
+            [
+                "MED-1233",
+                "MED-3028",
+                "MED-5293"
+            ],
+            [
+                "MED-3555",
+                "MED-4428",
+                "MED-2907"
+            ],
+            [
+                "MED-2407",
+                "MED-3028",
+                "MED-3484"
+            ],
+            [
+                "MED-5100",
+                "MED-5099",
+                "MED-3030"
+            ],
+            [
+                "MED-5099",
+                "MED-2409",
+                "MED-4170"
+            ],
+            [
+                "MED-2644",
+                "MED-4194",
+                "MED-3027"
+            ],
+            [
+                "MED-3590",
+                "MED-4739",
+                "MED-4559"
+            ],
+            [
+                "MED-3030",
+                "MED-3028",
+                "MED-1733"
+            ],
+            [
+                "MED-3822",
+                "MED-1753",
+                "MED-1553"
+            ]
+        ],
+        "llm_responses": [
+            " There is",
+            " I don",
+            " I don",
+            " No,",
+            " I don",
+            " No,",
+            " Yes,",
+            " No,",
+            " No,",
+            " No,"
+        ]
+    },
+    "MED-5299": {
+        "text": "Background Knowledge of the number of deaths caused by risk factors is needed for health policy and priority setting. Our aim was to estimate the mortality effects of the following 12 modifiable dietary, lifestyle, and metabolic risk factors in the United States (US) using consistent and comparable methods: high blood glucose, low-density lipoprotein (LDL) cholesterol, and blood pressure; overweight\u2013obesity; high dietary trans fatty acids and salt; low dietary polyunsaturated fatty acids, omega-3 fatty acids (seafood), and fruits and vegetables; physical inactivity; alcohol use; and tobacco smoking. Methods and Findings We used data on risk factor exposures in the US population from nationally representative health surveys and disease-specific mortality statistics from the National Center for Health Statistics. We obtained the etiological effects of risk factors on disease-specific mortality, by age, from systematic reviews and meta-analyses of epidemiological studies that had adjusted (i) for major potential confounders, and (ii) where possible for regression dilution bias. We estimated the number of disease-specific deaths attributable to all non-optimal levels of each risk factor exposure, by age and sex. In 2005, tobacco smoking and high blood pressure were responsible for an estimated 467,000 (95% confidence interval [CI] 436,000\u2013500,000) and 395,000 (372,000\u2013414,000) deaths, accounting for about one in five or six deaths in US adults. Overweight\u2013obesity (216,000; 188,000\u2013237,000) and physical inactivity (191,000; 164,000\u2013222,000) were each responsible for nearly 1 in 10 deaths. High dietary salt (102,000; 97,000\u2013107,000), low dietary omega-3 fatty acids (84,000; 72,000\u201396,000), and high dietary trans fatty acids (82,000; 63,000\u201397,000) were the dietary risks with the largest mortality effects. Although 26,000 (23,000\u201340,000) deaths from ischemic heart disease, ischemic stroke, and diabetes were averted by current alcohol use, they were outweighed by 90,000 (88,000\u201394,000) deaths from other cardiovascular diseases, cancers, liver cirrhosis, pancreatitis, alcohol use disorders, road traffic and other injuries, and violence. Conclusions Smoking and high blood pressure, which both have effective interventions, are responsible for the largest number of deaths in the US. Other dietary, lifestyle, and metabolic risk factors for chronic diseases also cause a substantial number of deaths in the US. Please see later in the article for Editors' Summary Editors' Summary A number of modifiable factors are responsible for many premature or preventable deaths. For example, being overweight or obese shortens life expectancy, while half of all long-term tobacco smokers in Western populations will die prematurely from a disease directly related to smoking. Modifiable risk factors fall into three main groups. First, there are lifestyle risk factors. These include tobacco smoking, physical inactivity, and excessive alcohol use (small amounts of alcohol may actually prevent diabetes and some types of heart disease and stroke). Second, there are dietary risk factors such as a high salt intake and a low intake of fruits and vegetables. Finally, there are \u201cmetabolic risk factors,\u201d which shorten life expectancy by increasing a person's chances of developing cardiovascular disease (in particular, heart problems and strokes) and diabetes. Metabolic risk factors include having high blood pressure or blood cholesterol and being overweight or obese. Why Was This Study Done? It should be possible to reduce preventable deaths by changing modifiable risk factors through introducing public health policies, programs and regulations that reduce exposures to these risk factors. However, it is important to know how many deaths are caused by each risk factor before developing policies and programs that aim to improve a nation's health. Although previous studies have provided some information on the numbers of premature deaths caused by modifiable risk factors, there are two problems with these studies. First, they have not used consistent and comparable methods to estimate the number of deaths attributable to different risk factors. Second, they have rarely considered the effects of dietary and metabolic risk factors. In this new study, the researchers estimate the number of deaths due to 12 different modifiable dietary, lifestyle, and metabolic risk factors for the United States population. They use a method called \u201ccomparative risk assessment.\u201d This approach estimates the number of deaths that would be prevented if current distributions of risk factor exposures were changed to hypothetical optimal distributions. What Did the Researchers Do and Find? The researchers extracted data on exposures to these 12 selected risk factors from US national health surveys, and they obtained information on deaths from difference diseases for 2005 from the US National Center for Health Statistics. They used previously published studies to estimate how much each risk factor increases the risk of death from each disease. The researchers then used a mathematical formula to estimate the numbers of deaths caused by each risk factor. Of the 2.5 million US deaths in 2005, they estimate that nearly half a million were associated with tobacco smoking and about 400,000 were associated with high blood pressure. These two risk factors therefore each accounted for about 1 in 5 deaths in US adults. Overweight\u2013obesity and physical inactivity were each responsible for nearly 1 in 10 deaths. Among the dietary factors examined, high dietary salt intake had the largest effect, being responsible for 4% of deaths in adults. Finally, while alcohol use prevented 26,000 deaths from ischemic heart disease, ischemic stroke, and diabetes, the researchers estimate that it caused 90,000 deaths from other types of cardiovascular diseases, other medical conditions, and road traffic accidents and violence. What Do These Findings Mean? These findings indicate that smoking and high blood pressure are responsible for the largest number of preventable deaths in the US, but that several other modifiable risk factors also cause many deaths. Although the accuracy of some of the estimates obtained in this study will be affected by the quality of the data used, these findings suggest that targeting a handful of risk factors could greatly reduce premature mortality in the US. The findings might also apply to other countries, although the risk factors responsible for most preventable deaths may vary between countries. Importantly, effective individual-level and population-wide interventions are already available to reduce people's exposure to the two risk factors responsible for most preventable deaths in the US. The researchers also suggest that combinations of regulation, pricing, and education have the potential to reduce the exposure of US residents to other risk factors that are likely to shorten their lives. Additional Information Please access these Web sites via the online version of this summary at http://dx.doi.org/10.1371/journal.pmed.1000058.",
+        "title": "The Preventable Causes of Death in the United States: Comparative Risk Assessment of Dietary, Lifestyle, and Metabolic Risk Factors",
+        "mem": "no",
+        "questions": [
+            "Are physical inactivity and overweight\u2013obesity each responsible for nearly 1 in 10 deaths?",
+            "Does high blood pressure account for about 1 in 5 deaths in US adults according to the study?",
+            "Is tobacco smoking responsible for nearly half a million deaths in the US in 2005?",
+            "Is high dietary salt identified as having the largest mortality effect among dietary factors?",
+            "Is the estimated number of deaths due to high blood glucose included as a risk factor in this study?",
+            "Were previous studies criticized for not using consistent and comparable methods to estimate deaths from modifiable risk factors?",
+            "Does the study suggest that current alcohol use prevented some deaths from ischemic heart disease?",
+            "Did the study find that alcohol use caused 90,000 deaths from various conditions and injuries in 2005?",
+            "Are smoking and high blood pressure identified as having effective interventions in reducing preventable deaths?",
+            "Do researchers use the term \u201ccomparative risk assessment\u201d to describe their method of estimating preventable deaths?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-2722",
+                "MED-1328",
+                "MED-1508"
+            ],
+            [
+                "MED-3577",
+                "MED-2162",
+                "MED-1484"
+            ],
+            [
+                "MED-2306",
+                "MED-3394",
+                "MED-3634"
+            ],
+            [
+                "MED-5291",
+                "MED-5290",
+                "MED-5301"
+            ],
+            [
+                "MED-2001",
+                "MED-3394",
+                "MED-2588"
+            ],
+            [
+                "MED-5293",
+                "MED-5344",
+                "MED-3394"
+            ],
+            [
+                "MED-5041",
+                "MED-3767",
+                "MED-3394"
+            ],
+            [
+                "MED-3394",
+                "MED-3767",
+                "MED-4445"
+            ],
+            [
+                "MED-1194",
+                "MED-3427",
+                "MED-3348"
+            ],
+            [
+                "MED-5293",
+                "MED-1487",
+                "MED-3394"
+            ]
+        ],
+        "llm_responses": [
+            " I don",
+            " I don",
+            " I don",
+            " No,",
+            " I don",
+            " Yes,",
+            " No,",
+            " No,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-2110": {
+        "text": "Almost all types of newborn respiratory failure are reversible. However, supportive treatment (oxygen and positive airway pressure) can damage the lung, and newborn respiratory failure remains a major cause of morbidity and death in infants. Prolonged extracorporeal membrane oxygenation (ECMO) provides life support while allowing the lung to \"rest.\" We have used ECMO in 45 moribund newborn infants; 25 survived. Neonatologists referred patients who were unresponsive to maximal therapy. The right atrium and aortic arch were cannulated via the jugular vein and carotid artery. Heparin was infused continuously to main activated clotting time at 200 to 300 seconds. Airway oxygenation and pressure were reduced to low levels. Primary diagnoses were hyaline membrane disease, 14 (6 survived, 8 died); meconium aspiration, 22 (15 survived, 7 died); persistent fetal circulation including diaphragmatic hernia, 5 (3 survived, 2 died); and sepsis, 4 (1 survived, 3 died). Growth, development, and brain and lung function are normal in 20 of 25 survivors. ECMO decreased newborn respiratory failure mortality and morbidity rates in this phase I trial. A controlled randomized study is underway. The results suggest that ECMO may be effective in older patients if used before irreversible lung damage occurs.",
+        "title": "Extracorporeal membrane oxygenation for newborn respiratory failure: forty-five cases.",
+        "mem": "no",
+        "questions": [
+            "Is newborn respiratory failure a major cause of morbidity and death in infants?",
+            "Is almost all types of newborn respiratory failure reversible?",
+            "Can supportive treatment, such as oxygen and positive airway pressure, damage the lung?",
+            "Was ECMO used in 45 moribund newborn infants in this study?",
+            "Did 25 of the 45 infants treated with ECMO survive?",
+            "Were patients referred for ECMO unresponsive to maximal therapy?",
+            "Were the right atrium and aortic arch cannulated via the jugular vein and carotid artery in this study?",
+            "Did airway oxygenation and pressure get reduced to low levels during ECMO treatment?",
+            "Was heparin infused continuously to maintain an activated clotting time between 200 to 300 seconds?",
+            "Is a controlled randomized study of ECMO currently underway according to the text?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes.",
+            " Yes."
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4402",
+                "MED-2109",
+                "MED-1483"
+            ],
+            [
+                "MED-1483",
+                "MED-2109",
+                "MED-901"
+            ],
+            [
+                "MED-2109",
+                "MED-1200",
+                "MED-1483"
+            ],
+            [
+                "MED-2109",
+                "MED-4399",
+                "MED-1484"
+            ],
+            [
+                "MED-2109",
+                "MED-2054",
+                "MED-2061"
+            ],
+            [
+                "MED-2109",
+                "MED-1638",
+                "MED-557"
+            ],
+            [
+                "MED-4423",
+                "MED-4424",
+                "MED-1205"
+            ],
+            [
+                "MED-2109",
+                "MED-1655",
+                "MED-1864"
+            ],
+            [
+                "MED-1465",
+                "MED-3520",
+                "MED-2085"
+            ],
+            [
+                "MED-2109",
+                "MED-5371",
+                "MED-4855"
+            ]
+        ],
+        "llm_responses": [
+            ",",
+            "on",
+            "on",
+            "No,",
+            "I don",
+            "Yes,",
+            " I don",
+            "I don",
+            " I don",
+            "No,"
+        ]
+    },
+    "MED-3091": {
+        "text": "Phosphate toxicity is an important determinant of mortality in patients with chronic kidney disease (CKD), particularly those undergoing hemodialysis treatments. CKD patients are advised to take a low phosphate-containing diet, and are additionally prescribed with phosphate-lowering drugs. Since these patients usually seek guidance from their physicians and nurses for their dietary options, we conducted a survey to determine the levels of awareness regarding the high phosphate content in commercially processed food and drinks among medical and nursing students at the Hirosaki University School of Medicine in Japan. For this survey, 190 medical and nursing students (average age 21.7\u00b13 years) were randomly selected, and provided with a list of questions aimed at evaluating their awareness of food and drinks containing artificially added phosphate ingredients. While 98.9% of these students were aware of the presence of sugar in commercially available soda drinks, only 6.9% were aware of the presence of phosphate (phosphoric acid). Similarly, only 11.6% of these students were aware of the presence of phosphate in commercially processed food, such as hamburgers and pizza. Moreover, around two thirds of the surveyed students (67.7%) were unaware of the harmful effects of unrestricted consumption of phosphate-containing food and drinks. About 28% of the surveyed students consume such \u201cfast food\u201d once a week, while 40% drink at least 1\u223c5 cans of soda drinks/week. After realizing the potential long-term risks of consuming excessive phosphate-containing food and drinks, 40.5% of the survey participants considered reducing their phosphate intake by minimizing the consumption of commercially processed \u201cfast food\u201d items and soda drinks. Moreover, another 48.4% of students showed interest in obtaining more information on the negative health effects of consuming excessive amounts of phosphate. This survey emphasizes the need for educational initiative to raise awareness of the health risks posed by excessive consumption of phosphate additives.",
+        "title": "Lack of Awareness among Future Medical Professionals about the Risk of Consuming Hidden Phosphate-Containing Processed Food and Drinks",
+        "mem": "no",
+        "questions": [
+            "Are CKD patients advised to consume a low phosphate-containing diet?",
+            "Is phosphate toxicity a significant factor in the mortality of patients with chronic kidney disease?",
+            "Did 40.5% of the survey participants consider reducing their intake of phosphate-containing foods?",
+            "Were the participants in the survey predominantly aware of phosphate in commercially processed foods?",
+            "Did approximately 67.7% of the surveyed students lack awareness of the harmful effects of unrestricted phosphate consumption?",
+            "Were less than 10% of the surveyed students aware of phosphate presence in soda drinks?",
+            "Is it true that about 28% of surveyed students eat fast food once a week?",
+            "Did the survey in the text include medical and nursing students from Hirosaki University School of Medicine?",
+            "Did the survey show that over 90% of students were aware of sugar content in soda drinks?",
+            "Did nearly half of the students express interest in learning more about the negative effects of excessive phosphate consumption?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " No,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes.",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3090",
+                "MED-5338",
+                "MED-3092"
+            ],
+            [
+                "MED-3090",
+                "MED-329",
+                "MED-330"
+            ],
+            [
+                "MED-1169",
+                "MED-3092",
+                "MED-4327"
+            ],
+            [
+                "MED-3096",
+                "MED-332",
+                "MED-3090"
+            ],
+            [
+                "MED-3090",
+                "MED-1153",
+                "MED-3092"
+            ],
+            [
+                "MED-334",
+                "MED-3092",
+                "MED-4834"
+            ],
+            [
+                "MED-2646",
+                "MED-2181",
+                "MED-1543"
+            ],
+            [
+                "MED-4674",
+                "MED-4599",
+                "MED-4598"
+            ],
+            [
+                "MED-1108",
+                "MED-4834",
+                "MED-1710"
+            ],
+            [
+                "MED-332",
+                "MED-3090",
+                "MED-330"
+            ]
+        ],
+        "llm_responses": [
+            "s,",
+            " Yes,",
+            "don",
+            " I don",
+            "don",
+            "don",
+            " I don",
+            " I don",
+            " I don",
+            " I don"
+        ]
+    },
+    "MED-2410": {
+        "text": "Background and aims Previous research on the association between fish consumption and incident type 2 diabetes has been inconclusive. In addition, few studies have investigated how fish consumption may be related to the metabolic abnormalities underlying diabetes. Therefore, we examined the association of fish consumption with measures of insulin sensitivity and beta-cell function in a multi-ethnic population. Methods and results We examined the cross-sectional association between fish consumption and measures of insulin sensitivity and secretion in 951 non-diabetic participants in the Insulin Resistance Atherosclerosis Study (IRAS). Fish consumption, categorized as <2 vs. \u22652 portions/week, was measured using a validated food frequency questionnaire. Insulin sensitivity (SI) and acute insulin response (AIR) were determined from frequently sampled intravenous glucose tolerance tests. Higher fish consumption was independently associated with lower SI-adjusted AIR (\u03b2=\u22120.13 [\u22120.25, \u22120.016], p=0.03, comparing \u2265 2 vs. <2 portions/week). Fish consumption was positively associated with intact and split proinsulin/C-peptide ratios, however, these associations were confounded by ethnicity (multivariable-adjusted \u03b2=0.073 [\u22120.014, 0.16] for intact proinsulin/C-peptide ratio, \u03b2=0.031 [\u22120.065, 0.13] for split proinsulin/C-peptide ratio). We also observed a significant positive association between fish consumption and fasting blood glucose (multivariable-adjusted \u03b2=2.27 [0.68, 3.86], p=0.005). We found no association between fish consumption and SI (multivariable-adjusted \u03b2= \u22120.015 [\u22120.083, 0.053]) or fasting insulin (multivariable-adjusted \u03b2=0.016 [\u22120.066, 0.10]). Conclusions Fish consumption was not associated with measures of insulin sensitivity in the multi-ethnic IRAS cohort. However, higher fish consumption may be associated with pancreatic beta-cell dysfunction.",
+        "title": "Fish consumption, insulin sensitivity and beta-cell function in the Insulin Resistance Atherosclerosis Study (IRAS)",
+        "mem": "no",
+        "questions": [
+            "Is there a conclusive association between fish consumption and incident type 2 diabetes according to previous research?",
+            "Did the study examine the association of fish consumption with insulin sensitivity and beta-cell function?",
+            "Was there an association found between fish consumption and insulin sensitivity in the study?",
+            "Did the study find a significant positive association between fish consumption and fasting blood glucose?",
+            "Was higher fish consumption associated with lower insulin sensitivity-adjusted acute insulin response?",
+            "Was fish consumption measured using a validated food frequency questionnaire?",
+            "Did the study conclude that higher fish consumption might be associated with pancreatic beta-cell dysfunction?",
+            "Were metabolic abnormalities underlying diabetes extensively studied in relation to fish consumption prior to this research?",
+            "Was there a significant concern that ethnicity confounded the association between fish consumption and proinsulin/C-peptide ratios?",
+            "Was the study population multi-ethnic?"
+        ],
+        "answers": [
+            " No,",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes.",
+            " No,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3028",
+                "MED-2413",
+                "MED-2406"
+            ],
+            [
+                "MED-2756",
+                "MED-2413",
+                "MED-2406"
+            ],
+            [
+                "MED-2756",
+                "MED-3028",
+                "MED-2406"
+            ],
+            [
+                "MED-2406",
+                "MED-2413",
+                "MED-4736"
+            ],
+            [
+                "MED-2756",
+                "MED-1454",
+                "MED-2413"
+            ],
+            [
+                "MED-4735",
+                "MED-5191",
+                "MED-2402"
+            ],
+            [
+                "MED-1817",
+                "MED-2388",
+                "MED-1333"
+            ],
+            [
+                "MED-3028",
+                "MED-2397",
+                "MED-2413"
+            ],
+            [
+                "MED-2413",
+                "MED-2406",
+                "MED-3032"
+            ],
+            [
+                "MED-2167",
+                "MED-4679",
+                "MED-4647"
+            ]
+        ],
+        "llm_responses": [
+            " No,",
+            " No,",
+            " Yes,",
+            " I don",
+            " I don",
+            " Yes,",
+            " No,",
+            " No,",
+            " I don",
+            " Yes,"
+        ]
+    },
+    "MED-1344": {
+        "text": "Is it ever right to prescribe placebos to patients in clinical practice? The General Medical Council is ambivalent about the issue; the American Medical Association asserts that placebos can be administered only if the patient is (somehow) 'informed'. The potential problem with placebos is that they may involve deception: indeed, if this is the case, an ethical tension arises over the patient's autonomy and the physician's requirement to be open and honest, and the notion that medical care should be the primary concern. This paper examines the case of depression as an entry point for understanding the complexities of the prescription of placebos. Recent important meta-analyses of antidepressants claim that they are not significantly more effective in a clinical setting than placebos. Given that antidepressants have numerous adverse side effects and are hugely expensive, this provocative research has serious potential ethical and practical implications for patients and medical providers. Should placebos be prescribed in place of antidepressants? The case of depression highlights another important issue which medical ethical codes have hitherto overlooked: well-being is not synonymous with being realistic about oneself, one's circumstances and the future. While severely depressed individuals are unduly pessimistic about themselves and the world around them, treatment of depressed individuals can be deemed successful when patients have successfully attained those positive illusions that are indicative of psychological health. This is exactly what successful psychological treatments of depression seem to achieve. It is therefore possible that there may be a limited unavoidable role for deception in medicine.",
+        "title": "Deception as treatment: the case of depression.",
+        "mem": "no",
+        "questions": [
+            "According to the American Medical Association, can placebos be administered without informing the patient?",
+            "Does the General Medical Council have a clear stance on prescribing placebos to patients in clinical practice?",
+            "Have recent meta-analyses suggested that antidepressants are not significantly more effective than placebos?",
+            "Does the treatment of depression sometimes involve creating positive illusions in patients?",
+            "Does prescribing placebos raise issues related to a patient's autonomy?",
+            "Are there ethical concerns related to the use of placebos due to potential deception?",
+            "Is there an ethical argument in favor of prescribing placebos over antidepressants due to lower side effects and cost?",
+            "Do antidepressants have numerous adverse side effects?",
+            "Is the primary concern in medical care supposed to be the well-being of the patient?",
+            "Is it suggested that some level of deception might be considered acceptable in medical practice for the benefit of the patient's psychological health?"
+        ],
+        "answers": [
+            " No,",
+            " No,",
+            " Yes.",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes.",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-3757",
+                "MED-1011",
+                "MED-3752"
+            ],
+            [
+                "MED-3757",
+                "MED-3754",
+                "MED-3749"
+            ],
+            [
+                "MED-1347",
+                "MED-1349",
+                "MED-1342"
+            ],
+            [
+                "MED-1360",
+                "MED-1350",
+                "MED-5365"
+            ],
+            [
+                "MED-3757",
+                "MED-3754",
+                "MED-3749"
+            ],
+            [
+                "MED-3757",
+                "MED-3749",
+                "MED-3756"
+            ],
+            [
+                "MED-3757",
+                "MED-1348",
+                "MED-1347"
+            ],
+            [
+                "MED-1010",
+                "MED-1352",
+                "MED-1348"
+            ],
+            [
+                "MED-727",
+                "MED-1709",
+                "MED-1351"
+            ],
+            [
+                "MED-3757",
+                "MED-3755",
+                "MED-3626"
+            ]
+        ],
+        "llm_responses": [
+            " No,",
+            " I don",
+            " Yes,",
+            "ccording to",
+            " According to",
+            " According to",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    },
+    "MED-4493": {
+        "text": "Processed meat intake may be involved in the etiology of colorectal cancer, a major cause of death in affluent countries. The epidemiologic studies published to date conclude that the excess risk in the highest category of processed meat-eaters is comprised between 20 and 50% compared with non-eaters. In addition, the excess risk per gram of intake is clearly higher than that of fresh red meat. Several hypotheses, which are mainly based on studies carried out on red meat, may explain why processed meat intake is linked to cancer risk. Those that have been tested experimentally are (i) that high-fat diets could promote carcinogenesis via insulin resistance or fecal bile acids; (ii) that cooking meat at a high temperature forms carcinogenic heterocyclic amines and polycyclic aromatic hydrocarbons; (iii) that carcinogenic N-nitroso compounds are formed in meat and endogenously; (iv) that heme iron in red meat can promote carcinogenesis because it increases cell proliferation in the mucosa, through lipoperoxidation and/or cytotoxicity of fecal water. Nitrosation might increase the toxicity of heme in cured products. Solving this puzzle is a challenge that would permit to reduce cancer load by changing the processes rather than by banning processed meat.",
+        "title": "Processed meat and colorectal cancer: a review of epidemiologic and experimental evidence",
+        "mem": "no",
+        "questions": [
+            "Are there hypotheses that explain the link between processed meat intake and increased cancer risk?",
+            "Is processed meat intake potentially involved in the development of colorectal cancer?",
+            "Is the excess risk per gram of processed meat intake higher than that of fresh red meat?",
+            "Do epidemiologic studies suggest that high processed meat consumption increases the risk of colorectal cancer by 20 to 50% compared to non-eaters?",
+            "Can heme iron in red meat potentially promote carcinogenesis by increasing cell proliferation in the mucosa?",
+            "Could solving the issue of processed meat's link to cancer reduce cancer load by changing processing methods rather than eliminating processed meat entirely?",
+            "Does nitrosation possibly increase the toxicity of heme in cured meat products?",
+            "Has it been experimentally tested whether high-fat diets might promote carcinogenesis through insulin resistance or fecal bile acids?",
+            "Are N-nitroso compounds, which are carcinogenic, formed both in meat and endogenously?",
+            "Is it possible that cooking meat at high temperatures forms carcinogenic compounds such as heterocyclic amines and polycyclic aromatic hydrocarbons?"
+        ],
+        "answers": [
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ],
+        "retrieved_doc_ids": [
+            [
+                "MED-4487",
+                "MED-4484",
+                "MED-4436"
+            ],
+            [
+                "MED-4487",
+                "MED-3000",
+                "MED-5326"
+            ],
+            [
+                "MED-4487",
+                "MED-5235",
+                "MED-847"
+            ],
+            [
+                "MED-4487",
+                "MED-3000",
+                "MED-5326"
+            ],
+            [
+                "MED-5326",
+                "MED-847",
+                "MED-4485"
+            ],
+            [
+                "MED-5326",
+                "MED-4487",
+                "MED-4484"
+            ],
+            [
+                "MED-5326",
+                "MED-5235",
+                "MED-5204"
+            ],
+            [
+                "MED-1238",
+                "MED-1417",
+                "MED-1414"
+            ],
+            [
+                "MED-4470",
+                "MED-4472",
+                "MED-4492"
+            ],
+            [
+                "MED-4972",
+                "MED-5197",
+                "MED-4071"
+            ]
+        ],
+        "llm_responses": [
+            " Yes,",
+            " Yes,",
+            " According to",
+            " Yes,",
+            " Yes,",
+            " The article",
+            " Yes,",
+            " Yes,",
+            " Yes,",
+            " Yes,"
+        ]
+    }
+}
