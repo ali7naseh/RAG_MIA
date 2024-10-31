@@ -15,8 +15,9 @@ def run(test_params):
         --M {test_params['M']}\
         --N {test_params['N']}\
         --seed {test_params['seed']}\
-        --name {log_name}\
-        > {log_file}"
+        --name {log_name} " + \
+        ("--from_ckpt " if test_params['from_ckpt'] else "") + \
+        f"> {log_file}"
         
     os.system(cmd)
 
@@ -41,9 +42,10 @@ test_params = {
     # attack
     'attack_method': 'aa',
     'repeat_times': 1,
-    'M': 2, #how many target docs
+    'M': 1000, #how many target docs
     'top_k': 10, # how many questions each doc after filtering
     'seed': 12,
+    'from_ckpt': True
 }
 
 # for dataset in ['nq', 'hotpotqa', 'msmarco']:

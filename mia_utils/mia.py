@@ -55,7 +55,7 @@ class MIA_Attacker():
             combined_questions = "\n".join(questions)
             self.target_docs[doc_id]['all_questions'] = combined_questions
             print(f"Combined questions for {doc_id}: {combined_questions}")
-
+        print('All questions are generated.')
         # Save the updated target_docs
         self.save_target_docs()
 
@@ -149,28 +149,79 @@ class MIA_Attacker():
         except FileNotFoundError as e:
             print(f"File not found: {e}")
 
-    def generate_ground_truth_answers(self, llm=None):
+    def generate_ground_truth_answers(self, llm=None,  from_ckpt=True):
         answer_pattern = r"A\d+:\s*(Yes|No)"  # Regex pattern to match "A1: Yes/No" format for answers
-        for q in self.target_docs.keys():
-            questions = self.target_docs[q].get('questions', [])
-            target_doc = self.target_docs[q]['text']
-            is_mem = self.target_docs[q].get('mem', 'no').lower() == 'yes'
-            answers = []
 
-            # Generate answers for each question
-            for idx, question in enumerate(questions, 1):
-                answer_prompt = question
-                answer_prompt = wrap_prompt(answer_prompt, [target_doc], prompt_id=4)
-    
-                print("answer_prompt: ", answer_prompt)
-                answer_response = llm.query(answer_prompt)
-                print('answer response: ', answer_response)
+        # Iterate over each target document in the list
+        for q, doc_info in self.target_docs.items():
+            questions = doc_info.get('questions', [])
+            target_doc = doc_info['text']
 
-                answers.append(answer_response)
+            answers = doc_info.get('answers', [])
+            if not from_ckpt:
+                answers=[]
+            if len(answers) < len(questions):
+                print(f"Reprocessing document: {q}")
+                doc_info['answers'] = []  # Clear existing answers to start fresh
+                answers = doc_info['answers']
 
-            self.target_docs[q]['answers'] = answers
-            print(f"Answers for {q}: {answers}")
+                # Generate answers for all questions
+                for idx, question in enumerate(questions, start=1):
+                    answer_prompt = wrap_prompt(question, [target_doc], prompt_id=4)
+                    try:
+                        answer_response = llm.query(answer_prompt)
+                        print('answer response: ', answer_response)
+                        answers.append(answer_response)
+                        doc_info['answers'] = answers
+                    except Exception as e:
+                        print(f"Error generating answer for question {idx} in doc {q}: {e}")
+                        break  # Stop processing if an error occurs to allow for retry
+                print(f"Answers for {q}: {answers}")
+                # Save progress after each answer
+                self.save_target_docs()
+            else:
+                print(f"All answers already generated for {q}")
+        # Save final state after processing all documents
         self.save_target_docs()
+
+    def query_target_llm(self, llm, from_ckpt=True):
+        for doc_id, doc_content in self.target_docs.items():
+            questions = doc_content.get('questions', [])
+            retrieved_doc_ids = doc_content.get('retrieved_doc_ids', [])
+
+            llm_responses = doc_content.get('llm_responses', [])
+            if not from_ckpt:
+                llm_responses = []  # Start fresh if from_ckpt is False
+            if len(llm_responses) < len(questions):
+                print(f"Reprocessing document: {doc_id}")
+                doc_content['llm_responses'] = []  # Clear existing responses to start fresh
+                llm_responses = doc_content['llm_responses']
+
+                # Generate responses for all questions
+                for i, question in enumerate(questions):
+                    # Access the text of each retrieved document directly from self.corpus
+                    topk_contents = [self.corpus[doc]['text'] for doc in retrieved_doc_ids[i]]
+                    query_prompt = wrap_prompt(question, topk_contents, prompt_id=4)
+
+                    try:
+                        # Query the LLM for the response
+                        response = llm.query(query_prompt)
+                        print(f'Response for doc {doc_id}, question {i}: {response}')
+                        llm_responses.append(response)
+                    except Exception as e:
+                        print(f"Error querying LLM for question {i} in doc {doc_id}: {e}")
+                        break  # Stop processing if an error occurs to allow for retry
+
+                print(f"Completed responses for doc {doc_id}: {llm_responses}")
+                doc_content['llm_responses'] = llm_responses
+                # Save progress after each document is processed
+                self.save_target_docs()
+            else:
+                print(f"All responses already generated for {doc_id}")
+
+        # Final save after processing all documents
+        self.save_target_docs()
+
 
     def calculate_accuracy_(self):
         def extract_yes_no(answer):

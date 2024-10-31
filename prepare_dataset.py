@@ -5,10 +5,10 @@ import random
 
 num=1000
 
-# datasets = ['nfcorpus',
-#             'trec-covid',
-#             'fiqa'
-#             ]
+datasets = ['nfcorpus',
+            # 'trec-covid',
+            # 'fiqa'
+            ]
 
 # for dataset in datasets:
 #     url = "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/{}.zip".format(dataset)
@@ -32,7 +32,8 @@ def select_mem_non_mem_indices(dataset_path):
     
     random.shuffle(doc_ids)
     mem_indices = random.sample(doc_ids, num)
-    non_mem_indices = random.sample(doc_ids, num)
+    remaining_doc_ids = list(set(doc_ids) - set(mem_indices))
+    non_mem_indices = random.sample(remaining_doc_ids, num)
     
     return mem_indices, non_mem_indices
 
