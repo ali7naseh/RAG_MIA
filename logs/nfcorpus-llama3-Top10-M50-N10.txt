@@ -1,0 +1,669 @@
+Namespace(retriever='colbert', eval_dataset='nfcorpus', split='test', model_config_path=None, model_name='llama3', shadow_model_name='llama3', gpu_id=0, attack_method='aa', repeat_times=1, M=50, N=10, top_k=10, seed=12, name='nfcorpus-llama3-Top10-M50-N10', from_ckpt=True)
+  0%|          | 0/3633 [00:00<?, ?it/s]100%|██████████| 3633/3633 [00:00<00:00, 133168.22it/s]
+model_configs/llama3_config.json model_configs/llama3_config.json
+llama3
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:10,  3.41s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.40s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:10<00:03,  3.51s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.47s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.83s/it]
+llama3
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.27s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:07<00:07,  3.61s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:10<00:03,  3.42s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.42s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.80s/it]
+All answers already generated for MED-5232
+All answers already generated for MED-3509
+All answers already generated for MED-5302
+All answers already generated for MED-3469
+All answers already generated for MED-1813
+All answers already generated for MED-4871
+All answers already generated for MED-3315
+All answers already generated for MED-3625
+All answers already generated for MED-3546
+All answers already generated for MED-5322
+All answers already generated for MED-4145
+All answers already generated for MED-3607
+All answers already generated for MED-3707
+Reprocessing document: MED-4876
+/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:601: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.1` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:649: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+answer response:   Yes, BMAA is produced by cyanobacteria found in a variety of freshwater, marine,
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, according to the conclusion of the study, the occurrence of BMAA in North American ALS
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study was designed to screen for and quantify the neurotoxic amino acid beta-N-m
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, BMAA was not detected and quantified in the brain tissues of Huntington's disease (
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study confirmed the presence of BMAA in neurological specimens using triple quadrupole liquid
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, Chamorro patients with ALS/Parkinsonism dementia complex from Guam were previously found to have
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the postmortem brain specimens were taken from neuropathologically confirmed cases of 13 ALS
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study found that the concentrations of BMAA were below what had been reported previously in
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the context, BMAA is produced by cyanobacteria found in a variety
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. The study used postmortem brain specimens taken from neuropathologically confirmed cases of ALS,
+Answers for MED-4876: [' Yes, BMAA is produced by cyanobacteria found in a variety of freshwater, marine,', ' Yes, according to the conclusion of the study, the occurrence of BMAA in North American ALS', ' Yes, the study was designed to screen for and quantify the neurotoxic amino acid beta-N-m', " No, BMAA was not detected and quantified in the brain tissues of Huntington's disease (", ' Yes, the study confirmed the presence of BMAA in neurological specimens using triple quadrupole liquid', ' Yes, Chamorro patients with ALS/Parkinsonism dementia complex from Guam were previously found to have', ' Yes, the postmortem brain specimens were taken from neuropathologically confirmed cases of 13 ALS', ' Yes, the study found that the concentrations of BMAA were below what had been reported previously in', ' Yes. According to the context, BMAA is produced by cyanobacteria found in a variety', ' Yes. The study used postmortem brain specimens taken from neuropathologically confirmed cases of ALS,']
+Reprocessing document: MED-5011
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, AV119 can induce human beta-defensin-2 production by normal human keratinocytes
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Note: The answer should be short and concise. If you cannot find the answer to
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, AV119 can induce the aggregation of yeast cells. 
+
+Contexts: AV119 is a
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study analyzed the effect of AV119 on the growth and invasiveness of Malasse
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, AV119 does not affect the growth of Malassezia furfur. According to the text
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, AV119 inhibits the invasiveness of M. furfur without affecting its growth.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, AV119 can be used to prepare cosmetics or drugs to inhibit the colonization of skin by path
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Query: What is the effect of AV119 on the invasiveness of M.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, real-time PCR analysis demonstrated that AV119 was able to modulate the HBD-2
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the maximum modulation of the HBD-2 response is reached after 48 hours of treatment
+Answers for MED-5011: [' Yes, AV119 can induce human beta-defensin-2 production by normal human keratinocytes', ' Yes. \n\nNote: The answer should be short and concise. If you cannot find the answer to', ' Yes, AV119 can induce the aggregation of yeast cells. \n\nContexts: AV119 is a', ' Yes, the study analyzed the effect of AV119 on the growth and invasiveness of Malasse', ' No, AV119 does not affect the growth of Malassezia furfur. According to the text', ' Yes, AV119 inhibits the invasiveness of M. furfur without affecting its growth.', ' Yes, AV119 can be used to prepare cosmetics or drugs to inhibit the colonization of skin by path', ' Yes. \n\nQuery: What is the effect of AV119 on the invasiveness of M.', ' Yes, real-time PCR analysis demonstrated that AV119 was able to modulate the HBD-2', ' Yes, the maximum modulation of the HBD-2 response is reached after 48 hours of treatment']
+Reprocessing document: MED-1625
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Query: What is the effect of artificial sweeteners on weight? 
+
+Answer: Artificial
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, there have been some controversial suggestions that excessive sugar may play an important role in certain degenerative
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, artificial sweeteners attract consumers as an alternative to sugar. According to the context, artificial sweet
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, too much sugar is considered harmful for our teeth and waistline. 
+
+Note: The answer
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, animal studies have convincingly proven that artificial sweeteners cause weight gain, brain tumors, bladder
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, some kind of health-related side effects, including carcinogenicity, are noted in humans from
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, publications often emphasize supporting studies while dismissing opposing results regarding artificial sweetener safety. 
+(I hope
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, studies on artificial sweeteners have drawn conclusions ranging from “safe under all conditions” to “
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, a sugar substitute is designed to duplicate the effect of sugar in taste, but usually has less
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the scientific community is divided on the safety of artificial sweeteners, with some studies concluding they
+Answers for MED-1625: [' Yes. \n\nQuery: What is the effect of artificial sweeteners on weight? \n\nAnswer: Artificial', ' Yes, there have been some controversial suggestions that excessive sugar may play an important role in certain degenerative', ' Yes, artificial sweeteners attract consumers as an alternative to sugar. According to the context, artificial sweet', ' Yes, too much sugar is considered harmful for our teeth and waistline. \n\nNote: The answer', ' Yes, animal studies have convincingly proven that artificial sweeteners cause weight gain, brain tumors, bladder', ' Yes, some kind of health-related side effects, including carcinogenicity, are noted in humans from', ' Yes, publications often emphasize supporting studies while dismissing opposing results regarding artificial sweetener safety. \n(I hope', ' Yes, studies on artificial sweeteners have drawn conclusions ranging from “safe under all conditions” to “', ' Yes, a sugar substitute is designed to duplicate the effect of sugar in taste, but usually has less', ' Yes, the scientific community is divided on the safety of artificial sweeteners, with some studies concluding they']
+Reprocessing document: MED-2804
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Contexts: Osteoarthritis (OA) is the most common form of
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, osteoarthritis is considered a leading cause of disability. 
+
+Contexts: Oste
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the context, epidemiologic studies of osteoarthritis are typically defined on the
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, there are methodologic challenges in studying osteoarthritis. 
+
+Contexts: Oste
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the prevalence of osteoarthritis is rising, likely related to the aging of the population
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, joint-specific factors are considered in assessing the risk of osteoarthritis. According to the
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the aging population is likely a factor in the increasing incidence of osteoarthritis. 
+
+
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, obesity is considered a risk factor for osteoarthritis. 
+
+Contexts: Oste
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, according to the text, osteoarthritis incidence also relates to joint-specific factors, which
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the text mentions "genetics" as one of the person-level risk factors for osteo
+Answers for MED-2804: [' Yes. \n\nContexts: Osteoarthritis (OA) is the most common form of', ' Yes, osteoarthritis is considered a leading cause of disability. \n\nContexts: Oste', ' Yes. According to the context, epidemiologic studies of osteoarthritis are typically defined on the', ' Yes, there are methodologic challenges in studying osteoarthritis. \n\nContexts: Oste', ' Yes, the prevalence of osteoarthritis is rising, likely related to the aging of the population', ' Yes, joint-specific factors are considered in assessing the risk of osteoarthritis. According to the', ' Yes, the aging population is likely a factor in the increasing incidence of osteoarthritis. \n\n', ' Yes, obesity is considered a risk factor for osteoarthritis. \n\nContexts: Oste', ' No, according to the text, osteoarthritis incidence also relates to joint-specific factors, which', ' Yes, the text mentions "genetics" as one of the person-level risk factors for osteo']
+Reprocessing document: MED-4171
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, strong positive intra-individual correlations (Spearman's r=0.61-0
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, OH-PCB concentrations in blood serum tended to decline as pregnancy progressed, although among some
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, if samples have been collected within the same relative narrow time window during pregnancy, PCB results from
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, positive intra-individual correlations (r=0.66-0.99) were observed
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the median PCB levels in serum lipids decreased 20-46% between early and late
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, PCP concentrations did not show a decline during pregnancy. In fact, no decline was observed
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, there was a 2-fold increase in median serum lipid content between early (weeks 9
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study suggests that sampling for OH-PCBs and PCP needs to be timed specifically
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, no significant correlations were found between concentrations of PCP at different sampling periods.  I don
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. The study measured the serum concentrations of five specific polychlorinated biphenyls (
+Answers for MED-4171: [" Yes, strong positive intra-individual correlations (Spearman's r=0.61-0", ' Yes, OH-PCB concentrations in blood serum tended to decline as pregnancy progressed, although among some', ' Yes, if samples have been collected within the same relative narrow time window during pregnancy, PCB results from', ' Yes, positive intra-individual correlations (r=0.66-0.99) were observed', ' Yes, the median PCB levels in serum lipids decreased 20-46% between early and late', ' No, PCP concentrations did not show a decline during pregnancy. In fact, no decline was observed', ' Yes, there was a 2-fold increase in median serum lipid content between early (weeks 9', ' Yes, the study suggests that sampling for OH-PCBs and PCP needs to be timed specifically', ' No, no significant correlations were found between concentrations of PCP at different sampling periods.  I don', ' Yes. The study measured the serum concentrations of five specific polychlorinated biphenyls (']
+Reprocessing document: MED-5311
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, dinitrophenol was used as a weight-loss drug in the early 1930
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, federal regulators were unable to stop the sale of dinitrophenol before 1938
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Contexts: The Food, Drug, and Cosmetic Act of 1938 was a
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the text, dinitrophenol was marketed with the promise of a drug
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Contexts: The Food, Drug, and Cosmetic Act of 1938 was a
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, dinitrophenol was associated with causing irreversible harm to thousands of people. 
+
+Context
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, Maurice Tainter, a clinical pharmacologist from Stanford University, played a significant role in promoting
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the Food, Drug, and Cosmetic Act of 1938 gave federal regulators the ability to
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the therapeutic index of dinitrophenol was considered to be very narrow, or "
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Contexts: In the early 1930s, the industrial chemical dinitro
+Answers for MED-5311: [' Yes, dinitrophenol was used as a weight-loss drug in the early 1930', ' Yes, federal regulators were unable to stop the sale of dinitrophenol before 1938', ' Yes. \n\nContexts: The Food, Drug, and Cosmetic Act of 1938 was a', ' Yes. According to the text, dinitrophenol was marketed with the promise of a drug', ' Yes. \n\nContexts: The Food, Drug, and Cosmetic Act of 1938 was a', ' Yes, dinitrophenol was associated with causing irreversible harm to thousands of people. \n\nContext', ' Yes, Maurice Tainter, a clinical pharmacologist from Stanford University, played a significant role in promoting', ' Yes, the Food, Drug, and Cosmetic Act of 1938 gave federal regulators the ability to', ' Yes, the therapeutic index of dinitrophenol was considered to be very narrow, or "', ' Yes. \n\nContexts: In the early 1930s, the industrial chemical dinitro']
+Reprocessing document: MED-5319
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the text, "10 subjects showed marked FDG uptake into adipose tissue of
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study examined the acute effects of capsinoid ingestion on energy expenditure in humans. 
+
+
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, the increase in energy expenditure was not significantly different between the BAT-positive and BAT-negative groups.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, neither capsinoids nor placebo changed the skin temperature in various regions, including regions close to
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+(I hope this is correct. Let me know if I made a mistake.) 
+
+Please
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, there was no significant difference in resting energy expenditure under warm conditions between the BAT-positive and BAT
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, the placebo ingestion produced no significant change in either group. 
+(I don't know if the
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, participants were exposed to cold conditions at 19°C for 2 hours during the experiment.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the context, "Eighteen healthy men aged 20-32 y" participated
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+(I hope this is correct. Let me know if I made a mistake.) 
+
+Please
+Answers for MED-5319: [' Yes. According to the text, "10 subjects showed marked FDG uptake into adipose tissue of', ' Yes, the study examined the acute effects of capsinoid ingestion on energy expenditure in humans. \n\n', ' No, the increase in energy expenditure was not significantly different between the BAT-positive and BAT-negative groups.', ' No, neither capsinoids nor placebo changed the skin temperature in various regions, including regions close to', ' Yes. \n\n(I hope this is correct. Let me know if I made a mistake.) \n\nPlease', ' No, there was no significant difference in resting energy expenditure under warm conditions between the BAT-positive and BAT', " No, the placebo ingestion produced no significant change in either group. \n(I don't know if the", ' Yes, participants were exposed to cold conditions at 19°C for 2 hours during the experiment.', ' Yes. According to the context, "Eighteen healthy men aged 20-32 y" participated', ' Yes. \n\n(I hope this is correct. Let me know if I made a mistake.) \n\nPlease']
+Reprocessing document: MED-990
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, elevated homocysteine has emerged as a risk factor for cognitive impairment even in healthy
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, elevated homocysteine was not associated with white matter hyperintensity volume. 
+
+
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, elevated homocysteine is associated with reduced global cerebral volume according to the study.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Although homocysteine and folate levels were correlated, their effects on white matter volume were
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, the association between homocysteine and lower speed of processing disappeared after controlling for white
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study found an association between elevated homocysteine and lower speed of processing,
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, participants underwent quantitative magnetic resonance imaging of the brain using a standardized protocol. 
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. Participants with medical conditions or neurological diseases other than well-controlled diabetes mellitus and hypertension were excluded
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study reports that homocysteine and folate levels are correlated. However,
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, plasma homocysteine was measured as part of the study. 
+
+(I hope this
+Answers for MED-990: [' Yes, elevated homocysteine has emerged as a risk factor for cognitive impairment even in healthy', ' No, elevated homocysteine was not associated with white matter hyperintensity volume. \n\n', ' Yes, elevated homocysteine is associated with reduced global cerebral volume according to the study.', ' Although homocysteine and folate levels were correlated, their effects on white matter volume were', ' No, the association between homocysteine and lower speed of processing disappeared after controlling for white', ' Yes, the study found an association between elevated homocysteine and lower speed of processing,', ' Yes, participants underwent quantitative magnetic resonance imaging of the brain using a standardized protocol. ', ' Yes. Participants with medical conditions or neurological diseases other than well-controlled diabetes mellitus and hypertension were excluded', ' Yes, the study reports that homocysteine and folate levels are correlated. However,', ' Yes, plasma homocysteine was measured as part of the study. \n\n(I hope this']
+Reprocessing document: MED-2337
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, urticaria is a common condition in children. 
+
+I don't know: No.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+I hope this helps! Let me know if you have any further questions. 
+
+Best
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the management of urticaria in children requires consideration of paediatric-specific features, including the
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, second-generation antihistamines are the mainstay of pharmacological treatment aimed at relief of
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, infections are considered a potential underlying cause of urticaria in children. 
+
+Note: The
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, food and drug hypersensitivity are considered as potential underlying causes of urticaria in children.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the review highlights unmet needs in the management of childhood urticaria, aiming to promote
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the context, the review "systematically discusses the current best-available evidence on spontaneous
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, second-generation antihistamines require dose adjustment for pediatric use. 
+
+I don't know
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the context, the review "systematically discusses the current best-available evidence" and
+Answers for MED-2337: [" Yes, urticaria is a common condition in children. \n\nI don't know: No.", ' Yes. \n\nI hope this helps! Let me know if you have any further questions. \n\nBest', ' Yes, the management of urticaria in children requires consideration of paediatric-specific features, including the', ' Yes, second-generation antihistamines are the mainstay of pharmacological treatment aimed at relief of', ' Yes, infections are considered a potential underlying cause of urticaria in children. \n\nNote: The', ' Yes, food and drug hypersensitivity are considered as potential underlying causes of urticaria in children.', ' Yes, the review highlights unmet needs in the management of childhood urticaria, aiming to promote', ' Yes. According to the context, the review "systematically discusses the current best-available evidence on spontaneous', " Yes, second-generation antihistamines require dose adjustment for pediatric use. \n\nI don't know", ' Yes. According to the context, the review "systematically discusses the current best-available evidence" and']
+Reprocessing document: MED-1124
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study found that an uncooked extreme vegan diet alters fecal bacterial flora significantly as measured
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study compared the effects of an uncooked vegan diet to a conventional diet on fecal
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Query: Did the control group consume a conventional diet throughout the study period? 
+
+Answer
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, there was a significant change in GLC profiles in the test group after the induction and discontin
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No. 
+
+(I don't know) if you are unsure or cannot find the answer to the question
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, the control group did not show significant changes in GLC profiles at any time during the study
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, only the test group received an uncooked vegan diet for 1 month. The control group
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. The study included a computerized analysis of the resulting fatty acid profiles, which was performed to
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the participants were divided randomly into two groups. 
+
+I hope this helps! Let me know
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the vegan diet was administered for one month during the study. The test group received an un
+Answers for MED-1124: [' Yes, the study found that an uncooked extreme vegan diet alters fecal bacterial flora significantly as measured', ' Yes, the study compared the effects of an uncooked vegan diet to a conventional diet on fecal', ' Yes. \n\nQuery: Did the control group consume a conventional diet throughout the study period? \n\nAnswer', ' Yes, there was a significant change in GLC profiles in the test group after the induction and discontin', " No. \n\n(I don't know) if you are unsure or cannot find the answer to the question", ' No, the control group did not show significant changes in GLC profiles at any time during the study', ' No, only the test group received an uncooked vegan diet for 1 month. The control group', ' Yes. The study included a computerized analysis of the resulting fatty acid profiles, which was performed to', ' Yes, the participants were divided randomly into two groups. \n\nI hope this helps! Let me know', ' Yes, the vegan diet was administered for one month during the study. The test group received an un']
+Reprocessing document: MED-2085
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, a diet rich in fruits and vegetables is known to decrease the risk of cardiovascular disease. 
+
+
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the extracts were evaluated for antiplatelet, anticoagulant, and fibrinoly
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the information regarding the antithrombotic activity of fruits and vegetables is scarce. 
+
+
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+(I hope this is correct. Let me know if I made a mistake.) 
+Final
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. The study included samples of 19 fruits and 26 vegetables, representative of the local diet
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, raspberry extracts presented fibrinolytic activity. 
+
+I don't know: None. 
+
+
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the text, "Extracts of green beans and tomatoes inhibited platelet aggregation induced
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the methanolic extracts of grapes prolonged the PT and dPT. 
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, both aqueous (juice or pressed solubles) and/or methanol-sol
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the study concludes that further investigations are necessary to advance in knowledge of the active compounds of these
+Answers for MED-2085: [' Yes, a diet rich in fruits and vegetables is known to decrease the risk of cardiovascular disease. \n\n', ' Yes, the extracts were evaluated for antiplatelet, anticoagulant, and fibrinoly', ' Yes, the information regarding the antithrombotic activity of fruits and vegetables is scarce. \n\n', ' Yes. \n(I hope this is correct. Let me know if I made a mistake.) \nFinal', ' Yes. The study included samples of 19 fruits and 26 vegetables, representative of the local diet', " Yes, raspberry extracts presented fibrinolytic activity. \n\nI don't know: None. \n\n", ' Yes. According to the text, "Extracts of green beans and tomatoes inhibited platelet aggregation induced', ' Yes, the methanolic extracts of grapes prolonged the PT and dPT. ', ' Yes, both aqueous (juice or pressed solubles) and/or methanol-sol', ' Yes, the study concludes that further investigations are necessary to advance in knowledge of the active compounds of these']
+Reprocessing document: MED-2363
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the antibody pool present in normal human serum binds cytokine receptors in vitro. 
+
+I don
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, anti-gal can interfere with such assays because it binds to cytokine receptors in vitro.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+I don't know. 
+
+Yes, it is the same as the natural antibody termed
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, according to the text, anti-carbohydrate antibodies may represent a new class of risk factors
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, anti-gal is the predominant obstacle to xenotransplantation. 
+
+I don't
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, anti-gal binds to the alpha-galactosyl carbohydrate epitope (alpha-g
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, there is a significant difference in levels of anti-carbohydrate antibodies between atherosclerosis patients
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, there are high levels of IgD anti alpha-gal in most volunteers. 
+
+I don
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, they have been previously described. 
+
+Query: Are there high levels of IgD anti-alpha
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+I hope this helps! Let me know if you have any further questions. 
+
+Best
+Answers for MED-2363: [' Yes, the antibody pool present in normal human serum binds cytokine receptors in vitro. \n\nI don', ' Yes, anti-gal can interfere with such assays because it binds to cytokine receptors in vitro.', " Yes. \n\nI don't know. \n\nYes, it is the same as the natural antibody termed", ' Yes, according to the text, anti-carbohydrate antibodies may represent a new class of risk factors', " Yes, anti-gal is the predominant obstacle to xenotransplantation. \n\nI don't", ' Yes, anti-gal binds to the alpha-galactosyl carbohydrate epitope (alpha-g', ' Yes, there is a significant difference in levels of anti-carbohydrate antibodies between atherosclerosis patients', ' Yes, there are high levels of IgD anti alpha-gal in most volunteers. \n\nI don', ' Yes, they have been previously described. \n\nQuery: Are there high levels of IgD anti-alpha', ' Yes. \n\nI hope this helps! Let me know if you have any further questions. \n\nBest']
+Reprocessing document: MED-2246
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. According to the text, "Curcuma spp. extracts, particularly the dietary polyphen
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Query: What was the dose range of Curcuma extract used in the study?
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the Curcuma extract was well tolerated by the patients, and dose-limiting toxicity was
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, curcumin was recovered from the feces of patients, and curcumin sulfate was
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, curcumin or its metabolites were not detected in the blood or urine of patients.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Query: Was curcumin detected in blood or urine? 
+
+Answer: No.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, dose-limiting toxicity was not observed. 
+--------------------------------------------------------
+
+Contexts: Curcuma spp
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, curcumin sulfate was identified in the feces of one patient. 
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Query: Was curcumin detected in blood or urine? 
+
+Answer: No.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, leukocytic M(1)G levels were constant within each patient and unaffected by treatment
+Answers for MED-2246: [' Yes. According to the text, "Curcuma spp. extracts, particularly the dietary polyphen', ' Yes. \n\nQuery: What was the dose range of Curcuma extract used in the study?', ' Yes, the Curcuma extract was well tolerated by the patients, and dose-limiting toxicity was', ' Yes, curcumin was recovered from the feces of patients, and curcumin sulfate was', ' No, curcumin or its metabolites were not detected in the blood or urine of patients.', ' Yes. \n\nQuery: Was curcumin detected in blood or urine? \n\nAnswer: No.', ' No, dose-limiting toxicity was not observed. \n--------------------------------------------------------\n\nContexts: Curcuma spp', ' Yes, curcumin sulfate was identified in the feces of one patient. ', ' Yes. \n\nQuery: Was curcumin detected in blood or urine? \n\nAnswer: No.', ' No, leukocytic M(1)G levels were constant within each patient and unaffected by treatment']
+Reprocessing document: MED-2928
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, NK cells belong to the innate immune system. 
+
+Contexts: Natural killer (NK)
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+(I hope this is correct. Let me know if I made a mistake.) 
+Final
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Contexts: Natural killer (NK) cells were discovered more than 30 years ago
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No. 
+(I don't know) 
+Yes. 
+NK cells do not rearrange T-cell
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No. 
+(I don't know) 
+Yes. 
+NK cells are large granular lymphocytes
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the most recent discoveries in NK-cell receptor biology have fueled translational research that has led to
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, recent discoveries in NK-cell receptor biology have fueled translational research that has led to remarkable results
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, NK cells play a role in normal immune surveillance. According to the context, during the past
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the function and purpose of NK cells in immune surveillance are better understood now compared to two decades
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, there has been a substantial gain in our understanding of what and how NK-cells “see
+Answers for MED-2928: [' Yes, NK cells belong to the innate immune system. \n\nContexts: Natural killer (NK)', ' Yes. \n(I hope this is correct. Let me know if I made a mistake.) \nFinal', ' Yes. \n\nContexts: Natural killer (NK) cells were discovered more than 30 years ago', " No. \n(I don't know) \nYes. \nNK cells do not rearrange T-cell", " No. \n(I don't know) \nYes. \nNK cells are large granular lymphocytes", ' Yes, the most recent discoveries in NK-cell receptor biology have fueled translational research that has led to', ' Yes, recent discoveries in NK-cell receptor biology have fueled translational research that has led to remarkable results', ' Yes, NK cells play a role in normal immune surveillance. According to the context, during the past', ' Yes, the function and purpose of NK cells in immune surveillance are better understood now compared to two decades', ' Yes, there has been a substantial gain in our understanding of what and how NK-cells “see']
+Reprocessing document: MED-3231
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes. 
+
+Contexts: This review looks at the role of an alkaline diet in health.
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   No, Pubmed was used to search for articles on pH, potential renal acid loads, bone health
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, books from the lay literature on the alkaline diet were also reviewed and evaluated in light of
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+answer response:   Yes, the review suggests that there may be some value in considering an alkaline diet in reducing morb
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+Traceback (most recent call last):
+  File "/work/yuefengpeng_umass_edu/exp/RAG_MIA/main_mia.py", line 152, in <module>
+    main()
+  File "/work/yuefengpeng_umass_edu/exp/RAG_MIA/main_mia.py", line 119, in main
+    attacker.generate_ground_truth_answers(validate_llm, from_ckpt=args.from_ckpt)
+  File "/work/yuefengpeng_umass_edu/exp/RAG_MIA/mia_utils/mia.py", line 196, in generate_ground_truth_answers
+    answer_response = llm.query(answer_prompt)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/yuefengpeng_umass_edu/exp/RAG_MIA/src/models/Llama3.py", line 24, in query
+    outputs = self.model.generate(input_ids,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/generation/utils.py", line 2048, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/generation/utils.py", line 3008, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 1189, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 1000, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 729, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+                                                          ^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 630, in forward
+    query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 277, in apply_rotary_pos_emb
+    q_embed = (q * cos) + (rotate_half(q) * sin)
+                           ^^^^^^^^^^^^^^
+  File "/work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 252, in rotate_half
+    return torch.cat((-x2, x1), dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
