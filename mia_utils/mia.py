@@ -137,6 +137,71 @@ class MIA_Attacker():
         self.save_target_docs()
 
 
+    def post_filter_topk(self, top_k=3, filtered=True):
+        # Iterate over the target documents
+        if filtered: # no need to do filter since they are sorted alraedy
+            for doc_id, target_info in self.target_docs.items():
+                self.target_docs[doc_id]['questions'] = self.target_docs[doc_id]['questions'][:top_k]
+                self.target_docs[doc_id]['answers'] = self.target_docs[doc_id]['answers'][:top_k]
+                self.target_docs[doc_id]['llm_responses'] = self.target_docs[doc_id]['llm_responses'][:top_k]
+                self.target_docs[doc_id]['retrieved_doc_ids'] = self.target_docs[doc_id]['retrieved_doc_ids'][:top_k]
+        else:
+            for doc_id, target_info in self.target_docs.items():
+                questions = target_info.get('questions', [])
+                answers = target_info.get('answers', [])
+                llm_responses = target_info.get('llm_responses', [])
+                retrieved_docs = target_info.get('retrieved_doc_ids', [])
+                
+                # Ensure we have data to process
+                if not questions or not answers or not llm_responses:
+                    continue
+
+                # Create a DataFrame with questions for scoring
+                df_questions = pd.DataFrame([{
+                    'docno': str(doc_id),
+                    'text': target_info['text'],
+                    'querygen': "\n".join(questions)
+                }])
+
+                # Score the questions
+                scorer = ElectraScorer()
+                query_scorer_pipeline = QueryScorer(scorer)
+                scored_df = query_scorer_pipeline(df_questions)
+                scored_questions = scored_df.to_dict()
+                
+                # Retrieve and split the scored questions and their scores
+                question_texts = scored_questions['querygen'][0].split('\n')
+                score_array = scored_questions['querygen_score'][0]
+
+                # Pair questions with scores and sort them
+                paired_questions_scores = sorted(zip(question_texts, score_array), key=lambda x: x[1], reverse=True)
+                
+                # Select the top-k questions
+                top_k_questions = [question for question, _ in paired_questions_scores[:top_k]]
+                
+                # Find corresponding answers and LLM responses based on the original question order
+                question_index_map = {question: idx for idx, question in enumerate(questions)}
+                top_k_indices = [question_index_map[q] for q in top_k_questions]
+
+                top_k_answers = [answers[idx] for idx in top_k_indices]
+                top_k_llm_responses = [llm_responses[idx] for idx in top_k_indices]
+                top_k_retrieved_docs = [retrieved_docs[idx] for idx in top_k_indices]
+
+                # Store the top-k results back in the target_docs dictionary
+                self.target_docs[doc_id]['questions'] = top_k_questions
+                self.target_docs[doc_id]['answers'] = top_k_answers
+                self.target_docs[doc_id]['llm_responses'] = top_k_llm_responses
+                self.target_docs[doc_id]['retrieved_doc_ids'] = top_k_retrieved_docs
+
+                print(f"Top-{top_k} Questions for {doc_id}: {top_k_questions}")
+                print(f"Corresponding Answers: {top_k_answers}")
+                print(f"Corresponding LLM Responses: {top_k_llm_responses}")
+
+        # Save the updated target_docs
+        self.save_target_docs()
+
+
+
     def retrieve_docs_(self, conda_env='colbert', script_path='../ColBERT'):
         try:
             command = f'conda run --prefix /work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/{conda_env} python retrieve_for_mia.py --dataset {self.args.eval_dataset} --name {self.args.name}'
@@ -148,6 +213,11 @@ class MIA_Attacker():
             print(f"An error occurred: {e}")
         except FileNotFoundError as e:
             print(f"File not found: {e}")
+            
+        output_dir = 'results/target_docs'
+        output_file = f'{output_dir}/{self.args.name}.json'
+        with open(output_file, 'r') as f:
+            self.target_docs = json.load(f)
 
     def generate_ground_truth_answers(self, llm=None,  from_ckpt=True):
         answer_pattern = r"A\d+:\s*(Yes|No)"  # Regex pattern to match "A1: Yes/No" format for answers
@@ -185,6 +255,12 @@ class MIA_Attacker():
         self.save_target_docs()
 
     def query_target_llm(self, llm, from_ckpt=True):
+        
+        output_dir = 'results/target_docs'
+        output_file = f'{output_dir}/{self.args.name}.json'
+        with open(output_file, 'r') as f:
+            self.target_docs = json.load(f)
+            
         for doc_id, doc_content in self.target_docs.items():
             questions = doc_content.get('questions', [])
             retrieved_doc_ids = doc_content.get('retrieved_doc_ids', [])
