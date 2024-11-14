@@ -14,6 +14,7 @@ from mia_utils.mia import MIA_Attacker
 from src.prompts import wrap_prompt
 import torch
 import re
+from mia_utils.utils import get_superset_file
 
 def parse_args():
     parser = argparse.ArgumentParser(description='test')
@@ -38,7 +39,7 @@ def parse_args():
     parser.add_argument('--seed', type=int, default=12, help='Random seed')
     parser.add_argument("--name", type=str, default='debug', help="Name of log and result.")
     parser.add_argument("--from_ckpt", action="store_true", help="Load from checkpoint if this flag is set.")
-    parser.add_argument("--post_filter", action="store_true", help="Do post filtering")
+    parser.add_argument("--post_filter", type=str, help="Do post filtering")
 
     args = parser.parse_args()
     print(args)
@@ -113,21 +114,16 @@ def main():
 
     elif args.attack_method in ['mia']:
 
-        if args.post_filter:
-            output_dir = 'results/target_docs'
-            # Extract values for Top and N from args.name using regular expressions
-            match = re.search(r'-Top(\d+)-M\d+-N(\d+)$', args.name)
-            if not match:
-                print("Invalid filename format. Expected format: 'base-TopX-MY-NZ'")
-                return
-            desired_top_k = int(match.group(1))
-            n_value = max(desired_top_k, int(match.group(2)))
-            superset_filename = f'{output_dir}/{args.name.replace(f"-Top{desired_top_k}", f"-Top{n_value}")}.json'
+        if args.post_filter is not None:
 
-            if not os.path.exists(superset_filename):
-                print(f"Superset file {superset_filename} does not exist. Cannot perform post-filtering.")
-                return
-
+            print(args.post_filter)
+            if args.post_filter == 'top':
+                superset_filename = get_superset_file(args, random=False)
+            elif args.post_filter == 'random':
+                args.name = 'random-'+args.name
+                superset_filename = get_superset_file(args, random=True)
+                
+            print('x',superset_filename)
             with open(superset_filename, 'r') as file:
                 data = json.load(file)
 
@@ -160,7 +156,7 @@ def main():
 
             if not args.from_ckpt:
                 #questions from GPT-4
-                query_file = f"./clean_data_with_questions_v2.json"
+                query_file = f"datasets/{args.eval_dataset}/clean_data_with_questions.json"
                 with open(query_file, 'r') as f:
                     source_docs = json.load(f)
                 attacker.generate_questions_GPT_4(source_docs)

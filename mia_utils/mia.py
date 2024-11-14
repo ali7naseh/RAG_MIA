@@ -200,7 +200,6 @@ class MIA_Attacker():
         # Save the updated target_docs
         self.save_target_docs()
 
-
     def post_filter_topk_random(self, top_k=3):
         # Iterate over the target documents
         for doc_id, target_info in self.target_docs.items():

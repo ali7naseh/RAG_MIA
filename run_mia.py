@@ -16,9 +16,9 @@ def run(test_params):
         --M {test_params['M']} \
         --N {test_params['N']} \
         --seed {test_params['seed']} \
-        --name {log_name} " + \
+        --name {log_name} \
+        --post_filter {test_params['post_filter']} "  + \
         ("--from_ckpt " if test_params['from_ckpt'] else "") + \
-        ("--post_filter " if test_params['post_filter'] else "") + \
         f"> {log_file}"
         
     os.system(cmd)
