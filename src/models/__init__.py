@@ -3,6 +3,7 @@ from .Vicuna import Vicuna
 from .GPT import GPT
 from .Llama import Llama
 from .Llama3 import Llama3
+from .Llama3_70b import Llama3_70b
 import json
 
 def load_json(file_path):
@@ -26,8 +27,9 @@ def create_model(config_path):
     elif provider == 'llama':
         model = Llama(config)
     elif provider == 'llama3':
-        print('llama3')
         model = Llama3(config)
+    elif provider == 'llama3_70b':
+        model = Llama3_70b(config)
     else:
         raise ValueError(f"ERROR: Unknown provider {provider}")
     return model

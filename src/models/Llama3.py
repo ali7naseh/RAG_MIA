@@ -22,7 +22,6 @@ class Llama3(Model):
     def query(self, msg, max_output_tokens=None):
         input_ids = self.tokenizer(msg, return_tensors="pt").input_ids.to("cuda")
         outputs = self.model.generate(input_ids,
-            temperature=self.temperature,
             max_new_tokens=self.max_output_tokens if max_output_tokens is None else max_output_tokens,
             early_stopping=True)
         out = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
