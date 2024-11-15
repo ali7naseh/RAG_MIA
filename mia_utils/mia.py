@@ -137,14 +137,27 @@ class MIA_Attacker():
         self.save_target_docs()
 
 
-    def post_filter_topk(self, top_k=3, filtered=True):
+    def post_filter(self, top_k=3, filtered=True, mode='top'):
         # Iterate over the target documents
         if filtered: # no need to do filter since they are sorted alraedy
-            for doc_id, target_info in self.target_docs.items():
-                self.target_docs[doc_id]['questions'] = self.target_docs[doc_id]['questions'][:top_k]
-                self.target_docs[doc_id]['answers'] = self.target_docs[doc_id]['answers'][:top_k]
-                self.target_docs[doc_id]['llm_responses'] = self.target_docs[doc_id]['llm_responses'][:top_k]
-                self.target_docs[doc_id]['retrieved_doc_ids'] = self.target_docs[doc_id]['retrieved_doc_ids'][:top_k]
+            if mode=='top':
+                for doc_id, target_info in self.target_docs.items():
+                    self.target_docs[doc_id]['questions'] = self.target_docs[doc_id]['questions'][:top_k]
+                    self.target_docs[doc_id]['answers'] = self.target_docs[doc_id]['answers'][:top_k]
+                    self.target_docs[doc_id]['llm_responses'] = self.target_docs[doc_id]['llm_responses'][:top_k]
+                    self.target_docs[doc_id]['retrieved_doc_ids'] = self.target_docs[doc_id]['retrieved_doc_ids'][:top_k]
+            elif mode == 'random':
+                for doc_id, target_info in self.target_docs.items():
+                    # Ensure there are enough elements to sample
+                    num_questions = min(top_k, len(self.target_docs[doc_id]['questions']))
+                    # Randomly sample top_k items
+                    sampled_indices = random.sample(range(len(self.target_docs[doc_id]['questions'])), num_questions)
+                    
+                    self.target_docs[doc_id]['questions'] = [self.target_docs[doc_id]['questions'][idx] for idx in sampled_indices]
+                    self.target_docs[doc_id]['answers'] = [self.target_docs[doc_id]['answers'][idx] for idx in sampled_indices]
+                    self.target_docs[doc_id]['llm_responses'] = [self.target_docs[doc_id]['llm_responses'][idx] for idx in sampled_indices]
+                    self.target_docs[doc_id]['retrieved_doc_ids'] = [self.target_docs[doc_id]['retrieved_doc_ids'][idx] for idx in sampled_indices]
+            
         else:
             for doc_id, target_info in self.target_docs.items():
                 questions = target_info.get('questions', [])
@@ -199,23 +212,6 @@ class MIA_Attacker():
 
         # Save the updated target_docs
         self.save_target_docs()
-
-    def post_filter_topk_random(self, top_k=3):
-        # Iterate over the target documents
-        for doc_id, target_info in self.target_docs.items():
-            # Ensure there are enough elements to sample
-            num_questions = min(top_k, len(self.target_docs[doc_id]['questions']))
-            
-            # Randomly sample top_k items
-            sampled_indices = random.sample(range(len(self.target_docs[doc_id]['questions'])), num_questions)
-            
-            self.target_docs[doc_id]['questions'] = [self.target_docs[doc_id]['questions'][idx] for idx in sampled_indices]
-            self.target_docs[doc_id]['answers'] = [self.target_docs[doc_id]['answers'][idx] for idx in sampled_indices]
-            self.target_docs[doc_id]['llm_responses'] = [self.target_docs[doc_id]['llm_responses'][idx] for idx in sampled_indices]
-            self.target_docs[doc_id]['retrieved_doc_ids'] = [self.target_docs[doc_id]['retrieved_doc_ids'][idx] for idx in sampled_indices]
-        # Save the updated target_docs
-        self.save_target_docs()
-
 
     def retrieve_docs_(self, conda_env='colbert', script_path='../ColBERT'):
         try:

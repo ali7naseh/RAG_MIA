@@ -7,9 +7,9 @@ test_params:
   gpu_id: 0
   attack_method: "mia"
   repeat_times: 1
-  M: 1000
+  M: 250
   N: 15
-  top_k: 3
+  top_k: 4
   seed: 12
   from_ckpt: true
-  post_filter: false
+  post_filter: 'random'

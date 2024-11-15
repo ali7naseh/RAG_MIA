@@ -57,14 +57,21 @@ def main():
     # load target queries and answers
     out_dir = os.path.join(os.getcwd(), "datasets")
     data_path = os.path.join(out_dir, args.eval_dataset)
-    corpus, queries, _ = GenericDataLoader(data_path).load(split="test")
+    try:
+        corpus, queries, _ = GenericDataLoader(data_path).load(split="test")
+    except Exception as e:
+        corpus_path = os.path.join(data_path, 'corpus.json')
+        with open(corpus_path, 'r') as f:
+            corpus = json.load(f)
+
+
 
     # Load the selected indices from selected_indices.json
     selected_indices_file = f"./datasets/{args.eval_dataset}/selected_indices.json"
     with open(selected_indices_file, 'r') as f:
         selected_indices = json.load(f)
 
-    if args.post_filter and args.attack_method in ['mia']:
+    if args.post_filter is not None and args.post_filter != 'None' and args.attack_method in ['mia']:
         pass
     elif not args.from_ckpt:
         # Extract mem and nonmem indices
@@ -114,16 +121,14 @@ def main():
 
     elif args.attack_method in ['mia']:
 
-        if args.post_filter is not None:
+        if args.post_filter is not None and args.post_filter != 'None':
 
-            print(args.post_filter)
             if args.post_filter == 'top':
                 superset_filename = get_superset_file(args, random=False)
             elif args.post_filter == 'random':
                 args.name = 'random-'+args.name
                 superset_filename = get_superset_file(args, random=True)
                 
-            print('x',superset_filename)
             with open(superset_filename, 'r') as file:
                 data = json.load(file)
 
@@ -136,7 +141,7 @@ def main():
                 corpus=None
             )
             # Perform post-filtering
-            attacker.post_filter_topk(top_k=args.top_k)
+            attacker.post_filter(top_k=args.top_k, mode=args.post_filter)
             attacker.calculate_accuracy_()
 
         else:
