@@ -25,7 +25,6 @@ os.system('rm datasets/*.zip')
 # Function to randomly select 200 mem and 200 non-mem indices from a JSONL dataset
 def select_mem_non_mem_indices(dataset_path):
     corpus_file = os.path.join(dataset_path, "corpus.jsonl")
-    
 
     doc_ids = []
     with open(corpus_file, 'r') as f:

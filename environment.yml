@@ -1,4 +1,4 @@
-name: /work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/miaRAG2
+
 channels:
   - pytorch
   - conda-forge

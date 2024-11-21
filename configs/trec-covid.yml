@@ -5,11 +5,11 @@ test_params:
   model_name: "llama3"
   shadow_model_name: "llama3"
   gpu_id: 0
-  attack_method: "mia"
+  attack_method: "s2"
   repeat_times: 1
   M: 250
   N: 15
-  top_k: 4
+  top_k: 15
   seed: 12
-  from_ckpt: true
-  post_filter: 'random'
+  from_ckpt: false
+  post_filter: null # top or random or none 

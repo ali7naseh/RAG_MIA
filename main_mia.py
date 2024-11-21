@@ -11,6 +11,8 @@ from src.attack import Attacker
 from beir.datasets.data_loader import GenericDataLoader
 from beir.retrieval import models
 from mia_utils.mia import MIA_Attacker
+from mia_utils.direct_query import Direct_Query_Attacker
+from mia_utils.s2 import S2_Attacker
 from src.prompts import wrap_prompt
 import torch
 import re
@@ -119,6 +121,21 @@ def main():
         attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
         attacker.calculate_accuracy_()
 
+    elif args.attack_method in ['s2']:
+        attacker = S2_Attacker(args,
+                            target_docs=target_docs,
+                            corpus=corpus
+                            )
+
+        #target LLM
+        llm = create_model(args.model_config_path)
+        llm.model.to(llm.device)
+
+        attacker.generate_questions()
+        attacker.retrieve_docs_()
+        attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
+        attacker.calculate_bleu()
+
     elif args.attack_method in ['mia']:
 
         if args.post_filter is not None and args.post_filter != 'None':
@@ -172,9 +189,9 @@ def main():
                 attacker.filter_questions_topk(top_k=args.top_k)
 
             #generate groud truth answers
-            validate_llm = create_model(args.model_config_path)
-            validate_llm.model.to(validate_llm.device)
-            attacker.generate_ground_truth_answers(validate_llm, from_ckpt=args.from_ckpt)
+            # validate_llm = create_model(args.model_config_path)
+            # validate_llm.model.to(validate_llm.device)
+            # attacker.generate_ground_truth_answers(validate_llm, from_ckpt=args.from_ckpt)
             attacker.retrieve_docs_()
             del validate_llm
         

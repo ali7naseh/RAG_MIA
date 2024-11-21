@@ -1,8 +1,6 @@
 import torch
 from transformers import LlamaTokenizer, LlamaForCausalLM
-
 from .Model import Model
-
 
 class Llama(Model):
     def __init__(self, config):

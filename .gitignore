@@ -164,4 +164,6 @@ datasets/trec-covid/*
 datasets/nq/*
 !datasets/nfcorpus/clean_data_with_questions.json
 !datasets/trec-covid/clean_data_with_questions.json
+!datasets/nfcorpus/selected_indices.json
+!datasets/trec-covid/selected_indices.json
 logs
