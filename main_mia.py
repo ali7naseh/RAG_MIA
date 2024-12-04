@@ -9,7 +9,7 @@ from src.utils import load_beir_datasets, load_models
 from src.utils import save_results, load_json, setup_seeds, clean_str, f1_score
 from src.attack import Attacker
 from beir.datasets.data_loader import GenericDataLoader
-from beir.retrieval import models
+# from beir.retrieval import models
 from mia_utils.mia import MIA_Attacker
 from mia_utils.direct_query import Direct_Query_Attacker
 from mia_utils.s2 import S2_Attacker
@@ -42,6 +42,8 @@ def parse_args():
     parser.add_argument("--name", type=str, default='debug', help="Name of log and result.")
     parser.add_argument("--from_ckpt", action="store_true", help="Load from checkpoint if this flag is set.")
     parser.add_argument("--post_filter", type=str, help="Do post filtering")
+    parser.add_argument('--retrieve_k', type=int, default=3, help='num of docs for each query in rag')
+    
 
     args = parser.parse_args()
     print(args)
@@ -49,7 +51,6 @@ def parse_args():
 
 def main():
     args = parse_args()
-    torch.cuda.set_device(args.gpu_id)
     device = 'cuda'
     setup_seeds(args.seed)
     if args.model_config_path == None:
@@ -65,8 +66,6 @@ def main():
         corpus_path = os.path.join(data_path, 'corpus.json')
         with open(corpus_path, 'r') as f:
             corpus = json.load(f)
-
-
 
     # Load the selected indices from selected_indices.json
     selected_indices_file = f"./datasets/{args.eval_dataset}/selected_indices.json"
@@ -102,8 +101,6 @@ def main():
                 corpus.pop(doc_id)
 
     print(args.shadow_model_config_path,args.model_config_path)
-    shadow_llm = create_model(args.shadow_model_config_path)
-    shadow_llm.model.to(shadow_llm.device)
     
     if args.attack_method in ['direct_query']:
 
@@ -153,7 +150,6 @@ def main():
             attacker = MIA_Attacker(
                 args=args,
                 model=None,
-                shadow_llm=None,
                 target_docs=data,
                 corpus=None
             )
@@ -162,16 +158,8 @@ def main():
             attacker.calculate_accuracy_()
 
         else:
-            # Load retrieval models
-            if args.retriever == 'colbert':
-                retriever = None # retrival is done in another repo
-            else:
-                #TBD
-                pass
-
+   
             attacker = MIA_Attacker(args,
-                                model=retriever,
-                                shadow_llm=shadow_llm,
                                 target_docs=target_docs,
                                 corpus=corpus
                                 )
@@ -182,17 +170,15 @@ def main():
                 with open(query_file, 'r') as f:
                     source_docs = json.load(f)
                 attacker.generate_questions_GPT_4(source_docs)
-                del attacker.shadow_llm
-                del shadow_llm
 
                 #Use IR to filter question- pre-filtering
                 attacker.filter_questions_topk(top_k=args.top_k)
 
+            attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
             #generate groud truth answers
-            # validate_llm = create_model(args.model_config_path)
-            # validate_llm.model.to(validate_llm.device)
-            # attacker.generate_ground_truth_answers(validate_llm, from_ckpt=args.from_ckpt)
-            attacker.retrieve_docs_()
+            validate_llm = create_model(args.shadow_model_config_path)
+            validate_llm.model.to(validate_llm.device)
+            attacker.generate_ground_truth_answers(validate_llm, from_ckpt=args.from_ckpt)
             del validate_llm
         
             #target LLM

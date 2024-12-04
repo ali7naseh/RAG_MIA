@@ -1,4 +1,4 @@
-from sentence_transformers import SentenceTransformer
+
 import torch
 import random
 from tqdm import tqdm
@@ -9,9 +9,6 @@ import json
 import os
 import re
 
-from beir.retrieval.search.dense import DenseRetrievalFaissSearch as DRFS
-from beir.retrieval import models
-import faiss
 import subprocess
 
 import pandas as pd
@@ -213,22 +210,120 @@ class MIA_Attacker():
         # Save the updated target_docs
         self.save_target_docs()
 
-    def retrieve_docs_(self, conda_env='colbert', script_path='../ColBERT'):
-        try:
-            command = f'conda run --prefix /work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/{conda_env} python retrieve_for_mia.py --dataset {self.args.eval_dataset} --name {self.args.name}'
-            # Run the command using subprocess and specify the script's working directory via 'cwd'
-            subprocess.run(command, shell=True, check=True, cwd=script_path)
-            print("Script executed successfully.")
+    # def retrieve_docs_(self, conda_env='colbert', script_path='../ColBERT'):
+    #     try:
+    #         command = f'conda run --prefix /work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/{conda_env} python retrieve_for_mia.py --dataset {self.args.eval_dataset} --name {self.args.name} --k {self.args.retrieve_k}'
+    #         # Run the command using subprocess and specify the script's working directory via 'cwd'
+    #         subprocess.run(command, shell=True, check=True, cwd=script_path)
+    #         print("Script executed successfully.")
         
-        except subprocess.CalledProcessError as e:
-            print(f"An error occurred: {e}")
-        except FileNotFoundError as e:
-            print(f"File not found: {e}")
+    #     except subprocess.CalledProcessError as e:
+    #         print(f"An error occurred: {e}")
+    #     except FileNotFoundError as e:
+    #         print(f"File not found: {e}")
             
-        output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
-        with open(output_file, 'r') as f:
-            self.target_docs = json.load(f)
+    #     output_dir = 'results/target_docs'
+    #     output_file = f'{output_dir}/{self.args.name}.json'
+    #     with open(output_file, 'r') as f:
+    #         self.target_docs = json.load(f)
+
+    def retrieve_docs_(self, k=5, retriever='colbert'):
+        if retriever == 'colbert':
+            from ragatouille import RAGPretrainedModel
+            # Load the RAG model with ColBERT index
+            index_path = os.path.join("./datasets", self.args.eval_dataset, 'colbert', 'indexes', f"{self.args.eval_dataset}-index")
+            model = RAGPretrainedModel.from_index(index_path)
+        
+            # Iterate over each target doc and retrieve documents for each attack question
+            for doc_id, doc_content in self.target_docs.items():
+                questions = doc_content.get('questions', [])
+                retrieved_doc_ids = []
+
+                print(f"Retrieving documents for doc_id: {doc_id}")
+
+                for question in questions:
+                    # Perform the search for each question
+                    print(f"Querying for question: {question}")
+                    results = model.search(question, k=k)
+
+                    # Collect the document IDs from the search results
+                    doc_ids = [result['document_id'] for result in results]
+                    retrieved_doc_ids.append(doc_ids)
+                    
+                # Update the target document with retrieved doc IDs
+                doc_content['retrieved_doc_ids'] = retrieved_doc_ids
+
+                # Save progress
+                self.save_target_docs()
+
+        elif retriever == 'contriever':
+            # Import necessary libraries
+            import os
+            import faiss
+            import pickle
+            import torch
+            from transformers import AutoTokenizer, AutoModel
+
+            model_name = "facebook/contriever"
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            model = AutoModel.from_pretrained(model_name).to('cuda').eval()
+
+            # Paths for FAISS index and document IDs
+            dataset = self.args.eval_dataset
+            index_folder = os.path.join("./datasets", dataset, 'contriever', 'indexes', f"{dataset}-index")
+            faiss_index_path = os.path.join(index_folder, "corpus_index.faiss")
+            doc_ids_path = os.path.join(index_folder, "doc_ids.pkl")
+
+            # Load FAISS index
+            print(f"Loading FAISS index from {faiss_index_path}")
+            faiss_index = faiss.read_index(faiss_index_path)
+
+            # Load document IDs
+            print(f"Loading document IDs from {doc_ids_path}")
+            with open(doc_ids_path, "rb") as f:
+                doc_ids = pickle.load(f)
+
+            # Mean pooling function for query encoding
+            def mean_pooling(token_embeddings, mask):
+                token_embeddings = token_embeddings.masked_fill(~mask[..., None].bool(), 0.0)
+                sentence_embeddings = token_embeddings.sum(dim=1) / mask.sum(dim=1)[..., None]
+                return sentence_embeddings
+
+            # Query encoding function
+            def encode_query(query, tokenizer, model, device):
+                inputs = tokenizer(query, return_tensors="pt", truncation=True, padding=True, max_length=512).to(device)
+                with torch.no_grad():
+                    outputs = model(**inputs)
+                    query_embedding = mean_pooling(outputs.last_hidden_state, inputs['attention_mask'])
+                    query_embedding = torch.nn.functional.normalize(query_embedding, p=2, dim=1)
+                return query_embedding.cpu().numpy()
+
+            # Iterate over each target document and retrieve results for its questions
+            print("Retrieving documents using Contriever...")
+            for doc_id, doc_content in self.target_docs.items():
+                questions = doc_content.get('questions', [])
+                retrieved_doc_ids = []
+
+                for question in questions:
+                    try:
+                        query_embedding = encode_query(question, self.tokenizer, self.model, torch.device("cuda"))
+                        distances, indices = faiss_index.search(query_embedding, k)
+                        retrieved_ids = [doc_ids[i] for i in indices[0]]
+                        retrieved_doc_ids.append(retrieved_ids)
+                        print(f"Retrieved document IDs for question '{question}': {retrieved_ids}")
+
+                    except Exception as e:
+                        print(f"Error during retrieval for question '{question}' in doc {doc_id}: {e}")
+                        continue
+
+                # Update the target document with retrieved document IDs
+                doc_content['retrieved_doc_ids'] = retrieved_doc_ids
+
+                # Save progress after each document
+                self.save_target_docs()
+
+        else:
+            raise ValueError(f"Retriever '{retriever}' is not supported.")
 
     def generate_ground_truth_answers(self, llm=None,  from_ckpt=True):
         answer_pattern = r"A\d+:\s*(Yes|No)"  # Regex pattern to match "A1: Yes/No" format for answers
@@ -248,7 +343,7 @@ class MIA_Attacker():
 
                 # Generate answers for all questions
                 for idx, question in enumerate(questions, start=1):
-                    answer_prompt = wrap_prompt(question, [target_doc], prompt_id=4)
+                    answer_prompt = wrap_prompt(question, [target_doc], prompt_id=4, atk=True)
                     try:
                         answer_response = llm.query(answer_prompt)
                         print('answer response: ', answer_response)
@@ -287,7 +382,7 @@ class MIA_Attacker():
                 # Generate responses for all questions
                 for i, question in enumerate(questions):
                     # Access the text of each retrieved document directly from self.corpus
-                    topk_contents = [self.corpus[doc]['text'] for doc in retrieved_doc_ids[i]]
+                    topk_contents = [self.corpus[doc]['text'][:2048] for doc in retrieved_doc_ids[i]]
                     query_prompt = wrap_prompt(question, topk_contents, prompt_id=4)
 
                     try:

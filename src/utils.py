@@ -1,5 +1,5 @@
 import sys, os
-from .contriever_src.contriever import Contriever
+# from .contriever_src.contriever import Contriever
 from beir import util
 from beir.datasets.data_loader import GenericDataLoader
 import json
@@ -9,7 +9,7 @@ import random
 import torch
 from transformers import AutoTokenizer
 
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 
 model_code_to_qmodel_name = {
     "contriever": "facebook/contriever",

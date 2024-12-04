@@ -1,5 +1,5 @@
 import torch
-from transformers import LlamaTokenizer, LlamaForCausalLM
+# from transformers import LlamaTokenizer, LlamaForCausalLM
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from .Model import Model

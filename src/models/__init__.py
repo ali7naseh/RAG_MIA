@@ -1,6 +1,6 @@
-from .PaLM2 import PaLM2
-from .Vicuna import Vicuna
-from .GPT import GPT
+# from .PaLM2 import PaLM2
+# from .Vicuna import Vicuna
+# from .GPT import GPT
 from .Llama import Llama
 from .Llama3 import Llama3
 from .Llama3_70b import Llama3_70b
