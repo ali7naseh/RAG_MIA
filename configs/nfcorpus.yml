@@ -1,9 +1,9 @@
 test_params:
-  retriever: "gte"
+  retriever: "colbert"
   eval_dataset: "nfcorpus"
   split: "test"
   model_name: "llama3"
-  shadow_model_name: "llama3"
+  shadow_model_name: "llama3_70b"
   gpu_id: 0
   attack_method: "mia"
   repeat_times: 1
@@ -12,5 +12,5 @@ test_params:
   top_k: 15
   seed: 12
   retrieve_k: 3
-  from_ckpt: false
+  from_ckpt: true
   post_filter: null # top or random or none 

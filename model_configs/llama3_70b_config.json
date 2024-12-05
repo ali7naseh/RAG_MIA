@@ -1,6 +1,6 @@
 {
     "model_info":{
-        "provider":"llama3",
+        "provider":"llama3_70b",
         "name":"meta-llama/Llama-2-7b-chat-hf"
     },
     "api_key_info":{
@@ -14,6 +14,6 @@
         "seed":100,
         "gpus":[0],
         "device":"cuda",
-        "max_output_tokens": 3
+        "max_output_tokens": 2
     }
 }

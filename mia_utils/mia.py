@@ -230,6 +230,7 @@ class MIA_Attacker():
     def retrieve_docs_(self, k=5, retriever='colbert'):
         if retriever == 'colbert':
             from ragatouille import RAGPretrainedModel
+            import os
             # Load the RAG model with ColBERT index
             index_path = os.path.join("./datasets", self.args.eval_dataset, 'colbert', 'indexes', f"{self.args.eval_dataset}-index")
             model = RAGPretrainedModel.from_index(index_path)
