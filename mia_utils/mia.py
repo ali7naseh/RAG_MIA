@@ -255,6 +255,131 @@ class MIA_Attacker():
 
                 # Save progress
                 self.save_target_docs()
+        
+        elif retriever == 'gte':
+            import faiss
+            import pickle
+            from transformers import AutoTokenizer, AutoModel
+            import torch.nn.functional as F
+            import torch
+            import os
+
+            # Paths for FAISS index and model
+            dataset = self.args.eval_dataset
+            index_folder = os.path.join("./datasets", dataset, "gte", "indexes", f"{dataset}-index")
+            faiss_index_path = os.path.join(index_folder, "corpus_index.faiss")
+            doc_ids_path = os.path.join(index_folder, "doc_ids.pkl")
+
+            # Load FAISS index
+            print("Loading FAISS index...")
+            faiss_index = faiss.read_index(faiss_index_path)
+
+            # Load document IDs
+            print("Loading document IDs...")
+            with open(doc_ids_path, "rb") as f:
+                doc_ids = pickle.load(f)
+
+            # Load GTE model
+            model_name = "Alibaba-NLP/gte-large-en-v1.5"
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            model = AutoModel.from_pretrained(model_name, trust_remote_code=True, torch_dtype=torch.float16).to("cuda")
+            model.eval()
+
+            # Function for encoding queries
+            def encode_query(query):
+                inputs = tokenizer(query, return_tensors="pt", truncation=True, padding=True, max_length=512).to("cuda")
+                with torch.no_grad():
+                    outputs = model(**inputs)
+                    query_embedding = F.normalize(outputs.last_hidden_state[:, 0], p=2, dim=1)  # CLS pooling and normalization
+                return query_embedding.cpu().numpy()
+
+            # Iterate over each target doc and retrieve documents for each attack question
+            for doc_id, doc_content in self.target_docs.items():
+                questions = doc_content.get('questions', [])
+                retrieved_doc_ids = []
+
+                print(f"Retrieving documents for doc_id: {doc_id} using GTE")
+
+                for question in questions:
+    
+                    query_embedding = encode_query(question)
+                    distances, indices = faiss_index.search(query_embedding, k)
+                    doc_ids_for_query = [doc_ids[i] for i in indices[0]]
+                    retrieved_doc_ids.append(doc_ids_for_query)
+                    print(f"Retrieved doc IDs for question '{question}': {doc_ids_for_query}")
+
+                # Update the target document with retrieved doc IDs
+                doc_content['retrieved_doc_ids'] = retrieved_doc_ids
+
+                # Save progress
+                self.save_target_docs()
+        
+        elif retriever == 'bge':
+            from transformers import AutoTokenizer, AutoModel
+            import faiss
+            import pickle
+            import torch
+            import os
+
+            model_name = "BAAI/bge-large-en-v1.5"
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            model = AutoModel.from_pretrained(model_name).to('cuda').eval()
+
+            # Paths for FAISS index and document IDs
+            dataset = self.args.eval_dataset
+            index_folder = os.path.join("./datasets", dataset, "bge", "indexes", f"{dataset}-index")
+            faiss_index_path = os.path.join(index_folder, "corpus_index.faiss")
+            doc_ids_path = os.path.join(index_folder, "doc_ids.pkl")
+
+            # Load FAISS index
+            print(f"Loading FAISS index from: {faiss_index_path}")
+            faiss_index = faiss.read_index(faiss_index_path)
+
+            # Load document IDs
+            print(f"Loading document IDs from: {doc_ids_path}")
+            with open(doc_ids_path, "rb") as f:
+                doc_ids = pickle.load(f)
+
+            # Function for embedding normalization
+            def normalize_embeddings(embeddings):
+                return torch.nn.functional.normalize(embeddings, p=2, dim=1)
+
+            # Query encoding function
+            def encode_query(query):
+                inputs = tokenizer(query, return_tensors="pt", padding=True, truncation=True, max_length=512).to("cuda")
+                with torch.no_grad():
+                    outputs = model(**inputs)
+                    query_embedding = normalize_embeddings(outputs.last_hidden_state[:, 0])  # CLS pooling
+                return query_embedding.cpu().numpy()
+
+            # Iterate over each target doc and retrieve documents for each attack question
+            print("Retrieving documents using BGE...")
+            for doc_id, doc_content in self.target_docs.items():
+                questions = doc_content.get('questions', [])
+                retrieved_doc_ids = []
+
+                print(f"Retrieving documents for doc_id: {doc_id}")
+
+                for question in questions:
+                    try:
+                        # Encode the query
+                        query_embedding = encode_query(question)
+
+                        # Perform FAISS search
+                        distances, indices = faiss_index.search(query_embedding, k)
+                        # Map indices to document IDs
+                        retrieved_ids = [doc_ids[i] for i in indices[0]]
+                        retrieved_doc_ids.append(retrieved_ids)
+                        print(f"Retrieved document IDs for question '{question}': {retrieved_ids}")
+
+                    except Exception as e:
+                        print(f"Error during retrieval for question '{question}' in doc {doc_id}: {e}")
+                        continue
+
+                # Update the target document with retrieved document IDs
+                doc_content['retrieved_doc_ids'] = retrieved_doc_ids
+                # Save progress
+                self.save_target_docs()
 
         elif retriever == 'contriever':
             # Import necessary libraries
