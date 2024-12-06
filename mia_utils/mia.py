@@ -245,7 +245,7 @@ class MIA_Attacker():
 
                 doc_ids = retriever.search_question(question, k)
                 if doc_ids is None:
-                    print(f"Error during retrieval for question '{question}' in doc {doc_id}: {e}")
+                    print(f"Error during retrieval for question '{question}' in doc {doc_id}")
                     continue
                 else:
                     print(f"Retrieved document IDs for question '{question}': {doc_ids}")
