@@ -5,6 +5,7 @@ from tqdm import tqdm
 from src.utils import load_json
 from src.utils import load_beir_datasets, load_models
 from src.prompts import wrap_prompt
+from src.retrievers import create_retriever
 import json
 import os
 import re
@@ -15,6 +16,7 @@ import pandas as pd
 from pyterrier_doc2query import Doc2Query, QueryScorer, QueryFilter
 from pyterrier_dr import ElectraScorer
 import re
+
 
 class MIA_Attacker():
     def __init__(self, args, **kwargs) -> None:
@@ -227,103 +229,35 @@ class MIA_Attacker():
     #     with open(output_file, 'r') as f:
     #         self.target_docs = json.load(f)
 
-    def retrieve_docs_(self, k=5, retriever='colbert'):
-        if retriever == 'colbert':
-            from ragatouille import RAGPretrainedModel
-            # Load the RAG model with ColBERT index
-            index_path = os.path.join("./datasets", self.args.eval_dataset, 'colbert', 'indexes', f"{self.args.eval_dataset}-index")
-            model = RAGPretrainedModel.from_index(index_path)
-        
-            # Iterate over each target doc and retrieve documents for each attack question
-            for doc_id, doc_content in self.target_docs.items():
-                questions = doc_content.get('questions', [])
-                retrieved_doc_ids = []
+    def retrieve_docs_(self, k: int=5, retriever: str='colbert'):
+        # Create retriever
+        retriever = create_retriever(retriever, self.args.eval_dataset)
 
-                print(f"Retrieving documents for doc_id: {doc_id}")
+        for doc_id, doc_content in self.target_docs.items():
+            questions = doc_content.get('questions', [])
+            retrieved_doc_ids = []
 
-                for question in questions:
-                    # Perform the search for each question
-                    print(f"Querying for question: {question}")
-                    results = model.search(question, k=k)
+            print(f"Retrieving documents for doc_id: {doc_id}")
 
-                    # Collect the document IDs from the search results
-                    doc_ids = [result['document_id'] for result in results]
-                    retrieved_doc_ids.append(doc_ids)
+            for question in questions:
+                # Perform the search for each question
+                print(f"Querying for question: {question}")
+
+                doc_ids = retriever.search_question(question, k)
+                if doc_ids is None:
+                    print(f"Error during retrieval for question '{question}' in doc {doc_id}: {e}")
+                    continue
+                else:
+                    print(f"Retrieved document IDs for question '{question}': {doc_ids}")
+
+                # Collect the document IDs from the search results
+                retrieved_doc_ids.append(doc_ids)
                     
-                # Update the target document with retrieved doc IDs
-                doc_content['retrieved_doc_ids'] = retrieved_doc_ids
+            # Update the target document with retrieved doc IDs
+            doc_content['retrieved_doc_ids'] = retrieved_doc_ids
 
-                # Save progress
-                self.save_target_docs()
-
-        elif retriever == 'contriever':
-            # Import necessary libraries
-            import os
-            import faiss
-            import pickle
-            import torch
-            from transformers import AutoTokenizer, AutoModel
-
-            model_name = "facebook/contriever"
-            tokenizer = AutoTokenizer.from_pretrained(model_name)
-            model = AutoModel.from_pretrained(model_name).to('cuda').eval()
-
-            # Paths for FAISS index and document IDs
-            dataset = self.args.eval_dataset
-            index_folder = os.path.join("./datasets", dataset, 'contriever', 'indexes', f"{dataset}-index")
-            faiss_index_path = os.path.join(index_folder, "corpus_index.faiss")
-            doc_ids_path = os.path.join(index_folder, "doc_ids.pkl")
-
-            # Load FAISS index
-            print(f"Loading FAISS index from {faiss_index_path}")
-            faiss_index = faiss.read_index(faiss_index_path)
-
-            # Load document IDs
-            print(f"Loading document IDs from {doc_ids_path}")
-            with open(doc_ids_path, "rb") as f:
-                doc_ids = pickle.load(f)
-
-            # Mean pooling function for query encoding
-            def mean_pooling(token_embeddings, mask):
-                token_embeddings = token_embeddings.masked_fill(~mask[..., None].bool(), 0.0)
-                sentence_embeddings = token_embeddings.sum(dim=1) / mask.sum(dim=1)[..., None]
-                return sentence_embeddings
-
-            # Query encoding function
-            def encode_query(query, tokenizer, model, device):
-                inputs = tokenizer(query, return_tensors="pt", truncation=True, padding=True, max_length=512).to(device)
-                with torch.no_grad():
-                    outputs = model(**inputs)
-                    query_embedding = mean_pooling(outputs.last_hidden_state, inputs['attention_mask'])
-                    query_embedding = torch.nn.functional.normalize(query_embedding, p=2, dim=1)
-                return query_embedding.cpu().numpy()
-
-            # Iterate over each target document and retrieve results for its questions
-            print("Retrieving documents using Contriever...")
-            for doc_id, doc_content in self.target_docs.items():
-                questions = doc_content.get('questions', [])
-                retrieved_doc_ids = []
-
-                for question in questions:
-                    try:
-                        query_embedding = encode_query(question, self.tokenizer, self.model, torch.device("cuda"))
-                        distances, indices = faiss_index.search(query_embedding, k)
-                        retrieved_ids = [doc_ids[i] for i in indices[0]]
-                        retrieved_doc_ids.append(retrieved_ids)
-                        print(f"Retrieved document IDs for question '{question}': {retrieved_ids}")
-
-                    except Exception as e:
-                        print(f"Error during retrieval for question '{question}' in doc {doc_id}: {e}")
-                        continue
-
-                # Update the target document with retrieved document IDs
-                doc_content['retrieved_doc_ids'] = retrieved_doc_ids
-
-                # Save progress after each document
-                self.save_target_docs()
-
-        else:
-            raise ValueError(f"Retriever '{retriever}' is not supported.")
+            # Save progress
+            self.save_target_docs()
 
     def generate_ground_truth_answers(self, llm=None,  from_ckpt=True):
         answer_pattern = r"A\d+:\s*(Yes|No)"  # Regex pattern to match "A1: Yes/No" format for answers
@@ -404,7 +338,6 @@ class MIA_Attacker():
         # Final save after processing all documents
         self.save_target_docs()
 
-
     def calculate_accuracy_(self):
         def extract_yes_no(answer):
             """Extract 'Yes' or 'No' from a response."""
@@ -443,6 +376,3 @@ class MIA_Attacker():
 
             # Save the accuracy back to the dict
             self.target_docs[doc_id]['accuracy'] = accuracy
-
-
-
