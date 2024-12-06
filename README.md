@@ -10,7 +10,11 @@ Create the Conda environment using the provided `environment.yml` file:
 
 ## Running the MIA Pipeline
 
-First, generate passage embeddings:
+Start by preparing the relevant datasets
+
+`python prepare_dataset.py`
+
+Then, generate passage embeddings:
 
 `python generate_index.py --config ./configs/nfcorpus.yml`
 

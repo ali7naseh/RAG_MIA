@@ -39,9 +39,8 @@ if __name__ == "__main__":
         data_path = os.path.join(out_dir, dataset)
         if not os.path.exists(data_path):
             data_path = util.download_and_unzip(url, out_dir)
-
-    # Remove zip files that we do not need
-    os.system('rm datasets/*.zip')
+            # Remove zip files that we do not need
+            os.system('rm datasets/*.zip')
 
     for dataset in datasets:
         dataset_path = os.path.join("datasets", dataset)
