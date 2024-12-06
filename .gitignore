@@ -168,4 +168,13 @@ datasets/nq/*
 !datasets/trec-covid/selected_indices.json
 logs
 
+results
+analysis.ipynb
+
+direct_query.ipynb
+test.ipynb
+
+# VSCode
+.vscode/
+
 worm_evals/*

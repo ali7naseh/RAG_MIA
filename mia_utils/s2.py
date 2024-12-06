@@ -1,4 +1,4 @@
-from sentence_transformers import SentenceTransformer
+
 import torch
 import random
 from tqdm import tqdm
@@ -9,9 +9,6 @@ import json
 import os
 import re
 
-from beir.retrieval.search.dense import DenseRetrievalFaissSearch as DRFS
-from beir.retrieval import models
-import faiss
 import subprocess
 
 import pandas as pd

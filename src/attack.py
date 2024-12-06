@@ -1,4 +1,4 @@
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 import torch
 import random
 from tqdm import tqdm

@@ -1,5 +1,5 @@
 import torch
-from transformers import LlamaTokenizer, LlamaForCausalLM
+# from transformers import LlamaTokenizer, LlamaForCausalLM
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from .Model import Model
@@ -17,7 +17,7 @@ class Llama3(Model):
         # self.tokenizer = LlamaTokenizer.from_pretrained(self.name, use_auth_token=hf_token)
         # self.model = LlamaForCausalLM.from_pretrained(self.name, torch_dtype=torch.float16, use_auth_token=hf_token).to(self.device)
         self.tokenizer = AutoTokenizer.from_pretrained('/datasets/ai/llama3/huggingface/llama-3-8b-instruct')
-        self.model = AutoModelForCausalLM.from_pretrained('/datasets/ai/llama3/huggingface/llama-3-8b-instruct')
+        self.model = AutoModelForCausalLM.from_pretrained('/datasets/ai/llama3/huggingface/llama-3-8b-instruct', torch_dtype=torch.float16)
 
     def query(self, msg, max_output_tokens=None):
         input_ids = self.tokenizer(msg, return_tensors="pt").input_ids.to("cuda")
