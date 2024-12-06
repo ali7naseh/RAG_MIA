@@ -1,17 +1,23 @@
 from .Contriever import Contriever
 from .ColBERT import ColBERT
+from .GTE import GTE
+from .BGE import BGE
 
 
-def create_retriever(provider: str, dataset: str):
+def create_retriever(name: str, dataset: str):
     """
     Method to createe a retriever object
     """
-    provider_ = provider.lower()
+    provider = name.lower()
 
-    if provider_ == 'contriever':
+    if provider == 'contriever':
         model = Contriever
-    elif provider_ == 'colbert':
+    elif provider == 'colbert':
         model = ColBERT
+    elif provider == 'gte':
+        model = GTE
+    elif provider == 'bge':
+        model = BGE
     else:
-        raise ValueError(f"ERROR: Unknown retriever {provider}")
+        raise ValueError(f"ERROR: Unknown retriever {name}")
     return model(dataset)

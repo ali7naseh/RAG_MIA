@@ -27,7 +27,7 @@ def run(test_params):
 
 def get_log_name(test_params):
     os.makedirs("logs", exist_ok=True)
-    log_name = f"{test_params['attack_method']}-{test_params['eval_dataset']}-{test_params['model_name']}-{test_params['retriever']}-R{test_params['retrieve_k']}-Top{test_params['top_k']}-M{test_params['M']}-N{test_params['N']}"
+    log_name = f"{test_params['attack_method']}-{test_params['eval_dataset']}-{test_params['model_name']}-{test_params['shadow_model_name']}-{test_params['retriever']}-R{test_params['retrieve_k']}-Top{test_params['top_k']}-M{test_params['M']}-N{test_params['N']}"
     return f"logs/{log_name}.txt", log_name
 
 def load_config(config_path):

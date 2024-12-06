@@ -10,6 +10,10 @@ Create the Conda environment using the provided `environment.yml` file:
 
 ## Running the MIA Pipeline
 
+First, generate passage embeddings:
+
+`python generate_index.py --config ./configs/nfcorpus.yml`
+
 To run the attack pipeline, use the following command:
 
 `python run_mia.py --config ./configs/nfcorpus.yml`
