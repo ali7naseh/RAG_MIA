@@ -12,9 +12,26 @@ import yaml
 from tqdm import tqdm
 
 from src.retrievers import create_retriever
+from src.retrievers.Retriever import Retriever
 
 
-def test(model, k: int):
+# Batch Query Encoding Function
+@torch.no_grad()
+def encode_queries(queries, model: Retriever, batch_size: int=32):
+    """
+    Encode a batch of queries using GTE.
+    """
+    embeddings = []
+    for i in range(0, len(queries), batch_size):
+        batch_queries = queries[i:i + batch_size]
+
+        query_embeddings = model.encode_query(batch_queries)
+        embeddings.append(query_embeddings)
+
+    return np.concatenate(embeddings, axis=0)
+
+
+def test(model: Retriever, k: int):
     # Test Queries
     queries = [
         "Is dexmedetomidine used as part of enhanced recovery after surgery (ERAS) protocols to reduce opioid consumption in the Post anesthesia care unit (PACU)?",
@@ -76,22 +93,9 @@ def test(model, k: int):
             print(f"    Text Snippet: {doc_content.get('text', '')[:200]}...")
         print()
 
-# Batch Query Encoding Function
-def encode_queries(queries, model, batch_size: int=32):
-    """
-    Encode a batch of queries using GTE.
-    """
-    embeddings = []
-    for i in range(0, len(queries), batch_size):
-        batch_queries = queries[i:i + batch_size]
-
-        query_embeddings = model.encode_queries(batch_queries)
-        embeddings.append(query_embeddings)
-
-    return np.concatenate(embeddings, dim=0)
-
 
 # Document encoding function
+@torch.no_grad()
 def encode_documents(corpus, model, batch_size=32):
     """
     Encode documents using provided retriever
@@ -107,7 +111,7 @@ def encode_documents(corpus, model, batch_size=32):
         passage_embedding = model.encode_passage(batch_texts)
         embeddings.append(passage_embedding)
 
-    embeddings = torch.cat(embeddings, dim=0).numpy()  # Combine all batches into a single array
+    embeddings = np.concatenate(embeddings, axis=0)  # Combine all batches into a single array
     return doc_ids, embeddings
 
 
@@ -180,4 +184,3 @@ if __name__ == "__main__":
     # Generate and cache passage embeddings
     batch_size = 32
     main(retriever_name=retriever_name, dataset=dataset, batch_size=batch_size)
-
