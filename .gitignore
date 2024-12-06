@@ -167,3 +167,5 @@ datasets/nq/*
 !datasets/nfcorpus/selected_indices.json
 !datasets/trec-covid/selected_indices.json
 logs
+
+worm_evals/*
