@@ -4,7 +4,9 @@
 from .Llama import Llama
 from .Llama3 import Llama3
 from .Llama3_70b import Llama3_70b
+from .Gemma2 import Gemma2_2B
 import json
+
 
 def load_json(file_path):
     with open(file_path) as file:
@@ -30,6 +32,8 @@ def create_model(config_path):
         model = Llama3(config)
     elif provider == 'llama3_70b':
         model = Llama3_70b(config)
+    elif provider == 'gemma2_2b':
+        model = Gemma2_2B(config)
     else:
         raise ValueError(f"ERROR: Unknown provider {provider}")
     return model

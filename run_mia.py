@@ -22,7 +22,7 @@ def run(test_params):
         --post_filter {test_params['post_filter']} "  + \
         ("--from_ckpt " if test_params['from_ckpt'] else "") + \
         f"> {log_file}"
-        
+
     os.system(cmd)
 
 def get_log_name(test_params):

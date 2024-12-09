@@ -4,6 +4,7 @@ import torch.nn.functional as F
 import torch
 import json
 
+
 class NVEmbed(HFRetriever):
     def __init__(self, eval_dataset: str):
         super().__init__("nvembed", eval_dataset)
@@ -24,7 +25,7 @@ class NVEmbed(HFRetriever):
     def encode_query(self, query: str):
         # Check for instruction
         query_prefix = "Instruct: " + self.instruction_mapping["query"]+"\nQuery: "
-        max_length = 32768
+        max_length = 1024 #32768
         embeddings = self.model.encode(query, instruction=query_prefix, max_length=max_length)
         embeddings = F.normalize(embeddings, p=2, dim=1)
         return embeddings.cpu().numpy()
@@ -32,10 +33,7 @@ class NVEmbed(HFRetriever):
     @torch.no_grad()
     def encode_passage(self, passage: str):
         # Check for instruction
-        passage_prefix = ""
-        if "passage" in self.instruction_mapping and len(self.instruction_mapping["passage"]) > 0:
-            passage_prefix = "Instruct: " + self.instruction_mapping["query"]+"\nQuery: "
-        max_length = 32768
-        embeddings = self.model.encode(passage, instruction=passage_prefix, max_length=max_length)
+        max_length = 1024 #32768
+        embeddings = self.model.encode(passage, max_length=max_length)
         embeddings = F.normalize(embeddings, p=2, dim=1)
         return embeddings.cpu().numpy()

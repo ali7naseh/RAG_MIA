@@ -1,0 +1,17 @@
+{
+    "model_info":{
+        "provider":"gemma2_2b",
+        "name":"google/gemma-2-2b-it"
+    },
+    "api_key_info":{
+        "api_keys":[0],
+        "api_key_use": 0
+    },
+    "params":{
+        "temperature":0.1,
+        "seed":100,
+        "gpus":[],
+        "device":"cuda",
+        "max_output_tokens":150
+    }
+}

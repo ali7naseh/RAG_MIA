@@ -1,20 +1,7 @@
-import argparse
 import os
-import json
-from tqdm import tqdm
-import random
-import numpy as np
-from src.models import create_model
-from src.utils import load_beir_datasets, load_models
-from src.utils import save_results, load_json, setup_seeds, clean_str, f1_score
-from src.attack import Attacker
-from beir.datasets.data_loader import GenericDataLoader
-from beir.retrieval import models
-from mia_utils.mia import MIA_Attacker
-from src.prompts import wrap_prompt
-import torch
 import re
 import glob
+
 
 def get_superset_file(args, random=False):
     if random==True:

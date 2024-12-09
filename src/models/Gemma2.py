@@ -1,0 +1,27 @@
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from .Model import Model
+
+
+class Gemma2_2B(Model):
+    def __init__(self, config):
+        super().__init__(config)
+        self.max_output_tokens = int(config["params"]["max_output_tokens"])
+        self.device = config["params"]["device"]
+        self.max_output_tokens = config["params"]["max_output_tokens"]
+
+        self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-2b-it")
+        self.model = AutoModelForCausalLM.from_pretrained(
+            "google/gemma-2-2b-it",
+            device_map="auto",
+            torch_dtype=torch.bfloat16,
+        )
+
+    def query(self, msg, max_output_tokens=None):
+        input_ids = self.tokenizer(msg, return_tensors="pt").input_ids.to("cuda")
+        outputs = self.model.generate(input_ids,
+            max_new_tokens=self.max_output_tokens if max_output_tokens is None else max_output_tokens,
+            early_stopping=True)
+        out = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+        result = out[len(msg):]
+        return result

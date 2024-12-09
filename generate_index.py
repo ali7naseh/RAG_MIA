@@ -182,5 +182,5 @@ if __name__ == "__main__":
     dataset = test_params['eval_dataset']
 
     # Generate and cache passage embeddings
-    batch_size = 32
+    batch_size = 16 #32
     main(retriever_name=retriever_name, dataset=dataset, batch_size=batch_size)
