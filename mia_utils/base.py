@@ -23,6 +23,7 @@ class BaseAttacker:
 
         #load dataset
         self.corpus = kwargs.get('corpus', None)
+        self.document_slice_size = 2048
 
     def save_target_docs(self):
         # Define the output directory and filename dynamically
@@ -86,7 +87,7 @@ class BaseAttacker:
                 # Generate responses for all questions
                 for i, question in enumerate(questions):
                     # Access the text of each retrieved document directly from self.corpus
-                    topk_contents = [self.corpus[doc]['text'][:2048] for doc in retrieved_doc_ids[i]]
+                    topk_contents = [self.corpus[doc]['text'][:self.document_slice_size] for doc in retrieved_doc_ids[i]]
                     query_prompt = wrap_prompt(question, topk_contents, prompt_id=4)
 
                     try:

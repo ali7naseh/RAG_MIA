@@ -109,7 +109,7 @@ def main(args):
         llm.to(llm.device)
 
         attacker.generate_questions()
-        attacker.retrieve_docs_()
+        attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
         attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
         attacker.calculate_score()
 
@@ -125,7 +125,7 @@ def main(args):
         llm.to(llm.device)
 
         attacker.generate_questions()
-        attacker.retrieve_docs_()
+        attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
         attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
         attacker.calculate_score()
 
@@ -199,7 +199,7 @@ def main(args):
         llm.to(llm.device)
 
         attacker.generate_questions()
-        attacker.retrieve_docs_()
+        attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
         attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
         attacker.calculate_score()
 

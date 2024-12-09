@@ -33,16 +33,18 @@ class MBA_Attacker(BaseAttacker):
                                          device='cuda')
 
         # Proxy LM
-        # Original paper used gpt-xl, but it does not do a very good job at subword representation and is very old
-        # So we switch to a more recent (but not too large) model
-        proxy_lm = "meta-llama/Llama-3.2-3B"
+        # Original paper used gpt-xl
         # proxy_lm = "openai-community/gpt2-xl"
+        proxy_lm = "meta-llama/Llama-3.2-3B"
         self.proxy_lm_tokenizer = AutoTokenizer.from_pretrained(proxy_lm)
         self.proxy_lm_model = AutoModelForCausalLM.from_pretrained(proxy_lm).eval().cuda()
 
         # Ensure NLTK stopwords are downloaded
         nltk.download('stopwords')
         self.stop_words = set(stopwords.words('english'))
+        # Add custom abbreviations (include <human> and <bot> tags that are part of HealthChat dataset)
+        self.stop_words.update(["etc", "etc.", "e.g.", "i.e.", "i.e", "et al.", "<human>:", "<bot>:"])
+
         self.punctuations = set(string.punctuation)
 
     def _fragmented_word_extraction(self, words: List[str]) -> List[int]:
@@ -109,8 +111,12 @@ class MBA_Attacker(BaseAttacker):
                 if j >= len(document_words):
                     break
 
+                # Skip the first 5 words (source: authors)
+                if j < 5:
+                    score = -1
+                    masked_words_within.append([""])
                 # If stop-word or punctuation, assign score of -1
-                if document_words[j].lower() in self.stop_words or document_words[j] in self.punctuations:
+                elif document_words[j].lower() in self.stop_words or document_words[j] in self.punctuations:
                     score = -1
                     masked_words_within.append([""])
                 # If right next to an already-masked word, do not mask
@@ -188,19 +194,9 @@ class MBA_Attacker(BaseAttacker):
         for doc_id, target_info in tqdm(self.target_docs.items(), desc="Generating Questions", total=len(self.target_docs)):
             target_doc = target_info['text']
 
+            # Use version of target_doc that is at most self.document_slice_size characters long
             # Generated masked document (and answers, to be used later)
-            # target_doc = (
-            #     "<human>: My baby has been pooing 5-6 times a day for a week. In the last few days it has increased to "
-            #     "7 and they are very watery with green stringy bits in them. He does not seem unwell i.e no temperature "
-            #     "and still eating. He now has a very bad nappy rash from the pooing ...help! "
-            #     "<bot>: Hi... Thank you for consulting in Chat Doctor. It seems your kid is having viral diarrhea. Once it "
-            #     "starts it will take 5-7 days to completely get better. Unless the kids having low urine output or very dull "
-            #     "or excessively sleepy or blood in motion or green bilious vomiting...you need not worry. There is no "
-            #     "need to use antibiotics unless there is blood in the motion. Antibiotics might worsen if unnecessarily "
-            #     "used causing antibiotic associated diarrhea. I suggest you use zinc supplements (Z&D Chat Doctor."
-            # )
-
-            masked_document, mask_answers = self.mba_pipeline(target_doc, self.num_masks)
+            masked_document, mask_answers = self.mba_pipeline(target_doc[:self.document_slice_size], self.num_masks)
             query = template.format(masked_document=masked_document)
 
             self.target_docs[doc_id]['questions'] = [query]
