@@ -38,7 +38,6 @@ def parse_args():
     parser.add_argument("--from_ckpt", action="store_true", help="Load from checkpoint if this flag is set.")
     parser.add_argument("--post_filter", type=str, help="Do post filtering")
     parser.add_argument('--retrieve_k', type=int, default=3, help='num of docs for each query in rag')
-    
 
     args = parser.parse_args()
     print(args)
@@ -172,7 +171,7 @@ def main(args):
                 attacker.filter_questions_topk(top_k=args.top_k)
 
             attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
-            #generate groud truth answers
+            #generate ground truth answers
             validate_llm = create_model(args.shadow_model_config_path)
             validate_llm.to(validate_llm.device)
             attacker.generate_ground_truth_answers(validate_llm, from_ckpt=args.from_ckpt)
@@ -200,8 +199,8 @@ def main(args):
 
         if not args.from_ckpt:
             attacker.generate_questions()
-        attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
-        attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
+            attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
+            attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
         attacker.calculate_score()
 
     else:

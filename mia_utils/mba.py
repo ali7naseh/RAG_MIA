@@ -213,7 +213,7 @@ class MBA_Attacker(BaseAttacker):
             matches = re.findall(pattern, text, re.IGNORECASE)
     
             # Create a dictionary from the matches
-            mask_mappings = {int(id): answer.strip() for id, answer in matches}
+            mask_mappings = {id: answer.strip() for id, answer in matches}
     
             return mask_mappings
 
@@ -230,7 +230,7 @@ class MBA_Attacker(BaseAttacker):
             #     continue
 
             correct_answer = doc_data['answers']
-            llm_response = doc_data['llm_responses']
+            llm_response = doc_data.get("llm_responses", [""])[0]
 
             # Compare LLM response with correct answers
             llm_answer = extract_mask_answers(llm_response)
@@ -248,3 +248,6 @@ class MBA_Attacker(BaseAttacker):
 
             # Save the accuracy back to the dict
             self.target_docs[doc_id]['accuracy'] = accuracy
+
+        # Save the updated target_docs
+        self.save_target_docs()
