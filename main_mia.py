@@ -198,7 +198,8 @@ def main(args):
         llm = create_model(args.model_config_path)
         llm.to(llm.device)
 
-        attacker.generate_questions()
+        if not args.from_ckpt:
+            attacker.generate_questions()
         attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
         attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
         attacker.calculate_score()

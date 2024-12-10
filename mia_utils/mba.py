@@ -205,11 +205,17 @@ class MBA_Attacker(BaseAttacker):
         self.save_target_docs()
 
     def calculate_score(self):
-        def extract_mask_answers(answer: str) -> dict:
-            pattern = r"\[Mask_(\d+)\]: (.+)"
-            matches = re.findall(pattern, answer)
-            mask_answers = {int(mask): answer for mask, answer in matches}
-            return mask_answers
+        def extract_mask_answers(text):
+            # Regular expression to match the mask pattern
+            pattern = r'\[MASK?_?(\d+)\]:?\s*\**\s*([\w\-\' ]+)'
+    
+            # Find all matches
+            matches = re.findall(pattern, text, re.IGNORECASE)
+    
+            # Create a dictionary from the matches
+            mask_mappings = {int(id): answer.strip() for id, answer in matches}
+    
+            return mask_mappings
 
         output_dir = 'results/target_docs'
         output_file = f'{output_dir}/{self.args.name}.json'
