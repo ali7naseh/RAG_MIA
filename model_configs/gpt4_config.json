@@ -1,7 +1,7 @@
 {
     "model_info":{
         "provider":"gpt",
-        "name":"gpt-4-0613"
+        "name":"gpt-4o-mini"
     },
     "api_key_info":{
         "api_keys":[
@@ -13,6 +13,6 @@
         "temperature":0.1,
         "seed":100,
         "gpus":[],
-        "max_output_tokens":150
+        "max_output_tokens":50
     }
 }
