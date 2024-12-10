@@ -19,9 +19,14 @@ class Gemma2_2B(Model):
 
     def query(self, msg, max_output_tokens=None):
         input_ids = self.tokenizer(msg, return_tensors="pt").input_ids.to("cuda")
+        num_input_tokens = input_ids.shape[1]
+
         outputs = self.model.generate(input_ids,
             max_new_tokens=self.max_output_tokens if max_output_tokens is None else max_output_tokens,
             early_stopping=True)
-        out = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-        result = out[len(msg):]
+
+        output_tokens = outputs[0][num_input_tokens:]
+        result = self.tokenizer.decode(output_tokens, skip_special_tokens=True)
+        #out = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+        #result = out[len(msg):]
         return result
