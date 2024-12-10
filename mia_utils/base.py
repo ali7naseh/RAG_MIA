@@ -25,6 +25,10 @@ class BaseAttacker:
         self.corpus = kwargs.get('corpus', None)
         self.document_slice_size = 2048
 
+    def prompt_len(self, tokenizer, question: str, doc_id: int, question_id: int):
+        # Default to None: use model-specific max_tokens
+        return None
+
     def save_target_docs(self):
         # Define the output directory and filename dynamically
         output_dir = 'results/target_docs'
@@ -66,7 +70,6 @@ class BaseAttacker:
             self.save_target_docs()
 
     def query_target_llm(self, llm, from_ckpt=True):
-   
         output_dir = 'results/target_docs'
         output_file = f'{output_dir}/{self.args.name}.json'
         with open(output_file, 'r') as f:
@@ -92,9 +95,9 @@ class BaseAttacker:
 
                     try:
                         # Query the LLM for the response
-                        response = llm.query(query_prompt)
-                        # max_gen_token_len = len(llm.tokenizer.tokenize(question))
-                        # response = llm.query(query_prompt, max_output_tokens = max_gen_token_len)
+                        max_gen_token_len = self.prompt_len(llm.tokenizer, question, doc_id, i)
+                        response = llm.query(query_prompt, max_output_tokens = max_gen_token_len)
+                        
                         print(f'Response for doc {doc_id}, question {i}: {response}')
                         llm_responses.append(response)
                     except Exception as e:

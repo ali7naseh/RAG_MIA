@@ -36,50 +36,10 @@ class S2_Attacker(BaseAttacker):
         # Save the updated target_docs
         self.save_target_docs()
 
-    def query_target_llm(self, llm, from_ckpt=True):
-
-        output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
-        with open(output_file, 'r') as f:
-            self.target_docs = json.load(f)
-
-        for doc_id, doc_content in self.target_docs.items():
-            questions = doc_content.get('questions', [])
-            retrieved_doc_ids = doc_content.get('retrieved_doc_ids', [])
-
-            llm_responses = doc_content.get('llm_responses', [])
-            if not from_ckpt:
-                llm_responses = []  # Start fresh if from_ckpt is False
-            if len(llm_responses) < len(questions):
-                print(f"Reprocessing document: {doc_id}")
-                doc_content['llm_responses'] = []  # Clear existing responses to start fresh
-                llm_responses = doc_content['llm_responses']
-
-                # Generate responses for all questions
-                for i, question in enumerate(questions):
-                    # Access the text of each retrieved document directly from self.corpus
-                    topk_contents = [self.corpus[doc]['text'] for doc in retrieved_doc_ids[i]]
-                    query_prompt = wrap_prompt(question, topk_contents, prompt_id=4)
-
-                    try:
-                        # Query the LLM for the response
-                        max_gen_token_len = len(llm.tokenizer.tokenize(question))
-                        response = llm.query(query_prompt, max_output_tokens = max_gen_token_len)
-                        print(f'Response for doc {doc_id}, question {i}: {response}')
-                        llm_responses.append(response)
-                    except Exception as e:
-                        print(f"Error querying LLM for question {i} in doc {doc_id}: {e}")
-                        break  # Stop processing if an error occurs to allow for retry
-
-                print(f"Completed responses for doc {doc_id}: {llm_responses}")
-                doc_content['llm_responses'] = llm_responses
-                # Save progress after each document is processed
-                self.save_target_docs()
-            else:
-                print(f"All responses already generated for {doc_id}")
-
-        # Final save after processing all documents
-        self.save_target_docs()
+    def prompt_len(self, tokenizer, question: str, doc_id: int, question_id: int):
+        num_tokens_question = len(tokenizer.tokenize(question))
+        # Add 32 tokens as a buffer
+        return num_tokens_question + 32
 
     def calculate_score(self):
         """

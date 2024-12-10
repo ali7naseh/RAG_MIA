@@ -47,6 +47,13 @@ class MBA_Attacker(BaseAttacker):
 
         self.punctuations = set(string.punctuation)
 
+    def prompt_len(self, tokenizer, question: str, doc_id: int, question_id: int):
+        # Look at number of tokens in answer
+        answer_dict_str = "\n".join([f"[MASK_{k}]: v" for k, v in self.target_docs[doc_id]['answers'].items()])
+        num_tokens_answer_dict_str = len(tokenizer.tokenize(answer_dict_str))
+        # Add a buffer of 8 tokens
+        return num_tokens_answer_dict_str + 8
+
     def _fragmented_word_extraction(self, words: List[str]) -> List[int]:
         split_word_indices = []
         for i, word in enumerate(words):
