@@ -11,6 +11,9 @@ class GPT(Model):
         self.max_output_tokens = int(config["params"]["max_output_tokens"])
         self.client = OpenAI(api_key=api_keys[api_pos])
 
+    def to(self, device):
+        pass
+
     def query(self, msg):
         try:
             completion = self.client.chat.completions.create(
