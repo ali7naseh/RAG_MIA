@@ -18,7 +18,7 @@ class Llama(Model):
         # self.tokenizer = LlamaTokenizer.from_pretrained('/datasets/ai/llama2/huggingface/llama-2-7b')
         # self.model = LlamaForCausalLM.from_pretrained('/datasets/ai/llama2/huggingface/llama-2-7b', torch_dtype=torch.float16)
         self.tokenizer = AutoTokenizer.from_pretrained('/datasets/ai/llama2/huggingface/llama-2-7b')
-        self.model = AutoModelForCausalLM.from_pretrained('/datasets/ai/llama2/huggingface/llama-2-7b', torch_dtype=torch.float16)
+        self.model = AutoModelForCausalLM.from_pretrained('/datasets/ai/llama2/huggingface/llama-2-7b', device_map="auto", torch_dtype=torch.float16)
 
     def query(self, msg, max_output_tokens=None):
         input_ids = self.tokenizer(msg, return_tensors="pt").input_ids.to("cuda")

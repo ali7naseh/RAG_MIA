@@ -177,13 +177,13 @@ def main():
             attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
             #generate groud truth answers
             validate_llm = create_model(args.shadow_model_config_path)
-            validate_llm.model.to(validate_llm.device)
+            # validate_llm.model.to(validate_llm.device)
             attacker.generate_ground_truth_answers(validate_llm, from_ckpt=args.from_ckpt)
             del validate_llm
         
             #target LLM
             llm = create_model(args.model_config_path)
-            llm.model.to(llm.device)
+            # llm.model.to(llm.device)
 
             attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
             attacker.calculate_accuracy_()
