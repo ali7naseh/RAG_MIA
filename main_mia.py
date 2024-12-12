@@ -1,22 +1,17 @@
 import argparse
 import os
 import json
-from tqdm import tqdm
 import random
-import numpy as np
 from src.models import create_model
-from src.utils import load_beir_datasets, load_models
-from src.utils import save_results, load_json, setup_seeds, clean_str, f1_score
-from src.attack import Attacker
+from src.utils import setup_seeds
 from beir.datasets.data_loader import GenericDataLoader
 # from beir.retrieval import models
 from mia_utils.mia import MIA_Attacker
 from mia_utils.direct_query import Direct_Query_Attacker
 from mia_utils.s2 import S2_Attacker
-from src.prompts import wrap_prompt
-import torch
-import re
+from mia_utils.mba import MBA_Attacker
 from mia_utils.utils import get_superset_file
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description='test')
@@ -43,14 +38,12 @@ def parse_args():
     parser.add_argument("--from_ckpt", action="store_true", help="Load from checkpoint if this flag is set.")
     parser.add_argument("--post_filter", type=str, help="Do post filtering")
     parser.add_argument('--retrieve_k', type=int, default=3, help='num of docs for each query in rag')
-    
 
     args = parser.parse_args()
     print(args)
     return args
 
-def main():
-    args = parse_args()
+def main(args):
     device = 'cuda'
     setup_seeds(args.seed)
     if args.model_config_path == None:
@@ -100,38 +93,40 @@ def main():
             if doc_content['mem'] == 'no' and doc_id in corpus:
                 corpus.pop(doc_id)
 
-    print(args.shadow_model_config_path,args.model_config_path)
+    print(args.shadow_model_config_path, args.model_config_path)
     
     if args.attack_method in ['direct_query']:
 
-        attacker = Direct_Query_Attacker(args,
-                            target_docs=target_docs,
-                            corpus=corpus
-                            )
+        attacker = Direct_Query_Attacker(
+            args,
+            target_docs=target_docs,
+            corpus=corpus
+        )
 
         #target LLM
         llm = create_model(args.model_config_path)
-        llm.model.to(llm.device)
+        llm.to(llm.device)
 
         attacker.generate_questions()
-        attacker.retrieve_docs_()
+        attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
         attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
-        attacker.calculate_accuracy_()
+        attacker.calculate_score()
 
     elif args.attack_method in ['s2']:
-        attacker = S2_Attacker(args,
-                            target_docs=target_docs,
-                            corpus=corpus
-                            )
+        attacker = S2_Attacker(
+            args,
+            target_docs=target_docs,
+            corpus=corpus
+        )
 
         #target LLM
         llm = create_model(args.model_config_path)
-        llm.model.to(llm.device)
+        llm.to(llm.device)
 
         attacker.generate_questions()
-        attacker.retrieve_docs_()
+        attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
         attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
-        attacker.calculate_bleu()
+        attacker.calculate_score()
 
     elif args.attack_method in ['mia']:
 
@@ -155,14 +150,15 @@ def main():
             )
             # Perform post-filtering
             attacker.post_filter(top_k=args.top_k, mode=args.post_filter)
-            attacker.calculate_accuracy_()
+            attacker.calculate_score()
 
         else:
    
-            attacker = MIA_Attacker(args,
-                                target_docs=target_docs,
-                                corpus=corpus
-                                )
+            attacker = MIA_Attacker(
+                args,
+                target_docs=target_docs,
+                corpus=corpus
+            )
 
             if not args.from_ckpt:
                 #questions from GPT-4
@@ -175,20 +171,42 @@ def main():
                 attacker.filter_questions_topk(top_k=args.top_k)
 
             attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
-            #generate groud truth answers
+            #generate ground truth answers
             validate_llm = create_model(args.shadow_model_config_path)
-            # validate_llm.model.to(validate_llm.device)
+            validate_llm.to(validate_llm.device)
             attacker.generate_ground_truth_answers(validate_llm, from_ckpt=args.from_ckpt)
             del validate_llm
         
             #target LLM
             llm = create_model(args.model_config_path)
-            # llm.model.to(llm.device)
+            llm.to(llm.device)
 
             attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
-            attacker.calculate_accuracy_()
+            attacker.calculate_score()
 
+    elif args.attack_method in ['mba']:
+        # Authors tested num_masks in [5, 10, 15, 20] and picked M with the higest AUC
+        attacker = MBA_Attacker(
+            args,
+            target_docs=target_docs,
+            corpus=corpus,
+            num_masks=10
+        )
+
+        #target LLM
+        llm = create_model(args.model_config_path)
+        llm.to(llm.device)
+
+        if not args.from_ckpt:
+            attacker.generate_questions()
+            attacker.retrieve_docs_(k=args.retrieve_k, retriever = args.retriever)
+            attacker.query_target_llm(llm=llm, from_ckpt=args.from_ckpt)
+        attacker.calculate_score()
+
+    else:
+        raise ValueError(f"Invalid attack method: {args.attack_method}")
 
 
 if __name__ == '__main__':
-    main()
+    args = parse_args()
+    main(args)

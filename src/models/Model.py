@@ -15,6 +15,10 @@ class Model:
         if len(self.gpus) > 0:
             self.initialize_gpus()
 
+    def to(self, device):
+        if hasattr(self, 'model'):
+            self.model.to(device)
+
     def print_model_info(self):
         print(f"{'-'*len(f'| Model name: {self.name}')}\n| Provider: {self.provider}\n| Model name: {self.name}\n{'-'*len(f'| Model name: {self.name}')}")
 
