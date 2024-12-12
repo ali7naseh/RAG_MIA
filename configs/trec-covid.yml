@@ -1,5 +1,5 @@
 test_params:
-  retriever: "gte"
+  retriever: "colbert"
   eval_dataset: "trec-covid"
   split: "test"
   model_name: "llama3"
@@ -9,7 +9,7 @@ test_params:
   repeat_times: 1
   M: 250
   N: 15
-  top_k: 4
+  top_k: 12
   retrieve_k: 3
   seed: 12
   from_ckpt: true
