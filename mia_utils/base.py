@@ -8,9 +8,9 @@ class BaseAttacker:
     """
         Base class for all attackers.
     """
-    def __init__(self, args, **kwargs) -> None:
-        self.args = args
-        self.attack_method = args.attack_method
+    def __init__(self, config, **kwargs) -> None:
+        self.config = config
+        self.attack_method = self.config.attack_config.attack_method
 
         # reserved for retriever
         self.model = kwargs.get('model', None)
@@ -32,16 +32,24 @@ class BaseAttacker:
     def save_target_docs(self):
         # Define the output directory and filename dynamically
         output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
+        output_file = f'{output_dir}/{self.config.attack_config.name}.json'
         # Ensure the output directory exists
         os.makedirs(output_dir, exist_ok=True)
         # Save the target_docs dictionary to the specified JSON file
         with open(output_file, 'w') as f:
             json.dump(self.target_docs, f, indent=4)
 
-    def retrieve_docs_(self, k: int=5, retriever: str='colbert'):
+    def retrieve_docs_(self):
+        k = self.config.rag_config.retrieve_k
+        retriever = self.config.rag_config.retriever
         # Create retriever
-        retriever = create_retriever(retriever, self.args.eval_dataset)
+        retriever = create_retriever(retriever, self.config.rag_config.eval_dataset)
+
+        # Create reranker, if specified
+        reranker_model = None
+        rerank_k = self.config.rag_config.rerank_k
+        if self.config.rag_config.reranker is not None:
+            reranker_model = create_retriever(self.config.rag_config.reranker, self.config.rag_config.eval_dataset)
 
         for doc_id, doc_content in self.target_docs.items():
             questions = doc_content.get('questions', [])
@@ -59,6 +67,12 @@ class BaseAttacker:
                     continue
                 else:
                     print(f"Retrieved document IDs for question '{question}': {doc_ids}")
+                
+                # Rerank the retrieved documents
+                if reranker_model is not None:
+                    retrieved_docs = [self.corpus[doc]['text'] for doc in doc_ids]
+                    shortlisted = reranker_model.reranked_topk(question, retrieved_docs, rerank_k)
+                    doc_ids = [doc_ids[i] for i in shortlisted]
 
                 # Collect the document IDs from the search results
                 retrieved_doc_ids.append(doc_ids)
@@ -71,7 +85,7 @@ class BaseAttacker:
 
     def query_target_llm(self, llm, from_ckpt=True):
         output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
+        output_file = f'{output_dir}/{self.config.attack_config.name}.json'
         with open(output_file, 'r') as f:
             self.target_docs = json.load(f)
             

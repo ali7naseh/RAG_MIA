@@ -1,6 +1,7 @@
 import os
 import faiss
 import pickle
+from typing import List
 
 
 class Retriever:
@@ -57,3 +58,24 @@ class HFRetriever(Retriever):
         except Exception as e:
             return None
         return retrieved_ids
+
+
+class HFReranker(HFRetriever):
+    def encode(self, text: str, passages: List[str]) -> List[float]:
+        raise NotImplementedError("_encode method must be implemented in subclass")
+    
+    def faiss_load(self):
+        pass
+
+    def reranked_topk(self, question: str,
+                      passages: List[str],
+                      k: int,
+                      batch_size: int=16):
+        scores = []
+        for i in range(0, len(passages), batch_size):
+            batch_passages = passages[i:i + batch_size]
+            batch_scores = self.encode(question, batch_passages)
+            scores.extend(batch_scores)
+        # Pick the top-k passages and return
+        top_k_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:k]
+        return top_k_indices

@@ -24,7 +24,7 @@ class Direct_Query_Attacker(BaseAttacker):
             return match.group(1).capitalize() if match else "Unknown"
 
         output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
+        output_file = f'{output_dir}/{self.config.attack_config.name}.json'
         with open(output_file, 'r') as f:
             data = json.load(f)
 

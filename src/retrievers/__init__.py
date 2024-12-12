@@ -3,11 +3,13 @@ from .ColBERT import ColBERT
 from .GTE import GTE
 from .BGE import BGE
 from .NVEmbed import NVEmbed
+from .Jina import JinaReranker
+from .MixedBread import MixedBreadReranker
 
 
 def create_retriever(name: str, dataset: str):
     """
-    Method to createe a retriever object
+    Method to create a retriever object
     """
     provider = name.lower()
 
@@ -21,6 +23,10 @@ def create_retriever(name: str, dataset: str):
         model = BGE
     elif provider == 'nvembed':
         model = NVEmbed
+    elif provider == 'jina':
+        model = JinaReranker
+    elif provider == 'mixedbread':
+        model = MixedBreadReranker
     else:
         raise ValueError(f"ERROR: Unknown retriever {name}")
     return model(dataset)
