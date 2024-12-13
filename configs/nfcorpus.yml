@@ -1,16 +1,22 @@
-test_params:
-  retriever: "colbert"
-  eval_dataset: "nfcorpus"
-  split: "test"
-  model_name: "llama3_70b"
-  shadow_model_name: "llama3"
-  gpu_id: 0
-  attack_method: "mia"
-  repeat_times: 1
+attack_config:
   M: 250
   N: 15
-  top_k: 4
-  seed: 12
-  retrieve_k: 3
+  attack_method: mia
   from_ckpt: true
-  post_filter: 'top' # top or random or none 
+  name: debug
+  post_filter: top
+  repeat_times: 1
+  seed: 12
+  top_k: 4
+llm_config:
+  gpu_id: 0
+  model_config_path: null
+  model_name: llama3_70b
+  shadow_model_name: llama3
+rag_config:
+  eval_dataset: nfcorpus
+  rerank_k: null
+  reranker: null
+  retrieve_k: 3
+  retriever: colbert
+  split: test
