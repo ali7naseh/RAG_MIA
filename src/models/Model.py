@@ -11,6 +11,7 @@ class Model:
         self.seed = int(config["params"]["seed"])
         self.temperature = float(config["params"]["temperature"])
         self.gpus = [str(gpu) for gpu in config["params"]["gpus"]]
+        self.device = 'cpu'
         self.initialize_seed()
         if len(self.gpus) > 0:
             self.initialize_gpus()

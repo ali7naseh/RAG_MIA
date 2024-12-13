@@ -225,16 +225,11 @@ class MBA_Attacker(BaseAttacker):
             return mask_mappings
 
         output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
+        output_file = f'{output_dir}/{self.config.attack_config.name}.json'
         with open(output_file, 'r') as f:
             data = json.load(f)
 
         for doc_id, doc_data in data.items():
-
-            # Skip the document if it doesn't meet the required number of questions or responses
-            # if len(doc_data['answers']) < self.args.N or len(doc_data['questions']) < self.args.N:
-            #     print(f"Skipping Document {doc_id}: Not enough questions or responses")
-            #     continue
 
             correct_answer = doc_data['answers']
             llm_response = doc_data.get("llm_responses", [""])[0]

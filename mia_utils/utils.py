@@ -3,11 +3,11 @@ import re
 import glob
 
 
-def get_superset_file(args, random=False):
+def get_superset_file(config, random=False):
     if random==True:
         output_dir = 'results/target_docs'
         # Extract values for Top and N from args.name using regular expressions
-        match = re.search(r'(.*?)-Top(\d+)-M(\d+)-N(\d+)', args.name)
+        match = re.search(r'(.*?)-Top(\d+)-M(\d+)-N(\d+)', config.attack_config.name)
         if not match:
             print("Invalid filename format. Expected format: 'prefix-TopX-MY-NZ'")
             return
@@ -24,7 +24,7 @@ def get_superset_file(args, random=False):
         print(f'{output_dir}/{prefix}-Top*{suffix}')
         files = glob.glob(f'{output_dir}/{prefix}-Top*{suffix}')
         available_top_ks = []
-        print(f"args.name: {args.name}")
+        print(f"args.name: {config.attack_config.name}")
         print(f"Matching files found: {files}")
 
         for file in files:
@@ -49,13 +49,13 @@ def get_superset_file(args, random=False):
     else:
         output_dir = 'results/target_docs'
         # Extract values for Top and N from args.name using regular expressions
-        match = re.search(r'-Top(\d+)-M\d+-N(\d+)$', args.name)
+        match = re.search(r'-Top(\d+)-M\d+-N(\d+)$', config.attack_config.name)
         if not match:
             print("Invalid filename format. Expected format: 'base-TopX-MY-NZ'")
             return
         desired_top_k = int(match.group(1))
         n_value = max(desired_top_k, int(match.group(2)))
-        superset_filename = f'{output_dir}/{args.name.replace(f"-Top{desired_top_k}", f"-Top{n_value}")}.json'
+        superset_filename = f'{output_dir}/{config.attack_config.name.replace(f"-Top{desired_top_k}", f"-Top{n_value}")}.json'
 
         if not os.path.exists(superset_filename):
             print(f"Superset file {superset_filename} does not exist. Cannot perform post-filtering.")

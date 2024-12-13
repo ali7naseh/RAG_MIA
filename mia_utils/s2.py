@@ -50,7 +50,7 @@ class S2_Attacker(BaseAttacker):
             return answer.strip()
 
         output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
+        output_file = f'{output_dir}/{self.config.attack_config.name}.json'
 
         if not os.path.exists(output_file):
             raise FileNotFoundError(f"Output file {output_file} does not exist.")

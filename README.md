@@ -8,6 +8,10 @@ Create the Conda environment using the provided `environment.yml` file:
 
 `conda env create -f environment.yml`
 
+Also make sure you have SimpleParsing installed
+
+`pip install git+https://github.com/lebrice/SimpleParsing.git`
+
 ## Running the MIA Pipeline
 
 Start by preparing the relevant datasets

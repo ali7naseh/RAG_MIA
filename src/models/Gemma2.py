@@ -3,16 +3,16 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from .Model import Model
 
 
-class Gemma2_2B(Model):
-    def __init__(self, config):
+class Gemma(Model):
+    def __init__(self, config, model_name: str):
         super().__init__(config)
         self.max_output_tokens = int(config["params"]["max_output_tokens"])
         self.device = config["params"]["device"]
         self.max_output_tokens = config["params"]["max_output_tokens"]
 
-        self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-2b-it")
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForCausalLM.from_pretrained(
-            "google/gemma-2-2b-it",
+            model_name,
             device_map="auto",
             torch_dtype=torch.bfloat16,
         )
@@ -27,6 +27,14 @@ class Gemma2_2B(Model):
 
         output_tokens = outputs[0][num_input_tokens:]
         result = self.tokenizer.decode(output_tokens, skip_special_tokens=True)
-        #out = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-        #result = out[len(msg):]
         return result
+
+
+class Gemma2_2B(Gemma):
+    def __init__(self, config):
+        super().__init__(config, model_name="google/gemma-2-2b-it")
+
+
+class Gemma2_9B(Gemma):
+    def __init__(self, config):
+        super().__init__(config, model_name="google/gemma-2-9b-it")

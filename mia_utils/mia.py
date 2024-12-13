@@ -28,7 +28,7 @@ class MIA_Attacker(BaseAttacker):
         question_pattern = r"Q\d+:\s*(.*?)$"  # Regex pattern to match "Q1: xxx" format for questions
         for doc_id, target_info in self.target_docs.items():
             target_doc = target_info['text']
-            gen_prompt = (f"Generate exactly {self.args.N} Yes/No questions based on the following document.\n"
+            gen_prompt = (f"Generate exactly {self.config.attack_config.N} Yes/No questions based on the following document.\n"
                         f"Document: {target_doc}\n"
                         f"Each question should:\n"
                         f"- Be meaningful and understandable on its own.\n"
@@ -37,7 +37,7 @@ class MIA_Attacker(BaseAttacker):
                         f"- Be specific enough to retrieve this document when used as a query.\n"
                         f"Avoid general or vague questions that could apply to other documents.\n"
                         f"Format your questions as follows:\n"
-                        f"Q1: ...\nQ2: ...\n... up to Q{self.args.N}.")
+                        f"Q1: ...\nQ2: ...\n... up to Q{self.config.attack_config.N}.")
 
             # Get the response from the LLM for questions
             response = self.shadow_llm.query(gen_prompt)
@@ -52,7 +52,7 @@ class MIA_Attacker(BaseAttacker):
         self.save_target_docs()
 
     def generate_questions_D2Q_IR(self):
-        doc2query = Doc2Query(append=False, num_samples=self.args.N)  # Set the number of samples/questions to generate
+        doc2query = Doc2Query(append=False, num_samples=self.config.attack_config.N)  # Set the number of samples/questions to generate
         documents = [{'docno': str(doc_id), 'text': doc_data['text']} for doc_id, doc_data in self.target_docs.items()]
         df = pd.DataFrame(documents)
 
@@ -222,14 +222,14 @@ class MIA_Attacker(BaseAttacker):
             return match.group(1).capitalize() if match else "Unknown"
 
         output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
+        output_file = f'{output_dir}/{self.config.attack_config.name}.json'
         with open(output_file, 'r') as f:
             data = json.load(f)
 
         for doc_id, doc_data in data.items():
 
             # Skip the document if it doesn't meet the required number of questions or responses
-            # if len(doc_data['answers']) < self.args.N or len(doc_data['questions']) < self.args.N:
+            # if len(doc_data['answers']) < self.config.attack_config.N or len(doc_data['questions']) < self.config.attack_config.N:
             #     print(f"Skipping Document {doc_id}: Not enough questions or responses")
             #     continue
 
@@ -253,20 +253,3 @@ class MIA_Attacker(BaseAttacker):
 
             # Save the accuracy back to the dict
             self.target_docs[doc_id]['accuracy'] = accuracy
-
-    # def retrieve_docs_(self, conda_env='colbert', script_path='../ColBERT'):
-    #     try:
-    #         command = f'conda run --prefix /work/pi_ahoumansadr_umass_edu/yuefeng/conda/envs/{conda_env} python retrieve_for_mia.py --dataset {self.args.eval_dataset} --name {self.args.name} --k {self.args.retrieve_k}'
-    #         # Run the command using subprocess and specify the script's working directory via 'cwd'
-    #         subprocess.run(command, shell=True, check=True, cwd=script_path)
-    #         print("Script executed successfully.")
-        
-    #     except subprocess.CalledProcessError as e:
-    #         print(f"An error occurred: {e}")
-    #     except FileNotFoundError as e:
-    #         print(f"File not found: {e}")
-            
-    #     output_dir = 'results/target_docs'
-    #     output_file = f'{output_dir}/{self.args.name}.json'
-    #     with open(output_file, 'r') as f:
-    #         self.target_docs = json.load(f)
