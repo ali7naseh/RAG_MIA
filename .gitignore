@@ -178,3 +178,4 @@ test.ipynb
 .vscode/
 
 worm_evals/*
+configs/*
