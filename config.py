@@ -51,6 +51,8 @@ class AttackConfig(Serializable):
     """Load from checkpoint if this flag is set"""
     post_filter: Optional[str] = None
     """Do post filtering"""
+    evaluate_attack: Optional[bool] = True
+    """If False, attack only generates relevant data for the attack but does not actually evaluate it"""
 
 
 @dataclass

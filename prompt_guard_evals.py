@@ -32,7 +32,8 @@ def tq_queries(path, select):
 def main(indices, nq_queries):
     # model_to_use = "meta-llama/Prompt-Guard-86M" # Good for nothing
     # model_to_use = "leolee99/InjecGuard"
-    model_to_use = "protectai/deberta-v3-base-prompt-injection-v2"
+    model_to_use = "deepset/deberta-v3-base-injection"
+    # model_to_use = "protectai/deberta-v3-base-prompt-injection-v2" # Fails to detect roleplay
     classifier = pipeline("text-classification", model=model_to_use, device="cuda")
     ds = load_dataset("RafaelMPereira/HealthCareMagic-100k-Chat-Format-en", split="train")
     # Pick sample corresponding to the indices

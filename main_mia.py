@@ -101,14 +101,15 @@ def main(config: ExperimentConfig):
             corpus=corpus
         )
 
-        #target LLM
-        llm = create_model(config.llm_config.model_config_path)
-        llm.to(llm.device)
-
         attacker.generate_questions()
         attacker.retrieve_docs_()
-        attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
-        attacker.calculate_score()
+        if config.attack_config.evaluate_attack:
+            #target LLM
+            llm = create_model(config.llm_config.model_config_path)
+            llm.to(llm.device)
+
+            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
+            attacker.calculate_score()
 
     elif config.attack_config.attack_method in ['s2']:
         attacker = S2_Attacker(
@@ -117,14 +118,15 @@ def main(config: ExperimentConfig):
             corpus=corpus
         )
 
-        #target LLM
-        llm = create_model(config.llm_config.model_config_path)
-        llm.to(llm.device)
-
         attacker.generate_questions()
         attacker.retrieve_docs_()
-        attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
-        attacker.calculate_score()
+        if config.attack_config.evaluate_attack:
+            #target LLM
+            llm = create_model(config.llm_config.model_config_path)
+            llm.to(llm.device)
+
+            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
+            attacker.calculate_score()
 
     elif config.attack_config.attack_method in ['mia']:
 
@@ -148,7 +150,8 @@ def main(config: ExperimentConfig):
             )
             # Perform post-filtering
             attacker.post_filter(top_k=config.attack_config.top_k, mode=config.attack_config.post_filter)
-            attacker.calculate_score()
+            if config.attack_config.evaluate_attack:
+                attacker.calculate_score()
 
         else:
    
@@ -175,12 +178,13 @@ def main(config: ExperimentConfig):
             attacker.generate_ground_truth_answers(validate_llm, from_ckpt=config.attack_config.from_ckpt)
             del validate_llm
         
-            #target LLM
-            llm = create_model(config.llm_config.model_config_path)
-            llm.to(llm.device)
+            if config.attack_config.evaluate_attack:
+                #target LLM
+                llm = create_model(config.llm_config.model_config_path)
+                llm.to(llm.device)
 
-            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
-            attacker.calculate_score()
+                attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
+                attacker.calculate_score()
 
     elif config.attack_config.attack_method in ['mba']:
         # Authors tested num_masks in [5, 10, 15, 20] and picked M with the higest AUC
@@ -191,15 +195,17 @@ def main(config: ExperimentConfig):
             num_masks=10
         )
 
-        #target LLM
-        llm = create_model(config.llm_config.model_config_path)
-        llm.to(llm.device)
-
         if not config.attack_config.from_ckpt:
             attacker.generate_questions()
             attacker.retrieve_docs_()
+        
+        if config.attack_config.evaluate_attack:
+            #target LLM
+            llm = create_model(config.llm_config.model_config_path)
+            llm.to(llm.device)
+
             attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
-        attacker.calculate_score()
+            attacker.calculate_score()
 
     else:
         raise ValueError(f"Invalid attack method: {config.attack_config.attack_method}")
