@@ -102,7 +102,7 @@ def main(config: ExperimentConfig):
         )
 
         attacker.generate_questions()
-        attacker.retrieve_docs_()
+        attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
         if config.attack_config.evaluate_attack:
             #target LLM
             llm = create_model(config.llm_config.model_config_path)
@@ -119,7 +119,7 @@ def main(config: ExperimentConfig):
         )
 
         attacker.generate_questions()
-        attacker.retrieve_docs_()
+        attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
         if config.attack_config.evaluate_attack:
             #target LLM
             llm = create_model(config.llm_config.model_config_path)
