@@ -33,7 +33,7 @@ class Direct_Query_Attacker(BaseAttacker):
         for doc_id, doc_data in data.items():
             
             expected_answer = "Yes" if doc_data.get("mem", "").lower() == "yes" else "No"
-            llm_response = extract_yes_no(doc_data.get("llm_response", "")[0])
+            llm_response = extract_yes_no(doc_data.get("llm_responses", "")[0])
             if expected_answer == llm_response:
                 correct_count += 1
             all_count += 1
