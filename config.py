@@ -53,6 +53,8 @@ class AttackConfig(Serializable):
     """Do post filtering"""
     evaluate_attack: Optional[bool] = True
     """If False, attack only generates relevant data for the attack but does not actually evaluate it"""
+    proxy_lm_mba: Optional[str] = None
+    """LM to use for MBA attack."""
 
 
 @dataclass

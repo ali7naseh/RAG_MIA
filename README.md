@@ -62,7 +62,7 @@ Example file content:
 
 ### 2. Question Generation
 
-Questions are generated for each document using clean_data_with_questions.json (provided by Ali) and stored in the result file:
+Questions are generated for each document using target_data_with_questions.json (provided by Ali) and stored in the result file:
 
 ```json
 {

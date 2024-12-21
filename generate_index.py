@@ -10,6 +10,7 @@ import faiss
 import argparse
 import yaml
 from tqdm import tqdm
+from config import ExperimentConfig
 
 from src.retrievers import create_retriever
 from src.retrievers.Retriever import Retriever
@@ -163,24 +164,20 @@ def main(retriever_name: str, dataset: str, batch_size: int=32):
     test(ret_model, k=3)
 
 
-def load_config(config_path):
-    with open(config_path, 'r') as file:
-        config = yaml.safe_load(file)
-    return config['test_params']
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run the main script with a specified config file.")
     parser.add_argument('--config', type=str, required=True, help='Path to the configuration YAML file.')
     args = parser.parse_args()
 
-    test_params = load_config(args.config)
+    config: ExperimentConfig = ExperimentConfig.load(args.config)
 
     # TODO: Handle ColBERT
 
-    retriever_name = test_params['retriever']
-    dataset = test_params['eval_dataset']
+    retriever_name = config.rag_config.retriever
+    dataset = config.rag_config.eval_dataset
 
     # Generate and cache passage embeddings
     batch_size = 16 #32
-    main(retriever_name=retriever_name, dataset=dataset, batch_size=batch_size)
+    main(retriever_name=retriever_name,
+         dataset=dataset,
+         batch_size=batch_size)

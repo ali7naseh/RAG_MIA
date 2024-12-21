@@ -163,7 +163,7 @@ def main(config: ExperimentConfig):
 
             if not config.attack_config.from_ckpt:
                 #questions from GPT-4
-                query_file = f"datasets/{config.rag_config.eval_dataset}/clean_data_with_questions.json"
+                query_file = f"datasets/{config.rag_config.eval_dataset}/target_data_with_questions.json"
                 with open(query_file, 'r') as f:
                     source_docs = json.load(f)
                 attacker.generate_questions_GPT_4(source_docs)
@@ -171,7 +171,8 @@ def main(config: ExperimentConfig):
                 #Use IR to filter question- pre-filtering
                 attacker.filter_questions_topk(top_k=config.attack_config.top_k)
 
-            attacker.retrieve_docs_()
+            attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
+            
             #generate ground truth answers
             validate_llm = create_model(shadow_model_config_path)
             validate_llm.to(validate_llm.device)
@@ -197,7 +198,7 @@ def main(config: ExperimentConfig):
 
         if not config.attack_config.from_ckpt:
             attacker.generate_questions()
-            attacker.retrieve_docs_()
+            attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
         
         if config.attack_config.evaluate_attack:
             #target LLM

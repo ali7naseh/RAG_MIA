@@ -1,5 +1,6 @@
 import os
 import json
+from tqdm import tqdm
 from src.retrievers import create_retriever
 from src.prompts import wrap_prompt
 
@@ -41,14 +42,14 @@ class BaseAttacker:
     def retrieve_docs_(self, k: int = 5, retriever: str = 'colbert', from_ckpt: bool = True):
         # Set output file for checkpointing
         output_dir = 'results/target_docs'
-        output_file = f'{output_dir}/{self.args.name}.json'
+        output_file = f'{output_dir}/{self.config.attack_config.name}.json'
         with open(output_file, 'r') as f:
             self.target_docs = json.load(f)
 
         # Create the retriever
-        retriever = create_retriever(retriever, self.args.eval_dataset)
+        retriever = create_retriever(retriever, self.config.rag_config.eval_dataset)
 
-        for doc_id, doc_content in self.target_docs.items():
+        for doc_id, doc_content in tqdm(self.target_docs.items(), desc="Processing documents"):
             questions = doc_content.get('questions', [])
             retrieved_doc_ids = doc_content.get('retrieved_doc_ids', [])
             if not from_ckpt:
@@ -134,7 +135,7 @@ class BaseAttacker:
         with open(output_file, 'r') as f:
             self.target_docs = json.load(f)
             
-        for doc_id, doc_content in self.target_docs.items():
+        for doc_id, doc_content in tqdm(self.target_docs.items()):
             questions = doc_content.get('questions', [])
             retrieved_doc_ids = doc_content.get('retrieved_doc_ids', [])
 
