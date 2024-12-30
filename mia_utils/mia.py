@@ -72,6 +72,10 @@ class MIA_Attacker(BaseAttacker):
         # Save the updated target_docs
         self.save_target_docs()
 
+    def prompt_len(self, tokenizer, question: str, doc_id: int, question_id: int):
+        # We only expect yes/no/I don't know in responses
+        return 5
+
     def filter_questions_topk(self, top_k=3):
         # Iterate over the target documents
         for doc_id, target_info in self.target_docs.items():
@@ -85,7 +89,7 @@ class MIA_Attacker(BaseAttacker):
                 'text': target_info['text'],
                 'querygen': "\n".join(question_list)
             }])
-            scorer = ElectraScorer()
+            scorer = ElectraScorer(verbose=False)
             query_scorer_pipeline = QueryScorer(scorer)
             scored_df = query_scorer_pipeline(df_questions)
             scored_questions = scored_df.to_dict()
@@ -144,7 +148,7 @@ class MIA_Attacker(BaseAttacker):
                 }])
 
                 # Score the questions
-                scorer = ElectraScorer()
+                scorer = ElectraScorer(verbose=False)
                 query_scorer_pipeline = QueryScorer(scorer)
                 scored_df = query_scorer_pipeline(df_questions)
                 scored_questions = scored_df.to_dict()
@@ -180,7 +184,7 @@ class MIA_Attacker(BaseAttacker):
         # Save the updated target_docs
         self.save_target_docs()
 
-    def generate_ground_truth_answers(self, llm=None, from_ckpt=True):
+    def generate_ground_truth_answers(self, llm=None, from_ckpt: bool=True):
         answer_pattern = r"A\d+:\s*(Yes|No)"  # Regex pattern to match "A1: Yes/No" format for answers
 
         # Iterate over each target document in the list

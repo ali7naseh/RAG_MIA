@@ -129,13 +129,13 @@ class BaseAttacker:
     #         # Save progress
     #         self.save_target_docs()
 
-    def query_target_llm(self, llm, from_ckpt=True):
+    def query_target_llm(self, llm, from_ckpt: bool=True):
         output_dir = 'results/target_docs'
         output_file = f'{output_dir}/{self.config.attack_config.name}.json'
         with open(output_file, 'r') as f:
             self.target_docs = json.load(f)
             
-        for doc_id, doc_content in tqdm(self.target_docs.items()):
+        for doc_id, doc_content in tqdm(self.target_docs.items(), total=len(self.target_docs), desc="Processing documents"):
             questions = doc_content.get('questions', [])
             retrieved_doc_ids = doc_content.get('retrieved_doc_ids', [])
 

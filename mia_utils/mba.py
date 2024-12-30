@@ -22,22 +22,25 @@ class MBA_Attacker(BaseAttacker):
     """
         MBA attack, as described in the paper 'Mask-based Membership Inference Attacks for Retrieval-Augmented Generation'
     """
-    def __init__(self, args, **kwargs) -> None:
-        super().__init__(args, **kwargs)
+    def __init__(self, config, **kwargs) -> None:
+        super().__init__(config, **kwargs)
         self.num_masks = kwargs.get('num_masks', 10)
+        if self.config.attack_config.proxy_lm_mba is None:
+            raise ValueError("Please specify the proxy LM model for the MBA attack.")
 
         # MBA-specific models
-        # Spell-correction model
-        self.spell_correction = pipeline("text2text-generation",
-                                         model="oliverguhr/spelling-correction-english-base",
-                                         device='cuda')
+        if kwargs.get('load_misc_models', True):
+            
+            # Spell-correction model
+            self.spell_correction = pipeline("text2text-generation",
+                                             model="oliverguhr/spelling-correction-english-base",
+                                             device='cuda')
 
-        # Proxy LM
-        # Original paper used gpt-xl
-        # proxy_lm = "openai-community/gpt2-xl"
-        proxy_lm = "meta-llama/Llama-3.2-3B"
-        self.proxy_lm_tokenizer = AutoTokenizer.from_pretrained(proxy_lm)
-        self.proxy_lm_model = AutoModelForCausalLM.from_pretrained(proxy_lm).eval().cuda()
+            # Proxy LM
+            # Original paper used gpt-xl
+            proxy_lm = self.config.attack_config.proxy_lm_mba #"meta-llama/Llama-3.2-3B"
+            self.proxy_lm_tokenizer = AutoTokenizer.from_pretrained(proxy_lm)
+            self.proxy_lm_model = AutoModelForCausalLM.from_pretrained(proxy_lm).eval().cuda()
 
         # Ensure NLTK stopwords are downloaded
         nltk.download('stopwords')
@@ -46,6 +49,19 @@ class MBA_Attacker(BaseAttacker):
         self.stop_words.update(["etc", "etc.", "e.g.", "i.e.", "i.e", "et al.", "<human>:", "<bot>:"])
 
         self.punctuations = set(string.punctuation)
+    
+    def free_space(self):
+        """
+            Delete proxy-LM, spell-correction, etc.
+        """
+        if hasattr(self, 'spell_correction'):
+            del self.spell_correction
+        if hasattr(self, 'proxy_lm_tokenizer'):
+            del self.proxy_lm_tokenizer
+        if hasattr(self, 'proxy_lm_model'):
+            del self.proxy_lm_model
+        # Free up GPU memory
+        ch.cuda.empty_cache()
 
     def prompt_len(self, tokenizer, question: str, doc_id: int, question_id: int):
         # Look at number of tokens in answer
