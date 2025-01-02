@@ -169,7 +169,6 @@ datasets/nq/*
 logs
 
 results
-analysis.ipynb
 
 direct_query.ipynb
 test.ipynb
