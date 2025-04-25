@@ -6,6 +6,7 @@ from .Llama3 import Llama3
 from .Llama3_70b import Llama3_70b
 from .Gemma2 import Gemma2_2B, Gemma2_9B
 from .CommandR import CommandR
+from .Phi4 import Phi4
 import json
 
 
@@ -39,6 +40,8 @@ def create_model(config_path):
         model = Gemma2_9B(config)
     elif provider == 'command_r':
         model = CommandR(config)
+    elif provider == 'phi4':
+        model = Phi4(config)
     else:
         raise ValueError(f"ERROR: Unknown provider {provider}")
     return model

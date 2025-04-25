@@ -20,6 +20,10 @@ class RAGConfig(Serializable):
     """Re-ranker model to use, if any"""
     rerank_k: Optional[int] = None
     """Top-k documents selected after re-ranking"""
+    query_rewrite: Optional[bool] = False
+    """Paraphrase query before retrieval?"""
+    context_free_response: Optional[bool] = False
+    """Generate response without using any provided context?"""
     def __post_init__(self):
         if self.reranker is not None:
             if self.rerank_k is None:
@@ -35,8 +39,6 @@ class AttackConfig(Serializable):
     """
     attack_method: str
     """Attack method to use"""
-    repeat_times: int = 10
-    """Repeat several times to compute average"""
     M: int = 10
     """One of our parameters, the number of target docs"""
     N: int = 2
@@ -55,6 +57,10 @@ class AttackConfig(Serializable):
     """If False, attack only generates relevant data for the attack but does not actually evaluate it"""
     proxy_lm_mba: Optional[str] = None
     """LM to use for MBA attack."""
+    from_ckpt_model_responses: Optional[bool] = True
+    """Load model responses from checkpoint?"""
+    from_ckpt_attack_data: Optional[bool] = False
+    """Load attack data from checkpoint?"""
 
 
 @dataclass
@@ -86,4 +92,8 @@ class ExperimentConfig(Serializable):
 
     def get_log_name(self):
         log_name = f"{self.attack_config.attack_method}-{self.rag_config.eval_dataset}-{self.llm_config.model_name}-{self.llm_config.shadow_model_name}-{self.rag_config.retriever}-R{self.rag_config.retrieve_k}-Top{self.attack_config.top_k}-M{self.attack_config.M}-N{self.attack_config.N}"
+        if self.rag_config.query_rewrite:
+            log_name += "-query_rewrite"
+        if self.rag_config.context_free_response:
+            log_name += "-context_free_response"
         return log_name

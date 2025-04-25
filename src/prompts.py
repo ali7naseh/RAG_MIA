@@ -7,11 +7,26 @@ GROUND_TRUTH_PROMPT = 'You are a helpful assistant. Based solely on the provided
 \n\nContexts: [context] \n\nQuestion: [question]? Answer only with "Yes," "No," or "I don\'t know". \n\nAnswer:'
 
 
-def wrap_prompt(question, context, prompt_id=1, atk = False) -> str:
+MULTIPLE_PROMPT_NO_DOC = 'You are a helpful assistant, below is a query from a user. \
+Your answer should be short and concise. \
+If you cannot give the answer to the question, just say "I don\'t know". \
+\n\nQuery: [question] \n\nAnswer:'
+
+
+def wrap_prompt(question, context,
+                prompt_id: int=1,
+                atk: bool = False,
+                context_free_response: bool = False) -> str:
+
     if atk==True:
         PROMPT = GROUND_TRUTH_PROMPT
     else:
-        PROMPT = MULTIPLE_PROMPT
+        if context_free_response:
+            # Ignore context
+            input_prompt = MULTIPLE_PROMPT_NO_DOC.replace('[question]', question)
+            return input_prompt
+        else:
+            PROMPT = MULTIPLE_PROMPT
 
     if prompt_id == 4:
         assert type(context) == list

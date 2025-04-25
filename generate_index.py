@@ -97,12 +97,18 @@ def test(model: Retriever, k: int):
 
 # Document encoding function
 @torch.no_grad()
-def encode_documents(corpus, model, batch_size=32):
+def encode_documents(corpus, model, batch_size: int=32):
     """
     Encode documents using provided retriever
     """
     doc_ids = list(corpus.keys())
-    texts = [f"{corpus[doc_id]['title']} {corpus[doc_id]['text']}" for doc_id in doc_ids]
+    texts = []
+    for doc_id in doc_ids:
+        if 'title' not in corpus[doc_id]:
+            text = corpus[doc_id]['text']
+        else:
+            text = f"{corpus[doc_id]['title']} {corpus[doc_id]['text']}"
+        texts.append(text)
     embeddings = []
 
     print("Encoding documents...")

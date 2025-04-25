@@ -18,6 +18,17 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import re
 
 
+def normalize(word):
+    """
+    Normalize a word by removing punctuation, converting to lowercase, and stripping spaces.
+    Args:
+        word (str): The input word to normalize.
+    Returns:
+        str: The normalized word.
+    """
+    return word.strip().lower().translate(str.maketrans('', '', string.punctuation))
+
+
 class MBA_Attacker(BaseAttacker):
     """
         MBA attack, as described in the paper 'Mask-based Membership Inference Attacks for Retrieval-Augmented Generation'
@@ -67,8 +78,8 @@ class MBA_Attacker(BaseAttacker):
         # Look at number of tokens in answer
         answer_dict_str = "\n".join([f"[MASK_{k}]: v" for k, v in self.target_docs[doc_id]['answers'].items()])
         num_tokens_answer_dict_str = len(tokenizer.tokenize(answer_dict_str))
-        # Add a buffer of 8 tokens
-        return num_tokens_answer_dict_str + 8
+        # Add a buffer of 12 tokens
+        return num_tokens_answer_dict_str + 12
 
     def _fragmented_word_extraction(self, words: List[str]) -> List[int]:
         split_word_indices = []
@@ -151,7 +162,7 @@ class MBA_Attacker(BaseAttacker):
                         # print("NOT-FRAGMENT")
                         tokenized_word = self.proxy_lm_tokenizer(document_words[j])['input_ids']
                         # Skip BOS token
-                        tokenized_word = tokenized_word[1:]
+                        # tokenized_word = tokenized_word[1:]
                         # Word not fragmented, can compute score directly
                         score = self.compute_rank(prefix + " ", tokenized_word[0])
                         masked_words_within.append([document_words[j]])
@@ -160,7 +171,7 @@ class MBA_Attacker(BaseAttacker):
                         # print("FRAGMENT")
                         tokenized_corrected_word = self.proxy_lm_tokenizer(corrected_word_extraction[j])['input_ids']
                         # Skip BOS token
-                        tokenized_corrected_word = tokenized_corrected_word[1:]
+                        # tokenized_corrected_word = tokenized_corrected_word[1:]
                         # Word is fragmented, compute score for each possible token
                         scores_ = []
                         toks_inner = []
@@ -230,7 +241,7 @@ class MBA_Attacker(BaseAttacker):
     def calculate_score(self):
         def extract_mask_answers(text):
             # Regular expression to match the mask pattern
-            pattern = r'\[MASK?_?(\d+)\]:?\s*\**\s*([\w\-\' ]+)'
+            pattern = r'\[?MASK?_?(\d+)\]?:?\s*\**\s*([\w\-\' ]+)'
     
             # Find all matches
             matches = re.findall(pattern, text, re.IGNORECASE)
@@ -257,7 +268,8 @@ class MBA_Attacker(BaseAttacker):
             # Count number of positions where the LLM response matches the correct answer
             correct_count = 0
             for mask, answer in correct_answer.items():
-                if llm_answer.get(mask, '') in answer:
+                normalized_answer = normalize(llm_answer.get(mask, ''))
+                if normalized_answer in [normalize(ans) for ans in answer]:
                     correct_count += 1
 
             # Calculate accuracy for the document

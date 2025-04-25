@@ -2,6 +2,7 @@ import argparse
 import os
 import json
 import random
+import torch
 from src.models import create_model
 from src.utils import setup_seeds
 from beir.datasets.data_loader import GenericDataLoader
@@ -70,13 +71,13 @@ def main(config: ExperimentConfig):
         mem_indices = selected_indices.get('mem_indices', [])
         nonmem_indices = selected_indices.get('non_mem_indices', [])
         # Ensure that mem_indices and nonmem_indices are valid and contain enough elements
-        assert len(mem_indices) >= config.attack_config.M * config.attack_config.repeat_times, "Not enough mem indices to sample from"
-        assert len(nonmem_indices) >= config.attack_config.M * config.attack_config.repeat_times, "Not enough non-mem indices to sample from"
+        assert len(mem_indices) >= config.attack_config.M, "Not enough mem indices to sample from"
+        assert len(nonmem_indices) >= config.attack_config.M, "Not enough non-mem indices to sample from"
         # Sample from nonmem_indices
-        docs_nonmem_id = random.sample(nonmem_indices, config.attack_config.M * config.attack_config.repeat_times)
+        docs_nonmem_id = random.sample(nonmem_indices, config.attack_config.M)
         nonmem_docs = {doc_id: {**corpus.pop(doc_id), 'mem': 'no'} for doc_id in docs_nonmem_id}
         # Sample from mem_indices
-        sampled_docs_mem_id = random.sample(mem_indices, config.attack_config.M * config.attack_config.repeat_times)
+        sampled_docs_mem_id = random.sample(mem_indices, config.attack_config.M)
         mem_docs = {doc_id: {**corpus[doc_id], 'mem': 'yes'} for doc_id in sampled_docs_mem_id}
         # Combine the mem and nonmem documents into the target_docs dictionary
         target_docs = {**mem_docs, **nonmem_docs}
@@ -92,7 +93,7 @@ def main(config: ExperimentConfig):
                 corpus.pop(doc_id)
 
     print(shadow_model_config_path, config.llm_config.model_config_path)
-    
+
     if config.attack_config.attack_method in ['direct_query']:
 
         attacker = Direct_Query_Attacker(
@@ -101,14 +102,16 @@ def main(config: ExperimentConfig):
             corpus=corpus
         )
 
-        attacker.generate_questions()
+        if not config.attack_config.from_ckpt_attack_data:
+            attacker.generate_questions()
+
         attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
         if config.attack_config.evaluate_attack:
             #target LLM
             llm = create_model(config.llm_config.model_config_path)
             llm.to(llm.device)
 
-            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
+            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt_model_responses)
             attacker.calculate_score()
 
     elif config.attack_config.attack_method in ['s2']:
@@ -118,14 +121,16 @@ def main(config: ExperimentConfig):
             corpus=corpus
         )
 
-        attacker.generate_questions()
+        if not config.attack_config.from_ckpt_attack_data:
+            attacker.generate_questions()
+
         attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
         if config.attack_config.evaluate_attack:
             #target LLM
             llm = create_model(config.llm_config.model_config_path)
             llm.to(llm.device)
 
-            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
+            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt_model_responses)
             attacker.calculate_score()
 
     elif config.attack_config.attack_method in ['mia']:
@@ -160,8 +165,7 @@ def main(config: ExperimentConfig):
                 target_docs=target_docs,
                 corpus=corpus
             )
-
-            if not config.attack_config.from_ckpt:
+            if not config.attack_config.from_ckpt_attack_data:
                 #questions from GPT-4
                 query_file = f"datasets/{config.rag_config.eval_dataset}/target_data_with_questions.json"
                 with open(query_file, 'r') as f:
@@ -170,42 +174,56 @@ def main(config: ExperimentConfig):
 
                 #Use IR to filter question- pre-filtering
                 attacker.filter_questions_topk(top_k=config.attack_config.top_k)
+            
+                #generate ground truth answers
+                validate_llm = create_model(shadow_model_config_path)
+                validate_llm.to(validate_llm.device)
+                attacker.generate_ground_truth_answers(validate_llm, from_ckpt=config.attack_config.from_ckpt)
+                del validate_llm
 
             attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
-            
-            #generate ground truth answers
-            validate_llm = create_model(shadow_model_config_path)
-            validate_llm.to(validate_llm.device)
-            attacker.generate_ground_truth_answers(validate_llm, from_ckpt=config.attack_config.from_ckpt)
-            del validate_llm
         
             if config.attack_config.evaluate_attack:
                 #target LLM
                 llm = create_model(config.llm_config.model_config_path)
                 llm.to(llm.device)
 
-                attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
+                attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt_model_responses)
                 attacker.calculate_score()
 
     elif config.attack_config.attack_method in ['mba']:
-        # Authors tested num_masks in [5, 10, 15, 20] and picked M with the higest AUC
+        # Authors tested num_masks in [5, 10, 15, 20] and picked M with the highest AUC
         attacker = MBA_Attacker(
             config,
             target_docs=target_docs,
             corpus=corpus,
-            num_masks=10
+            num_masks=10,
+            load_misc_models=not config.attack_config.from_ckpt_attack_data
         )
 
-        if not config.attack_config.from_ckpt:
+        if not config.attack_config.from_ckpt_attack_data:
             attacker.generate_questions()
-            attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
+            attacker.free_space()
         
+        """
+        if config.rag_config.query_rewrite:
+            llm = create_model(config.llm_config.model_config_path)
+            llm.to(llm.device)
+            attacker.query_rewrite(llm, from_ckpt=config.attack_config.from_ckpt_attack_data)
+            # Offload the model from GPU
+            del llm
+            torch.cuda.empty_cache()
+        """
+
+        if not config.attack_config.from_ckpt:
+            attacker.retrieve_docs_(k=config.rag_config.retrieve_k, retriever = config.rag_config.retriever)
+
         if config.attack_config.evaluate_attack:
             #target LLM
             llm = create_model(config.llm_config.model_config_path)
             llm.to(llm.device)
 
-            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt)
+            attacker.query_target_llm(llm=llm, from_ckpt=config.attack_config.from_ckpt_model_responses)
             attacker.calculate_score()
 
     else:

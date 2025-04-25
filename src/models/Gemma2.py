@@ -17,8 +17,10 @@ class Gemma(Model):
             torch_dtype=torch.bfloat16,
         )
 
-    def query(self, msg, max_output_tokens=None):
-        input_ids = self.tokenizer(msg, return_tensors="pt").input_ids.to("cuda")
+    def query(self, msg, max_output_tokens: int=None):
+        input_ids = self.tokenizer(msg,
+                                   max_length=2048,
+                                   return_tensors="pt").input_ids.to("cuda")
         num_input_tokens = input_ids.shape[1]
 
         outputs = self.model.generate(input_ids,

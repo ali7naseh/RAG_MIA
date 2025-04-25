@@ -19,6 +19,7 @@ class MIA_Attacker(BaseAttacker):
             questions = source_info.get('questions', [])
             combined_questions = "\n".join(questions)
             self.target_docs[doc_id]['all_questions'] = combined_questions
+            self.target_docs[doc_id]['questions'] = questions
             print(f"Combined questions for {doc_id}: {combined_questions}")
         print('All questions are generated.')
         # Save the updated target_docs
@@ -202,7 +203,8 @@ class MIA_Attacker(BaseAttacker):
 
                 # Generate answers for all questions
                 for idx, question in enumerate(questions, start=1):
-                    answer_prompt = wrap_prompt(question, [target_doc], prompt_id=4, atk=True)
+                    answer_prompt = wrap_prompt(question, [target_doc], prompt_id=4, atk=True,
+                                                context_free_response=self.config.rag_config.context_free_response)
                     try:
                         answer_response = llm.query(answer_prompt)
                         print('answer response: ', answer_response)

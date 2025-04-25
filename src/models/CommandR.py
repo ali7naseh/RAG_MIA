@@ -13,10 +13,10 @@ class CommandR(Model):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            device_map="auto",
+            device_map="auto"
         )
 
-    def query(self, msg, max_output_tokens=None):
+    def query(self, msg: str, max_output_tokens=None):
         input_ids = self.tokenizer(msg, return_tensors="pt").input_ids.to("cuda")
         num_input_tokens = input_ids.shape[1]
 

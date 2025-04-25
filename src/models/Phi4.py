@@ -1,33 +1,34 @@
-import torch
-# from transformers import LlamaTokenizer, LlamaForCausalLM
 from transformers import AutoModelForCausalLM, AutoTokenizer
-
 from .Model import Model
 
-class Llama3(Model):
+
+class Phi4(Model):
     def __init__(self, config):
         super().__init__(config)
         self.max_output_tokens = int(config["params"]["max_output_tokens"])
         self.device = config["params"]["device"]
         self.max_output_tokens = config["params"]["max_output_tokens"]
 
-        api_pos = int(config["api_key_info"]["api_key_use"])
-        hf_token = config["api_key_info"]["api_keys"][api_pos]
+        model_name = "microsoft/phi-4"
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            device_map="auto",
+            trust_remote_code=True
+        )
 
-        self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3.1-8B-Instruct')
-        self.model = AutoModelForCausalLM.from_pretrained('meta-llama/Llama-3.1-8B-Instruct',
-                                                          device_map="auto",
-                                                          torch_dtype=torch.bfloat16)
+    def to(self, device):
+        pass
 
     def query(self, msg: str, max_output_tokens=None):
-        chat_template_extra_tokens = 4 # Chat template will add 4 tokens
+        chat_template_extra_tokens = 4 # Phi-4 uses chat-template and will add 4 tokens
 
         # Phi-4 expects chat-template
         chat = [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": msg}
         ]
-        wrapped_msg = self.tokenizer.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)
+        wrapped_msg = self.tokenizer.apply_chat_template(chat, tokenize=False)
         inputs = self.tokenizer(wrapped_msg, return_tensors="pt", max_length=12296, truncation=True)
         inputs = {key: value.to(self.model.device) for key, value in inputs.items()}
         num_input_tokens = inputs['input_ids'].shape[1]

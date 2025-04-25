@@ -1,6 +1,6 @@
 # RAG_MIA
 
-This project implements membership inference attacks (MIA) on Retrieval-Augmented Generation (RAG).
+This project implements membership inference attacks (MIA) on Retrieval-Augmented Generation (RAG), for our work 'Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation'
 
 ## Setup
 

@@ -39,7 +39,9 @@ class BaseAttacker:
         with open(output_file, 'w') as f:
             json.dump(self.target_docs, f, indent=4)
 
-    def retrieve_docs_(self, k: int = 5, retriever: str = 'colbert', from_ckpt: bool = True):
+    def retrieve_docs_(self, retriever: str,
+                       k: int = 5,
+                       from_ckpt: bool = True):
         # Set output file for checkpointing
         output_dir = 'results/target_docs'
         output_file = f'{output_dir}/{self.config.attack_config.name}.json'
@@ -151,7 +153,8 @@ class BaseAttacker:
                 for i, question in enumerate(questions):
                     # Access the text of each retrieved document directly from self.corpus
                     topk_contents = [self.corpus[doc]['text'][:self.document_slice_size] for doc in retrieved_doc_ids[i]]
-                    query_prompt = wrap_prompt(question, topk_contents, prompt_id=4)
+                    query_prompt = wrap_prompt(question, topk_contents, prompt_id=4,
+                                               context_free_response=self.config.rag_config.context_free_response)
 
                     try:
                         # Query the LLM for the response
@@ -174,5 +177,49 @@ class BaseAttacker:
         # Final save after processing all documents
         self.save_target_docs()
     
+    def query_rewrite(self, llm, from_ckpt: bool=True):
+        output_dir = 'results/target_docs'
+        output_file = f'{output_dir}/{self.config.attack_config.name}.json'
+        with open(output_file, 'r') as f:
+            self.target_docs = json.load(f)
+            
+        for doc_id, doc_content in tqdm(self.target_docs.items(), total=len(self.target_docs), desc="Rewriting queries"):
+            questions = doc_content.get('questions', [])
+            rewritten_questions = doc_content.get('rewritten_questions', [])
+            if not from_ckpt:
+                rewritten_questions = []
+            if len(rewritten_questions) < len(questions):
+                print(f"Reprocessing document: {doc_id}")
+                doc_content['rewritten_questions'] = []
+            
+                # Generate rewritten questions for all questions
+                for i, question in enumerate(questions):
+                    try:
+                        # Add buffer to account for additional tokens in the paraphrased question
+                        num_tokens_paraphrase = len(llm.tokenizer.tokenize(question)) + 10
+                        PARAPHRASE_INS = "Paraphrase all of the following text inside <<>> while preserving its original meaning"
+                        # Rewrite the question using the LLM
+                        rewritten_question = llm.query(f"<<{question}>>",
+                                                       instruction=PARAPHRASE_INS,
+                                                       max_output_tokens=num_tokens_paraphrase)
+                        print(f'Rewritten question for doc {doc_id}, question {i}: {rewritten_question}')
+                        rewritten_questions.append(rewritten_question)
+                    except Exception as e:
+                        print(f"Error querying LLM for question {i} in doc {doc_id}: {e}")
+                        break
+
+                doc_content['rewritten_questions'] = rewritten_questions
+                # Also update original questions with rewritten questions, and keep a copy as 'original_questions'
+                doc_content['original_questions'] = questions
+                doc_content['questions'] = rewritten_questions
+
+                # Save progress after each document is processed
+                self.save_target_docs()
+            else:
+                print(f"All questions already rewritten for {doc_id}")
+        
+        # Final save after processing all documents
+        self.save_target_docs()
+
     def calculate_score(self):
         raise NotImplementedError("This method must be implemented in the derived class.")
